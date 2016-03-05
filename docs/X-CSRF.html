@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+	<script src="../js/main.js"></script>
+
+	<title>X CSRF | X CSRF</title>
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- ../docs/X-CSRF.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="..//" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="../../index.html">Home</a></li>
+<li><a href="">Guides</a>
+<ul>
+<li><a href="../docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="../docs/API-Details.html">API Details</a></li>
+<li><a href="../docs/Manifest.html">Manifest</a></li>
+<li><a href="../docs/Authentication.html">Authentication</a></li>
+</ul></li>
+<li><a href="">References</a>
+<ul>
+<li><a href="../docs/Error-Codes.html">Error Codes</a></li>
+<li><a href="../docs/Enums.html">Enums</a></li>
+<li><a href="../docs/Endpoints.html">Endpoints</a></li>
+<li><a href="../docs/Definitions.html">Definitions</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>X CSRF</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>What is X-CSRF?</h2>
+<p>X-CSRF is a HTTP header you must provide to make use of private endpoints. It is a security measure to prevent <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross Site Request Forgeries</a> (CSRF attacks).</p>
+<h2>What value do I put in it?</h2>
+<p>The exact value of the bungled cookie.</p>
+<pre><code>X-CSRF: bungled-cookie-value</code></pre>
+<h2>ErrorCode 99</h2>
+<p>If you try to make use of a private endpoint without including a valid X-CSRF header and token, you will receive a &quot;Please sign-in to continue.&quot; response.</p>
+<pre><code class="javascript">{
+   "ErrorCode":99,
+   "ThrottleSeconds":0,
+   "ErrorStatus":"WebAuthRequired",
+   "Message":"Please sign-in to continue.",
+   "MessageData":{
+
+   }
+}</code></pre>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+	<script src="../js/main.js"></script>
+
+	<title>Definitions | Definitions</title>
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- ../docs/Definitions.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="..//" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="../../index.html">Home</a></li>
+<li><a href="">Guides</a>
+<ul>
+<li><a href="../docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="../docs/API-Details.html">API Details</a></li>
+<li><a href="../docs/Manifest.html">Manifest</a></li>
+<li><a href="../docs/Authentication.html">Authentication</a></li>
+</ul></li>
+<li><a href="">References</a>
+<ul>
+<li><a href="../docs/Error-Codes.html">Error Codes</a></li>
+<li><a href="../docs/Enums.html">Enums</a></li>
+<li><a href="../docs/Endpoints.html">Endpoints</a></li>
+<li class="active"><a href="../docs/Definitions.html">Definitions</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Definitions</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><p>Definitions are the static representations of data used in Destiny. They can be included in most endpoints by setting <code>definitions=true</code>, but can also be requested using the <a href="../docs/DestinyService/GetDestinySingleDefinition.html">GetDestinySingleDefinition</a> endpoint or downloaded as part of the <a href="../docs/Manifest.html">mobile manifest</a>.</p>
+<h2>Manifest</h2>
+<ul>
+<li>asset
+<ul>
+<li><a href="DestinyGearAssetsDefinition">DestinyGearAssetsDefinition</a></li>
+</ul></li>
+<li>world
+<ul>
+<li><a href="DestinyActivityBundleDefinition">DestinyActivityBundleDefinition</a></li>
+<li><a href="DestinyActivityDefinition">DestinyActivityDefinition</a></li>
+<li><a href="DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a></li>
+<li><a href="DestinyClassDefinition">DestinyClassDefinition</a></li>
+<li><a href="DestinyDestinationDefinition">DestinyDestinationDefinition</a></li>
+<li><a href="DestinyDirectorBookDefinition">DestinyDirectorBookDefinition</a></li>
+<li><a href="DestinyEnemyRaceDefinition">DestinyEnemyRaceDefinition</a></li>
+<li><a href="DestinyFactionDefinition">DestinyFactionDefinition</a></li>
+<li><a href="DestinyGenderDefinition">DestinyGenderDefinition</a></li>
+<li><a href="DestinyGrimoireCardDefinition">DestinyGrimoireCardDefinition</a></li>
+<li><a href="DestinyGrimoireDefinition">DestinyGrimoireDefinition</a></li>
+<li><a href="DestinyHistoricalStatsDefinition">DestinyHistoricalStatsDefinition</a></li>
+<li><a href="DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a></li>
+<li><a href="DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a></li>
+<li><a href="DestinyPlaceDefinition">DestinyPlaceDefinition</a></li>
+<li><a href="DestinyProgressionDefinition">DestinyProgressionDefinition</a></li>
+<li><a href="DestinyRaceDefinition">DestinyRaceDefinition</a></li>
+<li><a href="DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a></li>
+<li><a href="DestinyScriptedSkullDefinition">DestinyScriptedSkullDefinition</a></li>
+<li><a href="DestinySpecialEventDefinition">DestinySpecialEventDefinition</a></li>
+<li><a href="DestinyStatDefinition">DestinyStatDefinition</a></li>
+<li><a href="DestinyStatGroupDefinition">DestinyStatGroupDefinition</a></li>
+<li><a href="DestinyTalentGridDefinition">DestinyTalentGridDefinition</a></li>
+<li><a href="DestinyUnlockFlagDefinition">DestinyUnlockFlagDefinition</a></li>
+<li><a href="DestinyVendorCategoryDefinition">DestinyVendorCategoryDefinition</a></li>
+<li><a href="DestinyVendorDefinition">DestinyVendorDefinition</a></li>
+</ul></li>
+</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>
