@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetAccount | DestinyService | DestinyService / GetAccount</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/DestinyService/GetAccount.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DestinyService / GetAccount</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns Destiny account information for the supplied membership.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/{membershipType}/Account/{membershipId}/">/Destiny/{membershipType}/Account/{membershipId}/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>membershipType</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>membershipId</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>definitions</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/platform/Destiny/2/Account/4611686018429501017/">https://www.bungie.net/platform/Destiny/2/Account/4611686018429501017/</a></p>
+<pre><code class="javascript">{
+   "Response":{
+      "data":{
+         "membershipId":"4611686018429501017",
+         "membershipType":2,
+         "characters":[
+            {
+               "characterBase":{
+                  "membershipId":"4611686018429501017",
+                  "membershipType":2,
+                  "characterId":"2305843009292996472",
+                  "dateLastPlayed":"2015-05-21T05:57:50Z",
+                  "minutesPlayedThisSession":"89",
+                  "minutesPlayedTotal":"24662",
+                  "powerLevel":32,
+                  "raceHash":898834093,
+                  "genderHash":3111576190,
+                  "classHash":2271682572,
+                  "currentActivityHash":0,
+                  "lastCompletedStoryHash":0,
+                  "stats":{
+                     "STAT_DEFENSE":{
+                        "statHash":3897883278,
+                        "value":1635,
+                        "maximumValue":0
+                     },
+                     "STAT_INTELLECT":{
+                        "statHash":144602215,
+                        "value":139,
+                        "maximumValue":0
+                     },
+                     "STAT_DISCIPLINE":{
+                        "statHash":1735777505,
+                        "value":121,
+                        "maximumValue":0
+                     },
+                     "STAT_STRENGTH":{
+                        "statHash":4244567218,
+                        "value":256,
+                        "maximumValue":0
+                     },
+                     "STAT_LIGHT":{
+                        "statHash":2391494160,
+                        "value":144,
+                        "maximumValue":0
+                     },
+                     "STAT_ARMOR":{
+                        "statHash":392767087,
+                        "value":3,
+                        "maximumValue":0
+                     },
+                     "STAT_AGILITY":{
+                        "statHash":2996146975,
+                        "value":7,
+                        "maximumValue":0
+                     },
+                     "STAT_RECOVERY":{
+                        "statHash":1943323491,
+                        "value":7,
+                        "maximumValue":0
+                     },
+                     "STAT_OPTICS":{
+                        "statHash":3555269338,
+                        "value":53,
+                        "maximumValue":0
+                     }
+                  },
+                  "customization":{
+                     "personality":2166136261,
+                     "face":4017475055,
+                     "skinColor":743423461,
+                     "lipColor":156633750,
+                     "eyeColor":4187018151,
+                     "hairColor":1992135328,
+                     "featureColor":2166136261,
+                     "decalColor":1770479591,
+                     "wearHelmet":false,
+                     "hairIndex":12,
+                     "featureIndex":0,
+                     "decalIndex":8
+                  },
+                  "grimoireScore":2585,
+                  "peerView":{
+                     "equipment":[
+                        {
+                           "itemHash":3828867689,
+                           "dyes":[
+
+                           ]
+                        },
+                        {
+                           "itemHash":3455371673,
+                           "dyes":[
+                              {
+                                 "channelHash":662199250,
+                                 "dyeHash":4168297850
+                              },
+                              {
+                                 "channelHash":1367384683,
+                                 "dyeHash":2711136537
+                              },
+                              {
+                                 "channelHash":218592586,
+                                 "dyeHash":689527522
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":3338086101,
+                           "dyes":[
+                              {
+                                 "channelHash":662199250,
+                                 "dyeHash":789637384
+                              },
+                              {
+                                 "channelHash":1367384683,
+                                 "dyeHash":2691267825
+                              },
+                              {
+                                 "channelHash":218592586,
+                                 "dyeHash":3137458580
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":2966036517,
+                           "dyes":[
+                              {
+                                 "channelHash":662199250,
+                                 "dyeHash":659689519
+                              },
+                              {
+                                 "channelHash":1367384683,
+                                 "dyeHash":1664797271
+                              },
+                              {
+                                 "channelHash":218592586,
+                                 "dyeHash":863822665
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":619241014,
+                           "dyes":[
+                              {
+                                 "channelHash":662199250,
+                                 "dyeHash":789637385
+                              },
+                              {
+                                 "channelHash":1367384683,
+                                 "dyeHash":2691267824
+                              },
+                              {
+                                 "channelHash":218592586,
+                                 "dyeHash":3137458581
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":534017969,
+                           "dyes":[
+                              {
+                                 "channelHash":662199250,
+                                 "dyeHash":2309489318
+                              },
+                              {
+                                 "channelHash":1367384683,
+                                 "dyeHash":4170385287
+                              },
+                              {
+                                 "channelHash":218592586,
+                                 "dyeHash":4120174566
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":1040188249,
+                           "dyes":[
+                              {
+                                 "channelHash":1667433279,
+                                 "dyeHash":401101184
+                              },
+                              {
+                                 "channelHash":1667433278,
+                                 "dyeHash":3599482519
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":2167009337,
+                           "dyes":[
+                              {
+                                 "channelHash":1667433279,
+                                 "dyeHash":1365861629
+                              },
+                              {
+                                 "channelHash":1667433278,
+                                 "dyeHash":1477711958
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":1883086571,
+                           "dyes":[
+                              {
+                                 "channelHash":1667433279,
+                                 "dyeHash":1355270032
+                              },
+                              {
+                                 "channelHash":1667433278,
+                                 "dyeHash":1607044263
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":526316387,
+                           "dyes":[
+                              {
+                                 "channelHash":284967655,
+                                 "dyeHash":2090051647
+                              },
+                              {
+                                 "channelHash":840921382,
+                                 "dyeHash":52698514
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":3703598457,
+                           "dyes":[
+                              {
+                                 "channelHash":2025709351,
+                                 "dyeHash":794303093
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":1040215532,
+                           "dyes":[
+                              {
+                                 "channelHash":4023194814,
+                                 "dyeHash":1242556826
+                              }
+                           ]
+                        },
+                        {
+                           "itemHash":1443409297,
+                           "dyes":[
+
+                           ]
+                        },
+                        {
+                           "itemHash":4248210736,
+                           "dyes":[
+
+                           ]
+                        }
+                     ]
+                  },
+                  "genderType":0,
+                  "classType":2,
+                  "buildStatGroupHash":2172613790
+               },
+               "levelProgression":{
+                  "dailyProgress":20650,
+                  "weeklyProgress":64000,
+                  "currentProgress":5429712,
+                  "level":67,
+                  "step":0,
+                  "progressToNextLevel":69712,
+                  "nextLevelAt":80000,
+                  "progressionHash":2030054750
+               },
+               "emblemPath":"/common/destiny_content/icons/ca7a9bb4a45b7d33a4848577a67cfa33.jpg",
+               "backgroundPath":"/common/destiny_content/icons/0fc2957b437530a6fec4b241257089bd.jpg",
+               "emblemHash":1443409297,
+               "characterLevel":32,
+               "baseCharacterLevel":20,
+               "isPrestigeLevel":true,
+               "percentToNextLevel":0.0
+            }
+         ],
+         "clanName":"TTL Gunslingers",
+         "clanTag":"TTL",
+         "inventory":{
+            "buckets":{
+               "Invisible":[
+
+               ],
+               "Item":[
+
+               ],
+               "Currency":[
+
+               ]
+            },
+            "currencies":[
+               {
+                  "itemHash":3159615086,
+                  "value":24576
+               }
+            ]
+         },
+         "grimoireScore":2585
+      }
+   },
+   "ErrorCode":1,
+   "ThrottleSeconds":0,
+   "ErrorStatus":"Success",
+   "Message":"Ok",
+   "MessageData":{
+
+   }
+}</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2f">https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2f</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

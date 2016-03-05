@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetAllGroupsForMember | GroupService | GroupService / GetAllGroupsForMember</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/GroupService/GetAllGroupsForMember.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>GroupService / GetAllGroupsForMember</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Get all groups for a given user.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/User/{membershipId}/All/">/Group/User/{membershipId}/All/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#GroupService">GroupService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>membershipId</td>
+<td>A valid Bungie.net membershipId.</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clanonly</td>
+<td>true or false. Default false.</td>
+</tr>
+<tr>
+<td>populatefriends</td>
+<td>true or false. Default false.</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Group/68974/All/">https://www.bungie.net/Platform/Group/68974/All/</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "founders": [
+            {
+                "membershipId": "68974",
+                "uniqueName": "dazarobbo",
+                "displayName": "dazarobbo",
+                "profilePicture": -3,
+                "profileTheme": 54,
+                "userTitle": 0,
+                "successMessageFlags": "0",
+                "isDeleted": false,
+                "about": "Got a question or have something to say? Read here first: http:\/\/goo.gl\/25Thhj",
+                "firstAccess": "2007-09-30T11:39:45.6Z",
+                "lastUpdate": "2015-05-11T18:42:37.392Z",
+                "context": {
+                    "isFollowing": false,
+                    "ignoreStatus": {
+                        "isIgnored": false,
+                        "ignoreFlags": 0
+                    }
+                },
+                "showActivity": true,
+                "followerCount": 238,
+                "followingUserCount": 1,
+                "locale": "en",
+                "localeInheritDefault": true,
+                "showGroupMessaging": true,
+                "profilePicturePath": "https:\/\/halo.bungie.net\/Stats\/emblem.ashx?s=90&amp;0=0&amp;1=0&amp;2=0&amp;3=9&amp;fi=47&amp;bi=4&amp;fl=0&amp;m=1",
+                "profileThemeName": "septagon",
+                "userTitleDisplay": "Newbie"
+            },
+            {
+                "membershipId": "5197148",
+                "uniqueName": "5197148",
+                "displayName": "lowlines",
+                "profilePicture": 70525,
+                "profileTheme": 84,
+                "userTitle": 0,
+                "successMessageFlags": "33",
+                "isDeleted": false,
+                "about": "",
+                "firstAccess": "2014-07-18T08:03:04.916Z",
+                "lastUpdate": "2015-06-02T03:27:22.251Z",
+                "context": {
+                    "isFollowing": false,
+                    "ignoreStatus": {
+                        "isIgnored": false,
+                        "ignoreFlags": 0
+                    }
+                },
+                "psnDisplayName": "lowlines",
+                "xboxDisplayName": "Low Lines",
+                "showActivity": true,
+                "followerCount": 48,
+                "followingUserCount": 52,
+                "locale": "en",
+                "localeInheritDefault": true,
+                "showGroupMessaging": true,
+                "profilePicturePath": "\/img\/profile\/avatars\/bungieday_03.jpg",
+                "profileThemeName": "bungieday1303",
+                "userTitleDisplay": "Newbie"
+            }
+        ],
+        "relatedGroups": [
+
+        ],
+        "results": [
+            {
+                "detail": {
+                    "groupId": "39966",
+                    "name": "BungieNetPlatform",
+                    "membershipIdCreated": "68974",
+                    "creationDate": "2013-04-17T10:23:46.69Z",
+                    "modificationDate": "2014-08-24T06:54:42.874Z",
+                    "groupType": 0,
+                    "about": "Documentation for the BungieNetPlatform API.",
+                    "isDeleted": false,
+                    "tags": [
+                        "#programming",
+                        "#BungieNetPlatform",
+                        "#api"
+                    ],
+                    "rating": 100,
+                    "ratingCount": 1164,
+                    "memberCount": 1018,
+                    "pendingMemberCount": 0,
+                    "isPublic": true,
+                    "isMembershipClosed": false,
+                    "isMembershipReviewed": false,
+                    "isPublicTopicAdminOnly": false,
+                    "primaryAlliedGroupId": "0",
+                    "clanCallsign": "",
+                    "allowChat": true,
+                    "isDefaultPostPublic": true,
+                    "isDefaultPostAlliance": false,
+                    "chatSecurity": 1,
+                    "locale": "en",
+                    "avatarImageIndex": 70000,
+                    "founderMembershipId": "68974",
+                    "homepage": 1,
+                    "membershipOption": 1,
+                    "defaultPublicity": 0,
+                    "theme": "Group_Community3",
+                    "bannerPath": "\/img\/Themes\/Group_Community3\/struct_images\/group_top_banner.jpg",
+                    "avatarPath": "\/img\/profile\/avatars\/group\/defaultGroup.png",
+                    "isAllianceOwner": false,
+                    "conversationId": "3780924",
+                    "clanReviewType": 1,
+                    "enableInvitationMessagingForAdmins": true
+                },
+                "founderMembershipId": "68974",
+                "founder": {
+                    "membershipId": "68974",
+                    "uniqueName": "dazarobbo",
+                    "displayName": "dazarobbo",
+                    "profilePicture": -3,
+                    "profileTheme": 54,
+                    "userTitle": 0,
+                    "successMessageFlags": "0",
+                    "isDeleted": false,
+                    "about": "Got a question or have something to say? Read here first: http:\/\/goo.gl\/25Thhj",
+                    "firstAccess": "2007-09-30T11:39:45.6Z",
+                    "lastUpdate": "2015-05-11T18:42:37.392Z",
+                    "context": {
+                        "isFollowing": false,
+                        "ignoreStatus": {
+                            "isIgnored": false,
+                            "ignoreFlags": 0
+                        }
+                    },
+                    "showActivity": true,
+                    "followerCount": 238,
+                    "followingUserCount": 1,
+                    "locale": "en",
+                    "localeInheritDefault": true,
+                    "showGroupMessaging": true,
+                    "profilePicturePath": "https:\/\/halo.bungie.net\/Stats\/emblem.ashx?s=90&amp;0=0&amp;1=0&amp;2=0&amp;3=9&amp;fi=47&amp;bi=4&amp;fl=0&amp;m=1",
+                    "profileThemeName": "septagon",
+                    "userTitleDisplay": "Newbie"
+                },
+                "followerCount": 1140,
+                "currentUserStatus": {
+                    "isFollowing": true,
+                    "membershipStatus": {
+                        "Response": {
+                            "clanMembershipTypes": [
+
+                            ],
+                            "user": {
+                                "membershipId": "5197148",
+                                "uniqueName": "5197148",
+                                "displayName": "lowlines",
+                                "profilePicture": 70525,
+                                "profileTheme": 84,
+                                "userTitle": 0,
+                                "successMessageFlags": "33",
+                                "isDeleted": false,
+                                "about": "",
+                                "firstAccess": "2014-07-18T08:03:04.916Z",
+                                "lastUpdate": "2015-06-02T03:27:22.251Z",
+                                "context": {
+                                    "isFollowing": false,
+                                    "ignoreStatus": {
+                                        "isIgnored": false,
+                                        "ignoreFlags": 0
+                                    }
+                                },
+                                "psnDisplayName": "lowlines",
+                                "xboxDisplayName": "Low Lines",
+                                "showActivity": true,
+                                "followerCount": 48,
+                                "followingUserCount": 52,
+                                "locale": "en",
+                                "localeInheritDefault": true,
+                                "showGroupMessaging": true,
+                                "profilePicturePath": "\/img\/profile\/avatars\/bungieday_03.jpg",
+                                "profileThemeName": "bungieday1303",
+                                "userTitleDisplay": "Newbie"
+                            },
+                            "hasPendingApplication": false,
+                            "hasRated": false,
+                            "approvalDate": "2015-02-27T01:27:46.191Z",
+                            "approvedByMembershipId": "5197148",
+                            "rating": 0,
+                            "groupId": "39966",
+                            "membershipType": 0,
+                            "membershipId": "5197148",
+                            "isMember": true,
+                            "memberType": 0,
+                            "isOriginalFounder": false
+                        },
+                        "ErrorCode": 1,
+                        "ThrottleSeconds": 0,
+                        "ErrorStatus": "Success",
+                        "MessageData": {
+
+                        }
+                    }
+                },
+                "alliedIds": [
+
+                ],
+                "attributes": [
+                    {
+                        "attributeId": 1,
+                        "minValue": 0,
+                        "maxValue": 100
+                    },
+                    {
+                        "attributeId": 2,
+                        "minValue": 0,
+                        "maxValue": 100
+                    },
+                    {
+                        "attributeId": 3,
+                        "minValue": 0,
+                        "maxValue": 100
+                    },
+                    {
+                        "attributeId": 4,
+                        "minValue": 0,
+                        "maxValue": 0
+                    },
+                    {
+                        "attributeId": 5,
+                        "minValue": 0,
+                        "maxValue": 0
+                    },
+                    {
+                        "attributeId": 6,
+                        "minValue": 0,
+                        "maxValue": 0
+                    },
+                    {
+                        "attributeId": 7,
+                        "minValue": 0,
+                        "maxValue": 0
+                    },
+                    {
+                        "attributeId": 8,
+                        "minValue": 0,
+                        "maxValue": 0
+                    }
+                ],
+                "membershipIds": [
+
+                ],
+                "clanMembershipTypes": [
+
+                ],
+                "allianceStatus": 0,
+                "friends": [
+
+                ],
+                "groupJoinRequestCount": 0,
+                "groupJoinInviteCount": 0,
+                "clanJoinRequestCount": 0,
+                "clanJoinInviteCount": 0
+            }
+        ],
+        "totalResults": "2",
+        "hasMore": false,
+        "query": {
+            "itemsPerPage": 50,
+            "currentPage": 1
+        },
+        "useTotalResults": false
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

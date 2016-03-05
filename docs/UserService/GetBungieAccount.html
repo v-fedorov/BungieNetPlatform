@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetBungieAccount | UserService | UserService / GetBungieAccount</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/UserService/GetBungieAccount.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>UserService / GetBungieAccount</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns the account information for the given membershipId and type, including any exposed BungieNet and Destiny information. Will respect privacy of links based on requesting user for anonymous requests.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/User/GetBungieAccount/{membershipId}/{membershipType}/">/User/GetBungieAccount/{membershipId}/{membershipType}/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#UserService">UserService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>membershipId</td>
+<td>Destiny membership ID.</td>
+</tr>
+<tr>
+<td>membershipType</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/User/GetBungieAccount/8011/254/">https://www.bungie.net/Platform/User/GetBungieAccount/8011/254/</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "destinyAccountResult": 1,
+        "destinyAccounts": [
+            {
+                "userInfo": {
+                    "iconPath": "\/common\/destiny_content\/icons\/ca7a9bb4a45b7d33a4848577a67cfa33.jpg",
+                    "membershipType": 1,
+                    "membershipId": "4611686018429501017",
+                    "displayName": "DeeJ BNG"
+                },
+                "grimoireScore": 2625,
+                "clanName": "TTL Gunslingers",
+                "clanTag": "TTL",
+                "characters": [
+                    {
+                        "characterId": "2305843009292996472",
+                        "raceHash": 898834093,
+                        "genderHash": 3111576190,
+                        "classHash": 2271682572,
+                        "emblemHash": 1443409297,
+                        "race": {
+                            "raceHash": 898834093,
+                            "raceType": 2,
+                            "raceName": "Exo",
+                            "raceNameMale": "Exo Male",
+                            "raceNameFemale": "Exo Female",
+                            "raceDescription": "Self-aware machines built for a long-forgotten war."
+                        },
+                        "gender": {
+                            "genderHash": 3111576190,
+                            "genderType": 0,
+                            "genderName": "Male",
+                            "genderDescription": "###Missing String: lc en index 50 hash 2652775957 name gender_male_description###"
+                        },
+                        "characterClass": {
+                            "classHash": 2271682572,
+                            "classType": 2,
+                            "className": "Warlock",
+                            "classNameMale": "Warlock",
+                            "classNameFemale": "Warlock",
+                            "classIdentifier": "CLASS_WARLOCK",
+                            "mentorVendorIdentifier": "VENDOR_WARLOCK_MENTOR"
+                        },
+                        "emblemPath": "\/common\/destiny_content\/icons\/ca7a9bb4a45b7d33a4848577a67cfa33.jpg",
+                        "backgroundPath": "\/common\/destiny_content\/icons\/0fc2957b437530a6fec4b241257089bd.jpg",
+                        "level": 32,
+                        "powerLevel": 32,
+                        "dateLastPlayed": "2015-05-31T06:37:38Z",
+                        "membershipId": "4611686018429501017",
+                        "membershipType": 1,
+                        "levelProgression": {
+                            "dailyProgress": 26515,
+                            "weeklyProgress": 42025,
+                            "currentProgress": 5498447,
+                            "level": 68,
+                            "step": 0,
+                            "progressToNextLevel": 58447,
+                            "nextLevelAt": 80000,
+                            "progressionHash": 2030054750
+                        },
+                        "isPrestigeLevel": true,
+                        "genderType": 0,
+                        "classType": 2,
+                        "percentToNextLevel": 0
+                    }
+                ],
+                "lastPlayed": "0001-01-01T00:00:00Z"
+            },
+            {
+                "userInfo": {
+                    "iconPath": "\/common\/destiny_content\/icons\/ca7a9bb4a45b7d33a4848577a67cfa33.jpg",
+                    "membershipType": 2,
+                    "membershipId": "4611686018428388138",
+                    "displayName": "DeeJ_BNG"
+                },
+                "grimoireScore": 2260,
+                "clanName": "TTL Gunslingers",
+                "clanTag": "TTL",
+                "characters": [
+                    {
+                        "characterId": "2305843009267191713",
+                        "raceHash": 898834093,
+                        "genderHash": 3111576190,
+                        "classHash": 2271682572,
+                        "emblemHash": 1443409297,
+                        "race": {
+                            "raceHash": 898834093,
+                            "raceType": 2,
+                            "raceName": "Exo",
+                            "raceNameMale": "Exo Male",
+                            "raceNameFemale": "Exo Female",
+                            "raceDescription": "Self-aware machines built for a long-forgotten war."
+                        },
+                        "gender": {
+                            "genderHash": 3111576190,
+                            "genderType": 0,
+                            "genderName": "Male",
+                            "genderDescription": "###Missing String: lc en index 50 hash 2652775957 name gender_male_description###"
+                        },
+                        "characterClass": {
+                            "classHash": 2271682572,
+                            "classType": 2,
+                            "className": "Warlock",
+                            "classNameMale": "Warlock",
+                            "classNameFemale": "Warlock",
+                            "classIdentifier": "CLASS_WARLOCK",
+                            "mentorVendorIdentifier": "VENDOR_WARLOCK_MENTOR"
+                        },
+                        "emblemPath": "\/common\/destiny_content\/icons\/ca7a9bb4a45b7d33a4848577a67cfa33.jpg",
+                        "backgroundPath": "\/common\/destiny_content\/icons\/0fc2957b437530a6fec4b241257089bd.jpg",
+                        "level": 31,
+                        "powerLevel": 31,
+                        "dateLastPlayed": "2015-05-08T05:18:38Z",
+                        "membershipId": "4611686018428388138",
+                        "membershipType": 2,
+                        "levelProgression": {
+                            "dailyProgress": 29971,
+                            "weeklyProgress": 29971,
+                            "currentProgress": 4895440,
+                            "level": 61,
+                            "step": 0,
+                            "progressToNextLevel": 15440,
+                            "nextLevelAt": 80000,
+                            "progressionHash": 2030054750
+                        },
+                        "isPrestigeLevel": true,
+                        "genderType": 0,
+                        "classType": 2,
+                        "percentToNextLevel": 25
+                    }
+                ],
+                "lastPlayed": "0001-01-01T00:00:00Z"
+            }
+        ],
+        "bungieNetUser": {
+            "membershipId": "8011",
+            "uniqueName": "DeeJ",
+            "displayName": "DeeJ",
+            "profilePicture": 770057,
+            "profileTheme": 67,
+            "userTitle": 0,
+            "successMessageFlags": "59",
+            "isDeleted": false,
+            "about": "Your friendly neighborhood Community Manager.",
+            "firstAccess": "2004-10-29T18:14:49.77Z",
+            "lastUpdate": "2015-02-27T23:28:26.83Z",
+            "context": {
+                "isFollowing": false,
+                "ignoreStatus": {
+                    "isIgnored": false,
+                    "ignoreFlags": 0
+                }
+            },
+            "psnDisplayName": "DeeJ_BNG",
+            "xboxDisplayName": "DeeJ BNG",
+            "showActivity": true,
+            "followerCount": 15445,
+            "followingUserCount": 264,
+            "locale": "en",
+            "localeInheritDefault": true,
+            "showGroupMessaging": true,
+            "profilePicturePath": "\/img\/profile\/avatars\/admin\/deej_icon.jpg",
+            "profileThemeName": "Destiny2",
+            "userTitleDisplay": "Newbie"
+        },
+        "clans": [
+            {
+                "groupId": "681",
+                "platformType": 1
+            },
+            {
+                "groupId": "681",
+                "platformType": 2
+            }
+        ],
+        "relatedGroups": {
+            "681": {
+                "groupId": "681",
+                "name": "TTL Gunslingers",
+                "membershipIdCreated": "8011",
+                "creationDate": "2005-10-28T07:42:20.437Z",
+                "modificationDate": "2014-09-07T16:43:04.149Z",
+                "groupType": 0,
+                "about": "United by a common code of conduct, we uphold a time-honored standard for sportsmanship and fair-play. We fight with honor and a light heart, but with an intention to carry the day. At the conclusion of a match, in either victory or defeat, you can expect to hear little else from us than \u201cGood Game!\u201d",
+                "isDeleted": false,
+                "deletionDate": "2001-01-01T00:00:00Z",
+                "deletedByMembershipId": "0",
+                "tags": [
+
+                ],
+                "rating": 100,
+                "ratingCount": 1489,
+                "memberCount": 83,
+                "pendingMemberCount": 13,
+                "isPublic": false,
+                "isMembershipClosed": false,
+                "isMembershipReviewed": true,
+                "isPublicTopicAdminOnly": true,
+                "primaryAlliedGroupId": "0",
+                "motto": "We are one from many. We deal in lead.",
+                "clanCallsign": "TTL",
+                "allowChat": false,
+                "isDefaultPostPublic": false,
+                "isDefaultPostAlliance": false,
+                "chatSecurity": 0,
+                "locale": "en",
+                "avatarImageIndex": 70018,
+                "founderMembershipId": "8011",
+                "homepage": 1,
+                "membershipOption": 0,
+                "defaultPublicity": 2,
+                "theme": "Group_Guns",
+                "bannerPath": "\/img\/Themes\/Group_Guns\/struct_images\/group_top_banner.jpg",
+                "avatarPath": "\/img\/profile\/avatars\/group\/018.jpg",
+                "isAllianceOwner": false,
+                "conversationId": "3781016",
+                "clanReviewType": 1,
+                "enableInvitationMessagingForAdmins": true
+            }
+        }
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="http://www.bungie.net/platform/user/help/HelpDetail/GET?uri=GetBungieAccount%2f%7bmembershipId%7d%2f%7bmembershipType%7d%2f">http://www.bungie.net/platform/user/help/HelpDetail/GET?uri=GetBungieAccount%2f%7bmembershipId%7d%2f%7bmembershipType%7d%2f</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetConversationsV5 | MessageService | MessageService / GetConversationsV5</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/MessageService/GetConversationsV5.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>MessageService / GetConversationsV5</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns a paged list of conversations for the current user.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Message/GetConversationsV5/{h}/">/Message/GetConversationsV5/{h}/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#MessageService">MessageService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>format</td>
+<td>Unknown. Default is 0.</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Message/GetConversationsV5/1/">https://www.bungie.net/Platform/Message/GetConversationsV5/1/</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "users": {
+            "5197148": {
+                "membershipId": "5197148",
+                "uniqueName": "5197148",
+                "displayName": "lowlines",
+                "profilePicture": 70525,
+                "profileTheme": 84,
+                "userTitle": 0,
+                "successMessageFlags": "33",
+                "isDeleted": false,
+                "about": "",
+                "firstAccess": "2014-07-18T08:03:04.916Z",
+                "lastUpdate": "2015-06-02T03:27:22.251Z",
+                "context": {
+                    "isFollowing": false,
+                    "ignoreStatus": {
+                        "isIgnored": false,
+                        "ignoreFlags": 0
+                    }
+                },
+                "psnDisplayName": "lowlines",
+                "xboxDisplayName": "Low Lines",
+                "showActivity": true,
+                "followerCount": 48,
+                "followingUserCount": 52,
+                "locale": "en",
+                "localeInheritDefault": true,
+                "showGroupMessaging": true,
+                "profilePicturePath": "\/img\/profile\/avatars\/bungieday_03.jpg",
+                "profileThemeName": "bungieday1303",
+                "userTitleDisplay": "Newbie"
+            }
+        },
+        "invitationDetails": {
+            "3624621": {
+                "invitationId": "3624621",
+                "membershipId": "5197148",
+                "resolutionStatus": 0,
+                "expireDate": "2015-01-28T17:44:22.813Z",
+                "invitationType": 4,
+                "requestingObjectId": "463037",
+                "targetObjectId": "5197148",
+                "requestMessage": "[redacted]",
+                "responseMessage": "This invitation has expired.",
+                "responseCode": "",
+                "hasExpired": true,
+                "message": "[redacted]",
+                "membershipIdCreated": "7847916",
+                "canRespond": false
+            }
+        },
+        "groups": {
+
+        },
+        "unreadCount": 0,
+        "results": [
+            {
+                "detail": {
+                    "conversationId": "10965982",
+                    "memberFromId": "6208552",
+                    "dateStarted": "2015-06-03T16:05:21.155Z",
+                    "totalMessageCount": 5,
+                    "lastMessageSent": "2015-06-03T18:06:22.525Z",
+                    "lastMessageId": "55651884",
+                    "isGlobal": false,
+                    "isLocked": false,
+                    "invitationId": "0",
+                    "starter": "6208552",
+                    "lastRead": "2015-06-04T00:52:15.063Z",
+                    "status": 1,
+                    "body": "[redacted]",
+                    "isAutoResponse": false,
+                    "isRead": true,
+                    "ownerEntityId": "0",
+                    "ownerEntityType": 0,
+                    "targetMembershipId": "5197148"
+                },
+                "participants": [
+                    {
+                        "membershipId": "5197148",
+                        "isDeleted": false
+                    },
+                    {
+                        "membershipId": "6208552",
+                        "isDeleted": false
+                    }
+                ]
+            }
+        ],
+        "totalResults": "10",
+        "hasMore": true,
+        "query": {
+            "itemsPerPage": 10,
+            "currentPage": 1
+        },
+        "useTotalResults": false
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

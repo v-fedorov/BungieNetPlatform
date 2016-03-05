@@ -1,0 +1,112 @@
+body {
+	background: rgb(18, 22, 27);
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+
+	color: fade(rgb(245, 245, 245), 65%);
+
+	strong {
+		color: #fff;
+	}
+}
+
+h1 {
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	&:hover, &:focus {
+		color: #fff;
+	}
+}
+
+#top {
+	background: #2a333e;
+	border: none;
+	box-shadow: 0 0 10px fade(#000, 50%);
+	border-radius: 0;
+	margin: 0;
+
+	.navbar-nav > li > a {
+		text-shadow: none;
+	}
+	a {
+		color: #fff;
+	}
+	.active a, a:hover, a:focus {
+		background: fade(#000, 20%);
+	}
+	#forkme_banner {
+		background: url('../images/blacktocat.png') #0090ff no-repeat 92% 50%;
+		padding-right: 52px;
+	}
+}
+#header {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	background: fade(#000, 30%);
+	border-bottom: 2px solid;
+	margin-bottom: 30px;
+}
+#content {
+	.inner {
+		background: fade(rgb(245, 245, 245), 5%);
+		padding: 20px;
+		p {
+			margin: 0;
+		}
+		.table {
+			word-break: break-word;
+		}
+		.table, .table th, .table td {
+			border-color: fade(rgb(245, 245, 245), 10%);
+		}
+		.table th {
+			border-bottom: none;
+			width: 80px;
+		}
+		.table td {
+			color: fade(rgb(245, 245, 245), 65%);
+		}
+		h2, h3, h4, h5, h6 {
+			color: rgb(242, 193, 97);
+			text-transform: uppercase;
+		}
+		h2 {
+			font-size: 1.3em;
+			border-bottom: 1px solid fade(rgb(245, 245, 245), 10%);
+			padding-bottom: 10px;
+			margin-bottom: 15px;
+		}
+		h3, h4, h5, h6 {
+			color: #fff;
+			font-size: 1em;
+		}
+
+		pre {
+			border: none;
+			border-radius: 0;
+			background: fade(rgb(245,245,245), 5%);
+			margin-top: 10px;
+			code {
+				background: none;
+				color: #fff;
+				.hljs-string {
+					color: rgb(242, 193, 97);
+				}
+				.hljs-number {
+					color: #5ea16a;
+				}
+			}
+		}
+	}
+}
+#footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 100px;
+	background: fade(#000, 30%);
+}

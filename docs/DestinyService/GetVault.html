@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetVault | DestinyService | DestinyService / GetVault</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/DestinyService/GetVault.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DestinyService / GetVault</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns the contents of player's Vault.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/{membershipType}/MyAccount/Vault/">/Destiny/{membershipType}/MyAccount/Vault/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>membershipType</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>definitions</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>accountId</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Destiny/2/MyAccount/Vault/?accountId=4611686018428939884">https://www.bungie.net/Platform/Destiny/2/MyAccount/Vault/?accountId=4611686018428939884</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "data": {
+            "buckets": [
+                {
+                    "items": [
+                        {
+                            "itemHash": 1096028869,
+                            "bindStatus": 0,
+                            "isEquipped": false,
+                            "itemInstanceId": "6917529042526510940",
+                            "itemLevel": 20,
+                            "stackSize": 1,
+                            "qualityLevel": 60,
+                            "stats": [
+                                {
+                                    "statHash": 2391494160,
+                                    "value": 30,
+                                    "maximumValue": 0
+                                }
+                            ],
+                            "primaryStat": {
+                                "statHash": 3897883278,
+                                "value": 402,
+                                "maximumValue": 0
+                            },
+                            "canEquip": false,
+                            "equipRequiredLevel": 20,
+                            "unlockFlagHashRequiredToEquip": 3720682193,
+                            "cannotEquipReason": 16,
+                            "damageType": 0,
+                            "damageTypeNodeIndex": -1,
+                            "damageTypeStepIndex": -1,
+                            "progression": {
+                                "dailyProgress": 0,
+                                "weeklyProgress": 0,
+                                "currentProgress": 127500,
+                                "level": 9,
+                                "step": 0,
+                                "progressToNextLevel": 0,
+                                "nextLevelAt": 17000,
+                                "progressionHash": 262790308
+                            },
+                            "talentGridHash": 1542531262,
+                            "nodes": [
+                                {
+                                    "isActivated": false,
+                                    "stepIndex": 0,
+                                    "state": 0,
+                                    "hidden": false,
+                                    "nodeHash": 2355026416
+                                }
+                            ],
+                            "useCustomDyes": false,
+                            "artRegions": {
+
+                            },
+                            "isEquipment": true,
+                            "isGridComplete": false,
+                            "perks": [
+                                {
+                                    "iconPath": "\/common\/destiny_content\/icons\/7bae5fb01662288f1e2dbb528af9f4dc.png",
+                                    "perkHash": 2152652275,
+                                    "isActive": true
+                                }
+                            ],
+                            "location": 2,
+                            "transferStatus": 0,
+                            "locked": false,
+                            "lockable": true
+                        }
+                    ],
+                    "bucketHash": 3003523923
+                }
+            ]
+        }
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

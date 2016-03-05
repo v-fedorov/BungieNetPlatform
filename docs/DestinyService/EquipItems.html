@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>EquipItems | DestinyService | DestinyService / EquipItems</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/DestinyService/EquipItems.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DestinyService / EquipItems</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Equips multiple items from a character's inventory and returns the updated inventory and character information. The endpoint will fail if the character is logged in and doing an activity.</p>
+<ul>
+<li><strong>URI:</strong> <a href="/docs/DestinyService/EquipItems.html">/Destiny/EquipItems/</a></li>
+<li><strong>Method:</strong> POST</li>
+<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h3>JSON POST Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>membershipType</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>characterId</td>
+<td>A valid characterId associated with the logged in account.</td>
+</tr>
+<tr>
+<td>itemIds][</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<p>POST <a href="/docs/DestinyService/EquipItems.html">https://www.bungie.net/Platform/Destiny/EquipItems/</a></p>
+<pre><code class="javascript">{
+    "membershipType": 2,
+    "characterId": "2305843009234425075",
+    "itemIds": [
+        "6917529044280138738"
+    ]
+}</code></pre>
+<pre><code class="javascript">{
+    "Response": {
+        "equipResults": [
+            {
+                "itemInstanceId": "6917529044280138738",
+                "equipStatus": 1
+            }
+        ],
+        "character": {
+            "characterBase": {
+                "membershipId": "4611686018428939884",
+                "membershipType": 2,
+                "characterId": "2305843009234425075",
+                "dateLastPlayed": "2015-05-26T13:02:00Z",
+                "minutesPlayedThisSession": "139",
+                "minutesPlayedTotal": "29170",
+                "powerLevel": 33,
+                "raceHash": 898834093,
+                "genderHash": 2204441813,
+                "classHash": 2271682572,
+                "currentActivityHash": 0,
+                "lastCompletedStoryHash": 0,
+                "stats": {
+                    "STAT_DEFENSE": {
+                        "statHash": 3897883278,
+                        "value": 1706,
+                        "maximumValue": 0
+                    },
+                    "STAT_INTELLECT": {
+                        "statHash": 144602215,
+                        "value": 151,
+                        "maximumValue": 0
+                    },
+                    "STAT_DISCIPLINE": {
+                        "statHash": 1735777505,
+                        "value": 71,
+                        "maximumValue": 0
+                    },
+                    "STAT_STRENGTH": {
+                        "statHash": 4244567218,
+                        "value": 293,
+                        "maximumValue": 0
+                    },
+                    "STAT_LIGHT": {
+                        "statHash": 2391494160,
+                        "value": 156,
+                        "maximumValue": 0
+                    },
+                    "STAT_ARMOR": {
+                        "statHash": 392767087,
+                        "value": 8,
+                        "maximumValue": 0
+                    },
+                    "STAT_AGILITY": {
+                        "statHash": 2996146975,
+                        "value": 3,
+                        "maximumValue": 0
+                    },
+                    "STAT_RECOVERY": {
+                        "statHash": 1943323491,
+                        "value": 6,
+                        "maximumValue": 0
+                    },
+                    "STAT_OPTICS": {
+                        "statHash": 3555269338,
+                        "value": 60,
+                        "maximumValue": 0
+                    }
+                },
+                "customization": {
+                    "personality": 2166136261,
+                    "face": 2552882599,
+                    "skinColor": 2808827061,
+                    "lipColor": 1955118884,
+                    "eyeColor": 4187018148,
+                    "hairColor": 1273209244,
+                    "featureColor": 2166136261,
+                    "decalColor": 424152528,
+                    "wearHelmet": false,
+                    "hairIndex": 13,
+                    "featureIndex": 0,
+                    "decalIndex": 0
+                },
+                "grimoireScore": 3405,
+                "peerView": {
+                    "equipment": [
+                        {
+                            "itemHash": 2771018502,
+                            "dyes": [
+                                {
+                                    "channelHash": 662199250,
+                                    "dyeHash": 1824360987
+                                },
+                                {
+                                    "channelHash": 1367384683,
+                                    "dyeHash": 2805582161
+                                },
+                                {
+                                    "channelHash": 218592586,
+                                    "dyeHash": 966603832
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "genderType": 1,
+                "classType": 2,
+                "buildStatGroupHash": 1997970403
+            },
+            "activities": {
+                "dateActivityStarted": "2015-05-26T12:59:17Z",
+                "available": [
+                    {
+                        "activityHash": 2330516073,
+                        "isNew": false,
+                        "canLead": true,
+                        "canJoin": true,
+                        "isCompleted": false,
+                        "isVisible": true
+                    }
+                ]
+            },
+            "directorNodeStates": {
+                "2190037045": {
+                    "1737926756": 4,
+                    "752833399": 3,
+                    "441808144": 3,
+                    "1009484925": 4,
+                    "737338014": 3,
+                    "3970856659": 3,
+                    "1077317788": 4,
+                    "2494258635": 4
+                }
+            },
+            "visibleBookHashes": [
+                2190037045,
+                2206814630,
+                2223592403,
+                2240370044,
+                2257147625,
+                2273925146,
+                2290702727,
+                2307480368
+            ],
+            "defaultBookHash": 2190037045,
+            "inventory": {
+                "buckets": {
+                    "Invisible": [
+                        {
+                            "items": [
+                                {
+                                    "itemHash": 2982560407,
+                                    "bindStatus": 0,
+                                    "isEquipped": false,
+                                    "itemInstanceId": "0",
+                                    "itemLevel": 0,
+                                    "stackSize": 12,
+                                    "qualityLevel": 0,
+                                    "stats": [
+
+                                    ],
+                                    "canEquip": false,
+                                    "equipRequiredLevel": 0,
+                                    "unlockFlagHashRequiredToEquip": 0,
+                                    "cannotEquipReason": 0,
+                                    "damageType": 0,
+                                    "damageTypeNodeIndex": -1,
+                                    "damageTypeStepIndex": -1,
+                                    "talentGridHash": 0,
+                                    "nodes": [
+
+                                    ],
+                                    "useCustomDyes": false,
+                                    "artRegions": {
+
+                                    },
+                                    "isEquipment": false,
+                                    "isGridComplete": false,
+                                    "perks": [
+
+                                    ],
+                                    "location": 1,
+                                    "transferStatus": 2,
+                                    "locked": false,
+                                    "lockable": false
+                                }
+                            ],
+                            "bucketHash": 2422292810
+                        }
+                    ],
+                    "Equippable": [],
+                    "Item": [],
+                    "Currency": []
+                },
+                "currencies": [
+                    {
+                        "itemHash": 3159615086,
+                        "value": 24331
+                    }
+                ]
+            },
+            "progressions": {
+                "progressions": [
+                    {
+                        "dailyProgress": 0,
+                        "weeklyProgress": 0,
+                        "currentProgress": 4,
+                        "level": 0,
+                        "step": 0,
+                        "progressToNextLevel": 4,
+                        "nextLevelAt": 50,
+                        "progressionHash": 3122728759
+                    }
+                ],
+                "levelProgression": {
+                    "dailyProgress": 24607,
+                    "weeklyProgress": 24607,
+                    "currentProgress": 10540259,
+                    "level": 131,
+                    "step": 0,
+                    "progressToNextLevel": 60259,
+                    "nextLevelAt": 80000,
+                    "progressionHash": 2030054750
+                },
+                "baseCharacterLevel": 20,
+                "isPrestigeLevel": true,
+                "factionProgressionHash": 3871980777,
+                "percentToNextLevel": 0
+            },
+            "customDyes": [
+                {
+                    "channelHash": 662199250,
+                    "dyeHash": 577498836
+                },
+                {
+                    "channelHash": 218592586,
+                    "dyeHash": 966603832
+                },
+                {
+                    "channelHash": 1367384683,
+                    "dyeHash": 2805582161
+                }
+            ],
+            "characterLevel": 33
+        },
+        "summary": {
+            "characterBase": {
+                "membershipId": "4611686018428939884",
+                "membershipType": 2,
+                "characterId": "2305843009234425075",
+                "dateLastPlayed": "2015-05-26T13:02:00Z",
+                "minutesPlayedThisSession": "139",
+                "minutesPlayedTotal": "29170",
+                "powerLevel": 33,
+                "raceHash": 898834093,
+                "genderHash": 2204441813,
+                "classHash": 2271682572,
+                "currentActivityHash": 0,
+                "lastCompletedStoryHash": 0,
+                "stats": {
+                    "STAT_DEFENSE": {
+                        "statHash": 3897883278,
+                        "value": 1706,
+                        "maximumValue": 0
+                    },
+                    "STAT_INTELLECT": {
+                        "statHash": 144602215,
+                        "value": 151,
+                        "maximumValue": 0
+                    },
+                    "STAT_DISCIPLINE": {
+                        "statHash": 1735777505,
+                        "value": 71,
+                        "maximumValue": 0
+                    },
+                    "STAT_STRENGTH": {
+                        "statHash": 4244567218,
+                        "value": 293,
+                        "maximumValue": 0
+                    },
+                    "STAT_LIGHT": {
+                        "statHash": 2391494160,
+                        "value": 156,
+                        "maximumValue": 0
+                    },
+                    "STAT_ARMOR": {
+                        "statHash": 392767087,
+                        "value": 8,
+                        "maximumValue": 0
+                    },
+                    "STAT_AGILITY": {
+                        "statHash": 2996146975,
+                        "value": 3,
+                        "maximumValue": 0
+                    },
+                    "STAT_RECOVERY": {
+                        "statHash": 1943323491,
+                        "value": 6,
+                        "maximumValue": 0
+                    },
+                    "STAT_OPTICS": {
+                        "statHash": 3555269338,
+                        "value": 60,
+                        "maximumValue": 0
+                    }
+                },
+                "customization": {
+                    "personality": 2166136261,
+                    "face": 2552882599,
+                    "skinColor": 2808827061,
+                    "lipColor": 1955118884,
+                    "eyeColor": 4187018148,
+                    "hairColor": 1273209244,
+                    "featureColor": 2166136261,
+                    "decalColor": 424152528,
+                    "wearHelmet": false,
+                    "hairIndex": 13,
+                    "featureIndex": 0,
+                    "decalIndex": 0
+                },
+                "grimoireScore": 3405,
+                "peerView": {
+                    "equipment": [
+                        {
+                            "itemHash": 2771018502,
+                            "dyes": [
+                                {
+                                    "channelHash": 662199250,
+                                    "dyeHash": 1824360987
+                                },
+                                {
+                                    "channelHash": 1367384683,
+                                    "dyeHash": 2805582161
+                                },
+                                {
+                                    "channelHash": 218592586,
+                                    "dyeHash": 966603832
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "genderType": 1,
+                "classType": 2,
+                "buildStatGroupHash": 1997970403
+            },
+            "levelProgression": {
+                "dailyProgress": 24607,
+                "weeklyProgress": 24607,
+                "currentProgress": 10540259,
+                "level": 131,
+                "step": 0,
+                "progressToNextLevel": 60259,
+                "nextLevelAt": 80000,
+                "progressionHash": 2030054750
+            },
+            "emblemPath": "\/common\/destiny_content\/icons\/a9ac444de02308d1410af8a0c201d177.jpg",
+            "backgroundPath": "\/common\/destiny_content\/icons\/ee90656ee23ceabf4fe6c4b34234d3ca.jpg",
+            "emblemHash": 3656150982,
+            "characterLevel": 33,
+            "baseCharacterLevel": 20,
+            "isPrestigeLevel": true,
+            "percentToNextLevel": 0
+        }
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

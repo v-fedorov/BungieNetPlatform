@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetPublicXurVendor | DestinyService | DestinyService / GetPublicXurVendor</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/DestinyService/GetPublicXurVendor.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DestinyService / GetPublicXurVendor</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns advisor information about the vendor Xur in Destiny.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Advisors/Xur/">/Destiny/Advisors/Xur/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>definitions</td>
+<td>Include definitions in the response; true or false.</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Destiny/Advisors/Xur/">https://www.bungie.net/Platform/Destiny/Advisors/Xur/</a>
+When Xur isn't available.```javascript
+{
+&quot;Response&quot;: {</p>
+<pre><code>},
+"ErrorCode": 1,
+"ThrottleSeconds": 0,
+"ErrorStatus": "Success",
+"Message": "Ok",
+"MessageData": {
+
+}</code></pre>
+<p>}</p>
+<pre><code>When Xur is available.```javascript
+{
+   "Response":{
+      "data":{
+         "vendorHash":2796397637,
+         "ackState":{
+            "needsAck":false,
+            "ackId":""
+         },
+         "nextRefreshDate":"2015-06-12T09:00:00Z",
+         "enabled":true,
+         "saleItemCategories":[
+            {
+               "categoryTitle":"Exotic Gear",
+               "saleItems":[
+                  {
+                     "item":{
+                        "itemHash":2994845059,
+                        "bindStatus":0,
+                        "isEquipped":false,
+                        "itemInstanceId":"0",
+                        "itemLevel":24,
+                        "stackSize":1,
+                        "qualityLevel":70,
+                        "stats":[
+                           {
+                              "statHash":2391494160,
+                              "value":36,
+                              "maximumValue":0
+                           },
+                           {
+                              "statHash":144602215,
+                              "value":111,
+                              "maximumValue":0
+                           },
+                           {
+                              "statHash":1735777505,
+                              "value":0,
+                              "maximumValue":0
+                           },
+                           {
+                              "statHash":4244567218,
+                              "value":0,
+                              "maximumValue":0
+                           }
+                        ],
+                        "primaryStat":{
+                           "statHash":3897883278,
+                           "value":451,
+                           "maximumValue":0
+                        },
+                        "canEquip":false,
+                        "equipRequiredLevel":20,
+                        "unlockFlagHashRequiredToEquip":2166136261,
+                        "cannotEquipReason":2,
+                        "damageType":0,
+                        "damageTypeNodeIndex":-1,
+                        "damageTypeStepIndex":-1,
+                        "progression":{
+                           "dailyProgress":0,
+                           "weeklyProgress":0,
+                           "currentProgress":0,
+                           "level":0,
+                           "step":0,
+                           "progressToNextLevel":0,
+                           "nextLevelAt":0,
+                           "progressionHash":2043912351
+                        },
+                        "talentGridHash":4175720268,
+                        "nodes":[
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":835183238
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":1144665524
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":3428940937
+                           },
+                           {
+                              "isActivated":true,
+                              "stepIndex":0,
+                              "state":10,
+                              "hidden":true,
+                              "nodeHash":1777049967
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":3452924987
+                           },
+                           {
+                              "isActivated":true,
+                              "stepIndex":0,
+                              "state":10,
+                              "hidden":true,
+                              "nodeHash":3330202799
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":4076480290
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":1173110174
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":7,
+                              "hidden":false,
+                              "nodeHash":99489719
+                           },
+                           {
+                              "isActivated":false,
+                              "stepIndex":0,
+                              "state":13,
+                              "hidden":true,
+                              "nodeHash":402641165
+                           }
+                        ],
+                        "useCustomDyes":false,
+                        "artRegions":{
+
+                        },
+                        "isEquipment":true,
+                        "isGridComplete":false,
+                        "perks":[
+                           {
+                              "iconPath":"\/common\/destiny_content\/icons\/ee878e2ed59c4ac5c3d4a3a8a19486c7.png",
+                              "perkHash":632126377,
+                              "isActive":false
+                           },
+                           {
+                              "iconPath":"\/common\/destiny_content\/icons\/e2e1efd7513ef2bf56f58184d92c51c2.png",
+                              "perkHash":2661061678,
+                              "isActive":false
+                           },
+                           {
+                              "iconPath":"\/common\/destiny_content\/icons\/e73fa676bc492284204f066af0afc414.png",
+                              "perkHash":2070475581,
+                              "isActive":false
+                           }
+                        ],
+                        "location":3,
+                        "transferStatus":0,
+                        "locked":false,
+                        "lockable":false
+                     },
+                     "vendorItemIndex":74,
+                     "itemStatus":0,
+                     "costs":[
+                        {
+                           "itemHash":1738186005,
+                           "value":13
+                        }
+                     ],
+                     "unlockStatuses":[
+
+                     ]
+                  }
+               ]
+            },
+            {
+               "categoryTitle":"Curios",
+               "saleItems":[]
+            },
+            {
+               "categoryTitle":"Material Exchange",
+               "saleItems":[]
+            }
+         ],
+         "inventoryBuckets":[
+
+         ]
+      }
+   },
+   "ErrorCode":1,
+   "ThrottleSeconds":0,
+   "ErrorStatus":"Success",
+   "Message":"Ok",
+   "MessageData":{
+
+   }
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

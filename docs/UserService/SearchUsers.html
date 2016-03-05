@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>SearchUsers | UserService | UserService / SearchUsers</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/UserService/SearchUsers.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>UserService / SearchUsers</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns the user information for the given BungieNet user name query</p>
+<ul>
+<li><strong>URI:</strong> <a href="/docs/UserService/SearchUsers.html">/User/SearchUsers/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#UserService">UserService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q</td>
+<td>A valid BungieNet user name</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="http://www.bungie.net/Platform/User/SearchUsers/?q=DeeJ">http://www.bungie.net/Platform/User/SearchUsers/?q=DeeJ</a></p>
+<pre><code class="javascript">{
+  "Response": [
+    {
+      "membershipId": "8011",
+      "uniqueName": "DeeJ",
+      "displayName": "DeeJ",
+      "profilePicture": 770057,
+      "profileTheme": 67,
+      "userTitle": 0,
+      "successMessageFlags": "59",
+      "isDeleted": false,
+      "about": "Your friendly neighborhood Community Manager.",
+      "firstAccess": "2004-10-29T18:14:49.77Z",
+      "lastUpdate": "2015-02-27T23:28:26.83Z",
+      "psnDisplayName": "DeeJ_BNG",
+      "xboxDisplayName": "DeeJ BNG",
+      "showActivity": true,
+      "followerCount": 18558,
+      "followingUserCount": 266,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/admin/deej_icon.jpg",
+      "profileThemeName": "Destiny2",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "640445",
+      "uniqueName": "Im Really DeeJ",
+      "displayName": "DeeJ",
+      "profilePicture": 70311,
+      "profileTheme": 62,
+      "userTitle": 0,
+      "successMessageFlags": "59",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2009-12-21T01:53:09.55Z",
+      "lastUpdate": "2014-05-21T04:09:03.065Z",
+      "showActivity": false,
+      "followerCount": 25,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "lastBanReportId": "50758",
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/seventhcolumn7.gif",
+      "profileThemeName": "space",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "3867021",
+      "uniqueName": "3867021",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2013-02-24T13:38:55.442Z",
+      "lastUpdate": "2013-02-24T13:38:55.442Z",
+      "psnDisplayName": "gghooker",
+      "showActivity": true,
+      "followerCount": 136,
+      "followingUserCount": 108,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4139202",
+      "uniqueName": "4139202",
+      "displayName": "DeeJ",
+      "profilePicture": 70486,
+      "profileTheme": 54,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2013-11-22T19:57:46.402Z",
+      "lastUpdate": "2013-11-22T19:58:10.17Z",
+      "showActivity": true,
+      "followerCount": 1,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/7.jpg",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4180166",
+      "uniqueName": "FOX NEWSS",
+      "displayName": "DeeJ",
+      "profilePicture": 70521,
+      "profileTheme": 54,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2013-12-22T23:25:38.404Z",
+      "lastUpdate": "2014-01-15T06:01:14.029Z",
+      "showActivity": true,
+      "followerCount": 1,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/themaestro.jpg",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4183549",
+      "uniqueName": "4183549",
+      "displayName": "deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2013-12-26T08:31:44.058Z",
+      "lastUpdate": "2013-12-26T08:31:44.058Z",
+      "psnDisplayName": "Damians_back",
+      "showActivity": true,
+      "followerCount": 6,
+      "followingUserCount": 2,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4408092",
+      "uniqueName": "4408092",
+      "displayName": "Deej",
+      "profilePicture": 70517,
+      "profileTheme": 73,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-04-27T22:37:52Z",
+      "lastUpdate": "2014-09-06T08:32:29.829Z",
+      "psnDisplayName": "Danny_J_",
+      "showActivity": true,
+      "followerCount": 6,
+      "followingUserCount": 6,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/Destiny26.jpg",
+      "profileThemeName": "Destiny8",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4436989",
+      "uniqueName": "4436989",
+      "displayName": "Deej",
+      "profilePicture": 70517,
+      "profileTheme": 54,
+      "userTitle": 0,
+      "successMessageFlags": "34",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-05-06T02:22:06.472Z",
+      "lastUpdate": "2014-09-12T01:34:46.744Z",
+      "psnDisplayName": "Guess_Whou",
+      "showActivity": true,
+      "followerCount": 68,
+      "followingUserCount": 50,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/Destiny26.jpg",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4452824",
+      "uniqueName": "4452824",
+      "displayName": "DeeJ",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-05-09T21:02:58.837Z",
+      "lastUpdate": "2014-05-09T21:02:58.837Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 1,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4465153",
+      "uniqueName": "4465153",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-05-14T20:26:53.823Z",
+      "lastUpdate": "2014-05-14T20:26:53.823Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 1,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4465162",
+      "uniqueName": "4465162",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-05-14T20:28:44.114Z",
+      "lastUpdate": "2014-05-14T20:28:44.114Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 1,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4493405",
+      "uniqueName": "4493405",
+      "displayName": "DeeJ",
+      "profilePicture": 70307,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-05-25T16:48:12.462Z",
+      "lastUpdate": "2014-12-19T20:31:31.932Z",
+      "psnDisplayName": "elchon57",
+      "showActivity": true,
+      "followerCount": 1,
+      "followingUserCount": 3,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/seventhcolumnred.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4518663",
+      "uniqueName": "4518663",
+      "displayName": "DeeJ",
+      "profilePicture": 70446,
+      "profileTheme": 54,
+      "userTitle": 0,
+      "successMessageFlags": "16",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-06-03T00:29:01.569Z",
+      "lastUpdate": "2014-10-14T00:49:28.465Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "lastBanReportId": "65807",
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/s_NobleTeam.jpg",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4580832",
+      "uniqueName": "4580832",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-06-13T02:48:25.432Z",
+      "lastUpdate": "2014-06-13T02:48:25.432Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 1,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4952498",
+      "uniqueName": "4952498",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-07-13T21:33:59.333Z",
+      "lastUpdate": "2014-07-13T21:33:59.333Z",
+      "xboxDisplayName": "DubL DeeJ",
+      "showActivity": true,
+      "followerCount": 15,
+      "followingUserCount": 9,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "4995779",
+      "uniqueName": "4995779",
+      "displayName": "DeeJ",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-07-15T15:22:37.947Z",
+      "lastUpdate": "2014-07-15T15:22:37.947Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "5031375",
+      "uniqueName": "5031375",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-07-16T18:08:28.544Z",
+      "lastUpdate": "2014-07-16T18:08:28.544Z",
+      "psnDisplayName": "Deej",
+      "showActivity": true,
+      "followerCount": 19,
+      "followingUserCount": 4,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "5195801",
+      "uniqueName": "5195801",
+      "displayName": "Deej",
+      "profilePicture": 70496,
+      "profileTheme": 103,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-07-18T07:22:47.631Z",
+      "lastUpdate": "2015-07-26T16:40:30.038Z",
+      "psnDisplayName": "SirHennesyII",
+      "showActivity": true,
+      "followerCount": 62,
+      "followingUserCount": 66,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/Destiny05.jpg",
+      "profileThemeName": "bungie_day15_12",
+      "userTitleDisplay": "Newbie",
+      "statusText": "soul keeper",
+      "statusDate": "2015-07-26T16:40:30.038Z"
+    },
+    {
+      "membershipId": "5395492",
+      "uniqueName": "5395492",
+      "displayName": "Deej",
+      "profilePicture": 70397,
+      "profileTheme": 87,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-07-21T19:45:46.727Z",
+      "lastUpdate": "2015-09-11T22:57:28.955Z",
+      "xboxDisplayName": "SOULREAPER1458",
+      "showActivity": true,
+      "followerCount": 54,
+      "followingUserCount": 65,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/th_BnetAvs27.jpg",
+      "profileThemeName": "bungieday1306",
+      "userTitleDisplay": "Newbie",
+      "statusText": "Exl",
+      "statusDate": "2015-08-31T13:12:14.769Z"
+    },
+    {
+      "membershipId": "5837839",
+      "uniqueName": "5837839",
+      "displayName": "DeeJ",
+      "profilePicture": 70482,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-08-09T15:03:20.989Z",
+      "lastUpdate": "2014-08-09T15:05:54.127Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "lastBanReportId": "64784",
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/3.jpg",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "5877812",
+      "uniqueName": "5877812",
+      "displayName": "DeeJ",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-08-29T02:34:15.353Z",
+      "lastUpdate": "2014-08-29T02:34:15.353Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 1,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "6133810",
+      "uniqueName": "6133810",
+      "displayName": "Deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-09-10T02:59:16.312Z",
+      "lastUpdate": "2014-09-10T02:59:16.312Z",
+      "psnDisplayName": "dj_lovoy",
+      "showActivity": true,
+      "followerCount": 1,
+      "followingUserCount": 3,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "7190365",
+      "uniqueName": "7190365",
+      "displayName": "deej",
+      "profilePicture": 0,
+      "profileTheme": 0,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-09-20T22:59:59.42Z",
+      "lastUpdate": "2014-09-20T22:59:59.42Z",
+      "psnDisplayName": "deefkw",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 0,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/default_avatar.gif",
+      "profileThemeName": "septagon",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "7388066",
+      "uniqueName": "7388066",
+      "displayName": "Deej",
+      "profilePicture": 70336,
+      "profileTheme": 37,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "",
+      "firstAccess": "2014-09-24T02:45:50.15Z",
+      "lastUpdate": "2014-10-10T05:58:36.717Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 10,
+      "locale": "en",
+      "localeInheritDefault": true,
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/14.jpg",
+      "profileThemeName": "lingling",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    },
+    {
+      "membershipId": "7844017",
+      "uniqueName": "7844017",
+      "displayName": "Deej",
+      "profilePicture": 70486,
+      "profileTheme": 88,
+      "userTitle": 0,
+      "successMessageFlags": "0",
+      "isDeleted": false,
+      "about": "I am not Deej",
+      "firstAccess": "2014-10-05T02:40:08.761Z",
+      "lastUpdate": "2014-12-26T00:01:24.488Z",
+      "showActivity": true,
+      "followerCount": 0,
+      "followingUserCount": 1,
+      "locale": "en",
+      "localeInheritDefault": false,
+      "lastBanReportId": "64786",
+      "showGroupMessaging": true,
+      "profilePicturePath": "/img/profile/avatars/7.jpg",
+      "profileThemeName": "bungieday1307",
+      "userTitleDisplay": "Newbie",
+      "statusText": "",
+      "statusDate": "0001-01-01T00:00:00Z"
+    }
+  ],
+  "ErrorCode": 1,
+  "ThrottleSeconds": 0,
+  "ErrorStatus": "Success",
+  "Message": "Ok",
+  "MessageData": {}
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

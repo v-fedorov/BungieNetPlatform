@@ -1,0 +1,114 @@
+body {
+  background: #12161b;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(245, 245, 245, 0.65);
+}
+body strong {
+  color: #fff;
+}
+h1 {
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+a:hover,
+a:focus {
+  color: #fff;
+}
+#top {
+  background: #2a333e;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  margin: 0;
+}
+#top .navbar-nav > li > a {
+  text-shadow: none;
+}
+#top a {
+  color: #fff;
+}
+#top .active a,
+#top a:hover,
+#top a:focus {
+  background: rgba(0, 0, 0, 0.2);
+}
+#top #forkme_banner {
+  background: url('../images/blacktocat.png') #0090ff no-repeat 92% 50%;
+  padding-right: 52px;
+}
+#header {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid;
+  margin-bottom: 30px;
+}
+#content .inner {
+  background: rgba(245, 245, 245, 0.05);
+  padding: 20px;
+}
+#content .inner p {
+  margin: 0;
+}
+#content .inner .table {
+  word-break: break-word;
+}
+#content .inner .table,
+#content .inner .table th,
+#content .inner .table td {
+  border-color: rgba(245, 245, 245, 0.1);
+}
+#content .inner .table th {
+  border-bottom: none;
+  width: 80px;
+}
+#content .inner .table td {
+  color: rgba(245, 245, 245, 0.65);
+}
+#content .inner h2,
+#content .inner h3,
+#content .inner h4,
+#content .inner h5,
+#content .inner h6 {
+  color: #f2c161;
+  text-transform: uppercase;
+}
+#content .inner h2 {
+  font-size: 1.3em;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+#content .inner h3,
+#content .inner h4,
+#content .inner h5,
+#content .inner h6 {
+  color: #fff;
+  font-size: 1em;
+}
+#content .inner pre {
+  border: none;
+  border-radius: 0;
+  background: rgba(245, 245, 245, 0.05);
+  margin-top: 10px;
+}
+#content .inner pre code {
+  background: none;
+  color: #fff;
+}
+#content .inner pre code .hljs-string {
+  color: #f2c161;
+}
+#content .inner pre code .hljs-number {
+  color: #5ea16a;
+}
+#footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.3);
+}

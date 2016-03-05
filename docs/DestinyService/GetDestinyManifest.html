@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetDestinyManifest | DestinyService | DestinyService / GetDestinyManifest</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/DestinyService/GetDestinyManifest.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DestinyService / GetDestinyManifest</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns the current version of the <a href="Manifest">manifest</a> as a json object.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Manifest/">/Destiny/Manifest/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Destiny/Manifest/">https://www.bungie.net/Platform/Destiny/Manifest/</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "version": "45194.15.05.13.1136-2",
+        "mobileAssetContentPath": "\/common\/destiny_content\/sqlite\/asset\/asset_sql_content_7c23eefeaa0003dbc141793135dae141.content",
+        "mobileGearAssetDataBases": [
+            {
+                "version": 0,
+                "path": "\/common\/destiny_content\/sqlite\/asset\/asset_sql_content_7c23eefeaa0003dbc141793135dae141.content"
+            },
+            {
+                "version": 1,
+                "path": "\/common\/destiny_content\/sqlite\/asset\/asset_sql_content_039b4a64b68a7ae75a1d349c301e494c.content"
+            }
+        ],
+        "mobileWorldContentPaths": {
+            "en": "\/common\/destiny_content\/sqlite\/en\/world_sql_content_bafce26a4daec6ba6932e93bb5bd200c.content",
+            "fr": "\/common\/destiny_content\/sqlite\/fr\/world_sql_content_50895b556dfee93a1f3d5a3817c18b19.content",
+            "es": "\/common\/destiny_content\/sqlite\/es\/world_sql_content_d016ba5a8d83b1526212bddaefbd96c6.content",
+            "de": "\/common\/destiny_content\/sqlite\/de\/world_sql_content_52fbe64346a0110511a86238aec07310.content",
+            "it": "\/common\/destiny_content\/sqlite\/it\/world_sql_content_bd613d541a690aa21896eb4ce761e42f.content",
+            "ja": "\/common\/destiny_content\/sqlite\/ja\/world_sql_content_884749c1a137aa80b701fb175eb9620d.content",
+            "pt-br": "\/common\/destiny_content\/sqlite\/pt-br\/world_sql_content_7a0cc97e802c88dee6a0ecff953194f2.content"
+        },
+        "mobileGearCDN": {
+            "Geometry": "\/common\/destiny_content\/geometry\/platform\/mobile\/geometry",
+            "Texture": "\/common\/destiny_content\/geometry\/platform\/mobile\/textures",
+            "PlateRegion": "\/common\/destiny_content\/geometry\/platform\/mobile\/plated_textures",
+            "Gear": "\/common\/destiny_content\/geometry\/gear"
+        }
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Manifest%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Manifest%2f</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

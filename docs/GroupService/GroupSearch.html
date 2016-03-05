@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GroupSearch | GroupService | GroupService / GroupSearch</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/GroupService/GroupSearch.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>GroupService / GroupSearch</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Searches for groups matching input string.  Returns matching group information.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/Search/">/Group/Search/</a></li>
+<li><strong>Method:</strong> POST</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#GroupService">GroupService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>populatefriends</td>
+<td>true or false.</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contents[searchValue]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>contents[searchType]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>creationDate</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>currentPage</td>
+<td>The current page. Starts at 1.</td>
+</tr>
+<tr>
+<td>groupMemberCountFilter</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>itemsPerPage</td>
+<td>Number of results per page. Default is 10.</td>
+</tr>
+<tr>
+<td>localeFilter</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>membershipType</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>sortBy</td>
+<td>Default 0.</td>
+</tr>
+<tr>
+<td>tagText</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<p>POST <a href="https://www.bungie.net/Platform/Group/Search/">https://www.bungie.net/Platform/Group/Search/</a></p>
+<pre><code class="javascript">{
+    "contents": {
+        "searchValue": "HeisenbergClan",
+        "searchType": 0
+    },
+    "creationDate": 0,
+    "sortBy": 0,
+    "itemsPerPage": 10,
+    "currentPage": 1,
+    "membershipType": 0,
+    "tagText": "",
+    "localeFilter": "en",
+    "groupMemberCountFilter": 0
+ }</code></pre>
+<pre><code class="javascript">{
+    "Response": {
+        "founders": [{
+            "membershipId": "6046610",
+            "uniqueName": "6046610",
+            "displayName": "CAPNPLAN3T",
+            "profilePicture": 69987,
+            "profileTheme": 66,
+            "userTitle": 0,
+            "successMessageFlags": "0",
+            "isDeleted": false,
+            "about": "",
+            "firstAccess": "2014-09-09T11:08:59.821Z",
+            "lastUpdate": "2014-09-12T11:37:53.104Z",
+            "psnDisplayName": "CAP-N_PLAN3T",
+            "showActivity": true,
+            "followerCount": 51,
+            "followingUserCount": 55,
+            "locale": "en",
+            "localeInheritDefault": true,
+            "showGroupMessaging": true,
+            "profilePicturePath": "/img/profile/avatars/odst_skull_5_4.png",
+            "profileThemeName": "Destiny1",
+            "userTitleDisplay": "Newbie",
+            "statusText": "",
+            "statusDate": "0001-01-01T00:00:00Z"
+        }],
+        "relatedGroups": [],
+        "results": [{
+            "detail": {
+                "groupId": "700997",
+                "name": "HeisenbergClan",
+                "membershipIdCreated": "6046610",
+                "creationDate": "2014-12-29T14:21:31.006Z",
+                "modificationDate": "2015-05-20T12:58:16.77Z",
+                "groupType": 0,
+                "about": "We shoot things, preferably in the face.",
+                "isDeleted": false,
+                "tags": ["#face", "#shoot"],
+                "rating": 63,
+                "ratingCount": 4,
+                "memberCount": 5,
+                "pendingMemberCount": 0,
+                "isPublic": true,
+                "isMembershipClosed": false,
+                "isMembershipReviewed": true,
+                "isPublicTopicAdminOnly": true,
+                "primaryAlliedGroupId": "0",
+                "motto": "Shoot",
+                "clanCallsign": "HSBN",
+                "allowChat": true,
+                "isDefaultPostPublic": true,
+                "isDefaultPostAlliance": false,
+                "chatSecurity": 0,
+                "locale": "en",
+                "avatarImageIndex": 60046,
+                "founderMembershipId": "6046610",
+                "homepage": 0,
+                "membershipOption": 0,
+                "defaultPublicity": 0,
+                "theme": "Group_Director",
+                "bannerPath": "/img/Themes/Group_Director/struct_images/group_top_banner.jpg",
+                "avatarPath": "/img/profile/avatars/group/avatars_groups_hunter.jpg",
+                "isAllianceOwner": false,
+                "conversationId": "7882965",
+                "clanReviewType": 0,
+                "enableInvitationMessagingForAdmins": true
+            },
+            "founderMembershipId": "6046610",
+            "founder": {
+                "membershipId": "6046610",
+                "uniqueName": "6046610",
+                "displayName": "CAPNPLAN3T",
+                "profilePicture": 69987,
+                "profileTheme": 66,
+                "userTitle": 0,
+                "successMessageFlags": "0",
+                "isDeleted": false,
+                "about": "",
+                "firstAccess": "2014-09-09T11:08:59.821Z",
+                "lastUpdate": "2014-09-12T11:37:53.104Z",
+                "psnDisplayName": "CAP-N_PLAN3T",
+                "showActivity": true,
+                "followerCount": 51,
+                "followingUserCount": 55,
+                "locale": "en",
+                "localeInheritDefault": true,
+                "showGroupMessaging": true,
+                "profilePicturePath": "/img/profile/avatars/odst_skull_5_4.png",
+                "profileThemeName": "Destiny1",
+                "userTitleDisplay": "Newbie",
+                "statusText": "",
+                "statusDate": "0001-01-01T00:00:00Z"
+            },
+            "followerCount": 4,
+            "currentUserStatus": {
+                "isFollowing": false
+            },
+            "alliedIds": [],
+            "attributes": [{
+                "attributeId": 1,
+                "minValue": 0,
+                "maxValue": 100
+            }, {
+                "attributeId": 2,
+                "minValue": 0,
+                "maxValue": 100
+            }, {
+                "attributeId": 3,
+                "minValue": 0,
+                "maxValue": 100
+            }, {
+                "attributeId": 4,
+                "minValue": 0,
+                "maxValue": 0
+            }, {
+                "attributeId": 5,
+                "minValue": 0,
+                "maxValue": 0
+            }, {
+                "attributeId": 6,
+                "minValue": 0,
+                "maxValue": 0
+            }, {
+                "attributeId": 7,
+                "minValue": 0,
+                "maxValue": 0
+            }, {
+                "attributeId": 8,
+                "minValue": 0,
+                "maxValue": 0
+            }],
+            "membershipIds": [],
+            "clanMembershipTypes": [{
+                "membershipType": 2,
+                "memberCount": 5,
+                "isProbation": false,
+                "isWorld": false,
+                "needsFounder": false
+            }],
+            "allianceStatus": 0,
+            "friends": [],
+            "groupJoinRequestCount": 0,
+            "groupJoinInviteCount": 0,
+            "clanJoinRequestCount": 0,
+            "clanJoinInviteCount": 0
+        }],
+        "totalResults": "1",
+        "hasMore": false,
+        "query": {
+            "contents": {
+                "searchValue": "heisenbergclan",
+                "searchType": 0
+            },
+            "creationDate": 0,
+            "sortBy": 0,
+            "membershipType": 0,
+            "groupMemberCountFilter": 0,
+            "localeFilter": "en",
+            "tagText": "",
+            "itemsPerPage": 26,
+            "currentPage": 1
+        },
+        "useTotalResults": false
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {}
+}
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

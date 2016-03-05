@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetClanAttributeDefinitions | GroupService | GroupService / GetClanAttributeDefinitions</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/GroupService/GetClanAttributeDefinitions.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>GroupService / GetClanAttributeDefinitions</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns a list of supported Clan Attribute Definitions.</p>
+<ul>
+<li><strong>URI:</strong> <a href="/docs/GroupService/GetClanAttributeDefinitions.html">/Group/GetClanAttributeDefinitions/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#GroupService">GroupService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="/docs/GroupService/GetClanAttributeDefinitions.html">https://www.bungie.net/Platform/Group/GetClanAttributeDefinitions/</a></p>
+<pre><code class="javascript">{
+    "Response": [
+        {
+            "categoryId": 1,
+            "key": "ClanAttributesCategory",
+            "displayName": "Attributes",
+            "attributes": [
+                {
+                    "attributeId": 1,
+                    "key": "ClanAttributeCommitment",
+                    "displayName": "Commitment",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 100,
+                    "attributeType": 2,
+                    "minimumLabel": "Recreational",
+                    "maximumLabel": "Hardcore",
+                    "tooltips": [],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                },
+                {
+                    "attributeId": 2,
+                    "key": "ClanAttributeSkill",
+                    "displayName": "Skill Level",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 100,
+                    "attributeType": 2,
+                    "minimumLabel": "Newbie",
+                    "maximumLabel": "Skilled",
+                    "tooltips": [],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                },
+                {
+                    "attributeId": 3,
+                    "key": "ClanAttributeAge",
+                    "displayName": "Age Level",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 100,
+                    "attributeType": 2,
+                    "minimumLabel": "Young",
+                    "maximumLabel": "Old",
+                    "tooltips": [],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                }
+            ]
+        },
+        {
+            "categoryId": 2,
+            "key": "ClanActivitiesCategory",
+            "displayName": "Preferred Activities",
+            "attributes": [
+                {
+                    "attributeId": 4,
+                    "key": "ClanAttributeRaid",
+                    "displayName": "Raids",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 0,
+                    "attributeType": 1,
+                    "minimumLabel": "Raids",
+                    "maximumLabel": "",
+                    "tooltips": [
+                        "We never raid.",
+                        "We raid on occasion.",
+                        "We raid monthly.",
+                        "We raid weekly.",
+                        "We raid daily."
+                    ],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                },
+                {
+                    "attributeId": 5,
+                    "key": "ClanAttributeFactionWars",
+                    "displayName": "Faction Wars",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 0,
+                    "attributeType": 1,
+                    "minimumLabel": "Faction Wars",
+                    "maximumLabel": "",
+                    "tooltips": [
+                        "We never play Faction Wars.",
+                        "We play Faction Wars on occasion.",
+                        "We play Faction Wars monthly.",
+                        "We play Faction Wars weekly.",
+                        "We play Faction Wars daily."
+                    ],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                },
+                {
+                    "attributeId": 6,
+                    "key": "ClanAttributePatrols",
+                    "displayName": "Patrols",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 0,
+                    "attributeType": 1,
+                    "minimumLabel": "Patrols",
+                    "maximumLabel": "",
+                    "tooltips": [
+                        "We never do patrols.",
+                        "We do patrols on occasion.",
+                        "We do patrols monthly.",
+                        "We do patrols weekly.",
+                        "We do patrols daily."
+                    ],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                },
+                {
+                    "attributeId": 7,
+                    "key": "ClanAttributeStory",
+                    "displayName": "Story",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 0,
+                    "attributeType": 1,
+                    "minimumLabel": "Story",
+                    "maximumLabel": "",
+                    "tooltips": [
+                        "We never do story missions.",
+                        "We do story missions on occasion.",
+                        "We do story missions monthly.",
+                        "We do story missions weekly.",
+                        "We do story missions daily."
+                    ],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                },
+                {
+                    "attributeId": 8,
+                    "key": "ClanAttributeStrikes",
+                    "displayName": "Strikes",
+                    "defaultMinimum": 0,
+                    "defaultMaximum": 0,
+                    "attributeType": 1,
+                    "minimumLabel": "Strikes",
+                    "maximumLabel": "",
+                    "tooltips": [
+                        "We never do strikes.",
+                        "We do strikes on occasion.",
+                        "We do strikes monthly.",
+                        "We do strikes weekly.",
+                        "We do strikes daily."
+                    ],
+                    "minimum": 0,
+                    "maximum": 100,
+                    "stepIncrement": 20,
+                    "stepCount": 5
+                }
+            ]
+        }
+    ],
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {}
+}</code></pre>
+<h2>References</h2>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

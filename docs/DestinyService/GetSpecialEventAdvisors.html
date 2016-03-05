@@ -18,16 +18,16 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
-	<script src="../js/main.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
 
-	<title>BungieNetPlatform</title>
+	<title>GetSpecialEventAdvisors | DestinyService | DestinyService / GetSpecialEventAdvisors</title>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<!-- / -->
+<!-- /docs/DestinyService/GetSpecialEventAdvisors.html -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -37,11 +37,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="../" class="navbar-brand">BungieNetPlatform</a>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-<li class="active"><a href="/">Home</a></li>
+<li><a href="/">Home</a></li>
 <li><a href="/docs/Enums.html">Enums</a></li>
 <li><a href="/docs/Endpoints.html">Endpoints</a></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -54,8 +54,8 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>BungieNetPlatform</h1>
-		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+		<h1>DestinyService / GetSpecialEventAdvisors</h1>
+		<h2></h2>
 
 		<!--<section id="downloads">
 		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
@@ -67,7 +67,59 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><p>Welcome to the BungieNetPlatform wiki!</p>
+		<div class="inner"><h2>Info</h2>
+<p>Returns a list of currently active events.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Events/">/Destiny/Events/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>definitions</td>
+<td>Include definitions in the response; true or false.</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Destiny/Events/">https://www.bungie.net/Platform/Destiny/Events/</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "data": {
+            "events": [
+                {
+                    "eventHash": 4,
+                    "eventIdentifier": "SPECIAL_EVENT_SALVAGE",
+                    "expirationDate": "2015-05-26T17:00:00Z",
+                    "startDate": "2015-05-19T17:00:00Z",
+                    "expirationKnown": true
+                }
+            ]
+        }
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
+<h2>References</h2>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
+
+	<title>GetLeaderboards | DestinyService | DestinyService / GetLeaderboards</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- /docs/DestinyService/GetLeaderboards.html -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/docs/Enums.html">Enums</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DestinyService / GetLeaderboards</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><h2>Info</h2>
+<p>Returns leaderboard stats compared against friends. Note you may need to re-authenticate with PSN/Xbox in order to see full rankings.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Stats/Leaderboards/{membershipType}/{membershipId}/">/Destiny/Stats/Leaderboards/{membershipType}/{membershipId}/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#DestinyService">DestinyService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>membershipType</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>membershipId</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modes</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p><a href="https://www.bungie.net/Platform/Destiny/Stats/Leaderboards/2/4611686018428939884/">https://www.bungie.net/Platform/Destiny/Stats/Leaderboards/2/4611686018428939884/</a>
+This response has been truncated to make it easier to see the full structure.```javascript
+{
+&quot;Response&quot;: {
+&quot;focusMembershipId&quot;: &quot;4611686018428939884&quot;,
+&quot;story&quot;: { // Note this is an associative array
+&quot;lbSingleGameKills&quot;: {
+&quot;statId&quot;: &quot;lbSingleGameKills&quot;,
+&quot;entries&quot;: [
+{
+&quot;rank&quot;: 1,
+&quot;player&quot;: {
+&quot;destinyUserInfo&quot;: {
+&quot;iconPath&quot;: &quot;\/common\/destiny_content\/icons\/552621dd6b31a1d088d72e640b86ebb8.jpg&quot;,
+&quot;membershipType&quot;: 2,
+&quot;membershipId&quot;: &quot;4611686018428939884&quot;,
+&quot;displayName&quot;: &quot;lowlines&quot;
+},
+&quot;characterClass&quot;: &quot;Hunter&quot;,
+&quot;characterLevel&quot;: 34,
+&quot;bungieNetUserInfo&quot;: {
+&quot;iconPath&quot;: &quot;\/img\/profile\/avatars\/bungieday_03.jpg&quot;,
+&quot;membershipType&quot;: 254,
+&quot;membershipId&quot;: &quot;5197148&quot;,
+&quot;displayName&quot;: &quot;lowlines&quot;
+},
+&quot;clanName&quot;: &quot;Darwinites&quot;,
+&quot;clanTag&quot;: &quot;DRWI&quot;
+},
+&quot;characterId&quot;: &quot;2305843009221011538&quot;,
+&quot;value&quot;: {
+&quot;basic&quot;: {
+&quot;value&quot;: 1011,
+&quot;displayValue&quot;: &quot;1011&quot;
+}
+}
+}
+]
+}
+},
+&quot;raid&quot;: {
+},
+&quot;patrol&quot;: {
+},
+&quot;allPvP&quot;: {
+},
+&quot;allStrikes&quot;: {
+}
+},
+&quot;ErrorCode&quot;: 1,
+&quot;ThrottleSeconds&quot;: 0,
+&quot;ErrorStatus&quot;: &quot;Success&quot;,
+&quot;Message&quot;: &quot;Ok&quot;,
+&quot;MessageData&quot;: {</p>
+<pre><code>}</code></pre>
+<p>}</p>
+<pre><code>
+
+## References</code></pre>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>

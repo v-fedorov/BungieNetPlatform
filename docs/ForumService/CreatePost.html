@@ -18,16 +18,16 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
-	<script src="../js/main.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css">
+	<script src="../../../js/main.js"></script>
 
-	<title>BungieNetPlatform</title>
+	<title>CreatePost | ForumService | ForumService / CreatePost</title>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<!-- / -->
+<!-- /docs/ForumService/CreatePost.html -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -37,11 +37,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="../" class="navbar-brand">BungieNetPlatform</a>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-<li class="active"><a href="/">Home</a></li>
+<li><a href="/">Home</a></li>
 <li><a href="/docs/Enums.html">Enums</a></li>
 <li><a href="/docs/Endpoints.html">Endpoints</a></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -54,8 +54,8 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>BungieNetPlatform</h1>
-		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+		<h1>ForumService / CreatePost</h1>
+		<h2></h2>
 
 		<!--<section id="downloads">
 		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
@@ -67,7 +67,87 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><p>Welcome to the BungieNetPlatform wiki!</p>
+		<div class="inner"><h2>Info</h2>
+<p>Creates a forum post.</p>
+<ul>
+<li><strong>URI:</strong> <a href="/docs/ForumService/CreatePost.html">/Forum/CreatePost/</a></li>
+<li><strong>Method:</strong> POST</li>
+<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Service:</strong> <a href="/docs/Endpoints.html#ForumService">ForumService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<p>POST <a href="/docs/ForumService/CreatePost.html">https://www.bungie.net/Platform/Forum/CreatePost/</a></p>
+<pre><code class="javascript">{
+    "parentPostId":"122410116",
+    "subTopicOverride":false,
+    "subject":"",
+    "body":"{postBody}",
+    "category":0,
+    "groupId":39966,
+    "isGroupPrivate":null,
+    "urlLinkOrImage":"",
+    "metadata":""
+}</code></pre>
+<pre><code class="javascript">{
+    "Response": {
+        "postId":"126596110",
+        "parentPostId":"122410116",
+        "topicId":"122410116",
+        "threadDepth":2,
+        "category":1,
+        "authorMembershipId":"5197148",
+        "body":"{postBody}",
+        "urlLinkOrImage":"",
+        "creationDate":"2015-06-02T06:47:46.062Z",
+        "lastModified":"0001-01-01T00:00:00Z",
+        "editCount":0,
+        "replyCount":0,
+        "topicReplyCount":0,
+        "ratingCount":1,
+        "rating":53,
+        "upvotes":1,
+        "downvotes":0,
+        "ratingScore":1,
+        "groupOwnerId":"39966",
+        "isGroupPrivate":false,
+        "flags":0,
+        "lockedForReplies":false,
+        "parentAuthorId":"68974",
+        "topicAuthorId":"68974",
+        "isTopicBanned":false,
+        "actualParentPostId":"122410116",
+        "playerSupportFlags":0,
+        "pinned":0,
+        "IsPinned":false,
+        "popularity":1,
+        "isActive":false,
+        "isAnnouncement":false,
+        "userRating":100,
+        "userHasRated":true,
+        "userHasMutedPost":false,
+        "latestReplyPostId":"0",
+        "latestReplyAuthorId":"0",
+        "ignoreStatus": {
+            "isIgnored":false,
+            "ignoreFlags":0
+        }
+    },
+    "ErrorCode":1,
+    "ThrottleSeconds":0,
+    "ErrorStatus":"Success",
+    "Message":"Ok",
+    "MessageData":{
+
+    }
+}</code></pre>
+<h2>References</h2>
 		</div>
 	</div>
 </div>
