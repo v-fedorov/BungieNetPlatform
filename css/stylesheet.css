@@ -90,6 +90,9 @@ a:focus {
   color: #fff;
   font-size: 1em;
 }
+#content .inner ul {
+  margin-top: 10px;
+}
 #content .inner pre {
   border: none;
   border-radius: 0;
