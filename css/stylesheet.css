@@ -113,6 +113,9 @@ a:focus {
 #content .inner .table {
   word-break: break-word;
 }
+#content .inner .table .active {
+  background: none;
+}
 #content .inner .table,
 #content .inner .table th,
 #content .inner .table td {
@@ -178,6 +181,9 @@ a:focus {
 }
 #content .inner pre code .hljs-built_in {
   color: #b184c5;
+}
+#content .inner .edit-link {
+  float: right;
 }
 #footer {
   padding-top: 50px;
