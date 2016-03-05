@@ -26,6 +26,7 @@ h1 {
 }
 a {
   color: #fff;
+  word-break: break-word;
 }
 a:hover,
 a:focus {
