@@ -11,19 +11,20 @@ $(document).ready(function() {
 
 	var pushHeader = function(toc, header, depth) {
 		if (depth > 1 && toc.length > 0) {
-			pushHeader(toc[toc.length-1], header, depth-1);
+			pushHeader(toc[toc.length-1].children, header, depth-1);
 		} else {
 			toc.push({selector: $(header), children: []});
 		}
 	};
 	var appendHeader = function($parent, toc) {
-		var $toc = $('<ol class="toc"></ol>');
+		var $toc = $('<ol></ol>');
 		for (var i=0; i<toc.length; i++) {
 			var header = toc[i];
-			var $header = $('<li><a href="#' + header.selector.attr('id') + '">' + header.selector.text().trim() + '</a></li>');
+			var $header = $('<li></li>');
 			if (header.children.length > 0) {
 				appendHeader($header, header.children);
 			}
+			$header.prepend('<a href="#' + header.selector.attr('id') + '">' + header.selector.text().trim() + '</a>');
 			$toc.append($header);
 		}
 		$parent.prepend($toc);
@@ -42,7 +43,7 @@ $(document).ready(function() {
 	});
 	console.log(tableOfContents);
 	if (tableOfContents.length > 1) {
-		var $toc = $('<div id="table-of-contents" class="collapse"></div>');
+		var $toc = $('<div id="table-of-contents" class="collapse toc"></div>');
 		appendHeader($toc, tableOfContents);
 		$toc.append('<hr/>');
 

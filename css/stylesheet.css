@@ -43,6 +43,22 @@ a:focus {
 .toggle-collpase.collapsed:before {
   content: '[ show ]';
 }
+.toc ol {
+  list-style: decimal;
+  counter-reset: item;
+  padding: 0;
+}
+.toc ol ol {
+  padding-left: 20px;
+}
+.toc li {
+  display: block;
+}
+.toc li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+  margin-right: 6px;
+}
 #top {
   background: #2a333e;
   border: none;

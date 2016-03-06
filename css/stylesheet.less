@@ -45,6 +45,24 @@ a {
 		content: '[ show ]';
 	}
 }
+.toc {
+	ol {
+		list-style: decimal;
+		counter-reset: item;
+		padding: 0;
+		& ol {
+			padding-left: 20px;
+		}
+	}
+	li {
+		display: block;
+		&:before {
+			content: counters(item, ".") " ";
+			counter-increment: item;
+			margin-right: 6px;
+		}
+	}
+}
 
 #top {
 	background: #2a333e;
