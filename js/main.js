@@ -36,7 +36,7 @@ $(document).ready(function() {
 			if (header.children.length > 0) {
 				appendHeader($header, header.children);
 			}
-			$header.prepend('<a href="#' + header.selector.attr('id') + '">' + header.selector.text().trim() + '</a>');
+			$header.prepend('<a href="#' + header.selector.attr('name') + '">' + header.selector.text().trim() + '</a>');
 			$toc.append($header);
 		}
 		$parent.prepend($toc);
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 	var tableOfContents = [];
 	$('#content .inner').first().find('h2, h3, h4, h5, h6').each(function() {
-		$(this).attr('id', $(this).text().trim().replace(/ /g, '-').replace(/[^a-z0-9\-]+/ig, ''));
+		$(this).attr('name', $(this).text().trim().replace(/ /g, '-').replace(/[^a-z0-9\-]+/ig, ''));
 		switch($(this).prop('tagName').toLowerCase()) {
 			case 'h2': pushHeader(tableOfContents, this, 1); break;
 			case 'h3': pushHeader(tableOfContents, this, 2); break;
