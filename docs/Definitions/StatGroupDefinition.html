@@ -24,14 +24,14 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1457258900">
 	<script src="../../js/main.js?1457258725"></script>
 
-	<title>GetGrimoireDefinition | DestinyService | DestinyService / GetGrimoireDefinition</title>
+	<title>StatGroupDefinition | Definitions | Definitions / StatGroupDefinition</title>
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../../docs/DestinyService/GetGrimoireDefinition.html | DestinyService / GetGrimoireDefinition -->
+<!-- ../../docs/Definitions/StatGroupDefinition.html | Definitions / StatGroupDefinition -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -71,7 +71,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>DestinyService / GetGrimoireDefinition</h1>
+		<h1>Definitions / StatGroupDefinition</h1>
 		<h2></h2>
 
 		<!--<section id="downloads">
@@ -84,28 +84,87 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetGrimoireDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/StatGroupDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Returns Grimoire definitions. This is the equivalent pulling the <a href="../../docs/Definitions/GrimoireDefinition">GrimoireDefinition</a> from the <a href="../../docs/Manifest">Manifest</a>.</p>
+<h2>Stats</h2>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">/Destiny/Vanguard/Grimoire/Definition/</a></li>
-<li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
-<li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
+<li><strong>Entries:</strong> 42</li>
 </ul>
-<h2>Parameters</h2>
-<h3>Path Parameters</h3>
-<p>None</p>
-<h3>Query String Parameters</h3>
-<p>None</p>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/</a></p>
-<h2>References</h2>
-<ol>
-<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f</a></li>
-</ol>
+<h2>Structure</h2>
+<pre><code class="javascript">{
+    "statGroupHash": 2172613790,
+    "maximumValue": 11,
+    "uiPosition": 0,
+    "scaledStats": [
+        {
+            "statHash": 392767087,
+            "maximumValue": 11,
+            "displayAsNumeric": false,
+            "displayInterpolation": [
+                {
+                    "value": 0,
+                    "weight": 0
+                },
+                {
+                    "value": 100,
+                    "weight": 100
+                }
+            ]
+        },
+        {
+            "statHash": 1943323491,
+            "maximumValue": 11,
+            "displayAsNumeric": false,
+            "displayInterpolation": [
+                {
+                    "value": 0,
+                    "weight": 0
+                },
+                {
+                    "value": 100,
+                    "weight": 100
+                }
+            ]
+        },
+        {
+            "statHash": 2996146975,
+            "maximumValue": 11,
+            "displayAsNumeric": false,
+            "displayInterpolation": [
+                {
+                    "value": 0,
+                    "weight": 0
+                },
+                {
+                    "value": 100,
+                    "weight": 100
+                }
+            ]
+        }
+    ],
+    "overrides": {
+        "144602215": {
+            "statHash": 144602215,
+            "displayName": "",
+            "displayDescription": "",
+            "displayIcon": "\/img\/misc\/missing_icon.png"
+        },
+        "1735777505": {
+            "statHash": 1735777505,
+            "displayName": "",
+            "displayDescription": "",
+            "displayIcon": "\/img\/misc\/missing_icon.png"
+        },
+        "4244567218": {
+            "statHash": 4244567218,
+            "displayName": "",
+            "displayDescription": "",
+            "displayIcon": "\/img\/misc\/missing_icon.png"
+        }
+    },
+    "hash": 2172613790,
+    "index": 0
+}</code></pre>
 		</div>
 	</div>
 </div>

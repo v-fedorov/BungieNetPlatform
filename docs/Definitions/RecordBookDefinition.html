@@ -24,14 +24,14 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1457258900">
 	<script src="../../js/main.js?1457258725"></script>
 
-	<title>GetGrimoireDefinition | DestinyService | DestinyService / GetGrimoireDefinition</title>
+	<title>RecordBookDefinition | Definitions | Definitions / RecordBookDefinition</title>
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../../docs/DestinyService/GetGrimoireDefinition.html | DestinyService / GetGrimoireDefinition -->
+<!-- ../../docs/Definitions/RecordBookDefinition.html | Definitions / RecordBookDefinition -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -71,7 +71,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>DestinyService / GetGrimoireDefinition</h1>
+		<h1>Definitions / RecordBookDefinition</h1>
 		<h2></h2>
 
 		<!--<section id="downloads">
@@ -84,28 +84,83 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetGrimoireDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/RecordBookDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Returns Grimoire definitions. This is the equivalent pulling the <a href="../../docs/Definitions/GrimoireDefinition">GrimoireDefinition</a> from the <a href="../../docs/Manifest">Manifest</a>.</p>
+<h2>Stats</h2>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">/Destiny/Vanguard/Grimoire/Definition/</a></li>
-<li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
-<li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
+<li><strong>Entries:</strong> 1</li>
 </ul>
-<h2>Parameters</h2>
-<h3>Path Parameters</h3>
-<p>None</p>
-<h3>Query String Parameters</h3>
-<p>None</p>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/</a></p>
-<h2>References</h2>
-<ol>
-<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f</a></li>
-</ol>
+<h2>Structure</h2>
+<pre><code class="javascript">{
+    "pages": [
+        {
+            "displayName": "Campus Martius, Mars",
+            "displayDescription": "Complete objectives to earn rewards.",
+            "records": [
+                {
+                    "recordHash": 217055300
+                },
+                {
+                    "recordHash": 1296553125
+                },
+                {
+                    "recordHash": 3852381276
+                },
+                {
+                    "recordHash": 3238180283
+                },
+                {
+                    "recordHash": 2897558091
+                },
+                {
+                    "recordHash": 1040741368
+                },
+                {
+                    "recordHash": 1292871602
+                },
+                {
+                    "recordHash": 3195182366
+                }
+            ]
+        },
+        {
+            "displayName": "Infinite Descent, Venus",
+            "displayDescription": "Complete objectives to earn rewards.",
+            "records": [
+                {
+                    "recordHash": 1005786758
+                },
+                {
+                    "recordHash": 3416780927
+                },
+                {
+                    "recordHash": 706320034
+                },
+                {
+                    "recordHash": 3744735417
+                },
+                {
+                    "recordHash": 1724017521
+                },
+                {
+                    "recordHash": 3374757482
+                },
+                {
+                    "recordHash": 1023796540
+                },
+                {
+                    "recordHash": 4186051700
+                }
+            ]
+        }
+    ],
+    "displayName": "SRL Record Book, Vol. 1",
+    "displayDescription": "Sparrow Racing Logbook",
+    "icon": "\/common\/destiny_content\/icons\/4029c8ccf171c9fc2ffc748e8e71df1d.png",
+    "unavailableReason": "SRL Event Inactive",
+    "hash": 3192310198,
+    "index": 0
+}</code></pre>
 		</div>
 	</div>
 </div>

@@ -24,14 +24,14 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1457258900">
 	<script src="../../js/main.js?1457258725"></script>
 
-	<title>GetGrimoireDefinition | DestinyService | DestinyService / GetGrimoireDefinition</title>
+	<title>InventoryItemDefinition | Definitions | Definitions / InventoryItemDefinition</title>
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../../docs/DestinyService/GetGrimoireDefinition.html | DestinyService / GetGrimoireDefinition -->
+<!-- ../../docs/Definitions/InventoryItemDefinition.html | Definitions / InventoryItemDefinition -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -71,7 +71,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>DestinyService / GetGrimoireDefinition</h1>
+		<h1>Definitions / InventoryItemDefinition</h1>
 		<h2></h2>
 
 		<!--<section id="downloads">
@@ -84,28 +84,116 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetGrimoireDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/InventoryItemDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Returns Grimoire definitions. This is the equivalent pulling the <a href="../../docs/Definitions/GrimoireDefinition">GrimoireDefinition</a> from the <a href="../../docs/Manifest">Manifest</a>.</p>
+<h2>Stats</h2>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">/Destiny/Vanguard/Grimoire/Definition/</a></li>
-<li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
-<li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
+<li><strong>Entries:</strong> 6271</li>
+<li><strong>Classified:</strong> 50</li>
 </ul>
-<h2>Parameters</h2>
-<h3>Path Parameters</h3>
-<p>None</p>
-<h3>Query String Parameters</h3>
-<p>None</p>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/</a></p>
-<h2>References</h2>
-<ol>
-<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f</a></li>
-</ol>
+<h2>Structure</h2>
+<pre><code class="javascript">{
+    "itemHash": 2147998056,
+    "itemName": "Faceguard of Kabr",
+    "itemDescription": "Kabr fought the Vex alone. But somehow they didn't kill him.",
+    "icon": "\/common\/destiny_content\/icons\/f01edf4553686a01fe57e40e5914e3ac.jpg",
+    "secondaryIcon": "\/img\/misc\/missing_icon.png",
+    "actionName": "Dismantle",
+    "hasAction": true,
+    "deleteOnAction": true,
+    "tierTypeName": "Legendary",
+    "tierType": 5,
+    "itemTypeName": "Helmet",
+    "bucketTypeHash": 3448274439,
+    "primaryBaseStatHash": 3897883278,
+    "stats": {
+        "3897883278": {
+            "statHash": 3897883278,
+            "value": 0,
+            "minimum": 0,
+            "maximum": 0
+        },
+        "2391494160": {
+            "statHash": 2391494160,
+            "value": 0,
+            "minimum": 0,
+            "maximum": 0
+        }
+    },
+    "perkHashes": [],
+    "specialItemType": 0,
+    "talentGridHash": 607519122,
+    "equippingBlock": {
+        "weaponSandboxPatternIndex": -1,
+        "gearArtArrangementIndex": 906,
+        "defaultDyes": [
+            {
+                "channelHash": 662199250,
+                "dyeHash": 1079641418
+            },
+            {
+                "channelHash": 1367384683,
+                "dyeHash": 982661963
+            },
+            {
+                "channelHash": 218592586,
+                "dyeHash": 1550502300
+            }
+        ],
+        "lockedDyes": [],
+        "customDyes": [],
+        "customDyeExpression": {
+            "steps": [
+                {
+                    "stepOperator": 1,
+                    "flagHash": 1680320212,
+                    "valueHash": 0,
+                    "value": 2312
+                }
+            ]
+        },
+        "weaponPatternHash": 0,
+        "arrangements": [
+            {
+                "classHash": 0,
+                "gearArtArrangementIndex": 906
+            }
+        ]
+    },
+    "hasGeometry": true,
+    "statGroupHash": 1116828683,
+    "itemLevels": [
+        0
+    ],
+    "qualityLevel": 60,
+    "equippable": true,
+    "instanced": true,
+    "rewardItemHash": 0,
+    "values": {},
+    "itemType": 2,
+    "itemSubType": 0,
+    "classType": 0,
+    "itemCategoryHashes": [
+        22,
+        45,
+        20
+    ],
+    "sourceHashes": [],
+    "nonTransferrable": false,
+    "exclusive": 0,
+    "maxStackSize": 1,
+    "itemIndex": 0,
+    "setItemHashes": [],
+    "questlineItemHash": 0,
+    "needsFullCompletion": false,
+    "objectiveHashes": [],
+    "allowActions": true,
+    "questTrackingUnlockValueHash": 0,
+    "bountyResetUnlockHash": 0,
+    "uniquenessHash": 2166136261,
+    "hash": 2147998056,
+    "index": 0
+}</code></pre>
 		</div>
 	</div>
 </div>

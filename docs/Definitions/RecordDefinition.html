@@ -24,14 +24,14 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1457258900">
 	<script src="../../js/main.js?1457258725"></script>
 
-	<title>GetGrimoireDefinition | DestinyService | DestinyService / GetGrimoireDefinition</title>
+	<title>RecordDefinition | Definitions | Definitions / RecordDefinition</title>
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../../docs/DestinyService/GetGrimoireDefinition.html | DestinyService / GetGrimoireDefinition -->
+<!-- ../../docs/Definitions/RecordDefinition.html | Definitions / RecordDefinition -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -71,7 +71,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>DestinyService / GetGrimoireDefinition</h1>
+		<h1>Definitions / RecordDefinition</h1>
 		<h2></h2>
 
 		<!--<section id="downloads">
@@ -84,28 +84,43 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetGrimoireDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/RecordDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Returns Grimoire definitions. This is the equivalent pulling the <a href="../../docs/Definitions/GrimoireDefinition">GrimoireDefinition</a> from the <a href="../../docs/Manifest">Manifest</a>.</p>
+<h2>Stats</h2>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">/Destiny/Vanguard/Grimoire/Definition/</a></li>
-<li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
-<li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
+<li><strong>Entries:</strong> 16</li>
 </ul>
-<h2>Parameters</h2>
-<h3>Path Parameters</h3>
-<p>None</p>
-<h3>Query String Parameters</h3>
-<p>None</p>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/">https://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/</a></p>
-<h2>References</h2>
-<ol>
-<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f</a></li>
-</ol>
+<h2>Structure</h2>
+<pre><code class="javascript">{
+    "displayName": "Event Standing Earned",
+    "description": "Earn SRL Event Standing in SRL races. Placing higher earns more standing.",
+    "recordValueUIStyle": "_investment_record_value_ui_style_integer",
+    "icon": "\/img\/destiny_content\/records\/mars_points_earned.png",
+    "rewards": [
+        {
+            "rewardSiteHash": 0,
+            "uiItemHash": 1001251649,
+            "uiItemQuantity": 1
+        },
+        {
+            "rewardSiteHash": 0,
+            "uiItemHash": 1475579175,
+            "uiItemQuantity": 0
+        },
+        {
+            "rewardSiteHash": 0,
+            "uiItemHash": 0,
+            "uiItemQuantity": 1
+        }
+    ],
+    "objectives": [
+        {
+            "objectiveHash": 3626886705
+        }
+    ],
+    "hash": 2897558091,
+    "index": 0
+}</code></pre>
 		</div>
 	</div>
 </div>
