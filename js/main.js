@@ -5,7 +5,7 @@ $(document).ready(function() {
 		if (link && (link.indexOf('//') == 0 || link.indexOf('http') == 0)) {
 			$(this).attr('target', '_blank');
 		}
-		if (link.indexOf('#') == 0 && $(this).parents('#content')) {
+		if (link.indexOf('#') == 0 && $(this).parents('#content').length > 0) {
 			$(this).addClass('no-page');
 		}
 	});
