@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+	<script src="../js/main.js"></script>
+
+	<title>DirectorBookDefinition | DirectorBookDefinition</title>
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- ../docs/DirectorBookDefinition.html | DirectorBookDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../">Home</a></li>
+<li><a href="../docs/Changelog">Changelog</a></li>
+<li><a href="#Guides">Guides</a>
+<ul>
+<li><a href="../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../docs/API-Details">API Details</a></li>
+<li><a href="../docs/Manifest">Manifest</a></li>
+<li><a href="../docs/Authentication">Authentication</a></li>
+</ul></li>
+<li><a href="#References">References</a>
+<ul>
+<li><a href="../docs/Error-Codes">Error Codes</a></li>
+<li><a href="../docs/Enums">Enums</a></li>
+<li><a href="../docs/Endpoints">Endpoints</a></li>
+<li><a href="../docs/Definitions">Definitions</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>DirectorBookDefinition</h1>
+		<h2></h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/DirectorBookDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>Info</h2>
+<p>The directorBookDefinition represents the structure used to feed the home screen (called the Director) in Destiny while sitting in Orbit. At one point, the image assets in this definition could be used to render the Director outside of the game however they are now out of date.</p>
+<h2>Structure</h2>
+<pre><code class="javascript">directorBookDefinition = {
+    "bookHash": 2072593726,
+    "bookDescription": "[display_description]",
+    "nodes": [
+        {
+            "nodeDefinitionHash": 897974050,
+            "styleHash": 3199098480,
+            "positionX": 488,
+            "positionY": 490,
+            "positionZ": 0,
+            "activityBundleHashes": [
+                1553742942 // see ActivityBundleDefinition
+            ],
+            "states": [
+                {
+                    "state": 0,
+                    "expression": {
+                        "steps": [
+                            {
+                                "stepOperator": 1,
+                                "flagHash": 2388787017,
+                                "valueHash": 0,
+                                "value": 170
+                            }
+                        ]
+                    }
+                }
+            ],
+            "uiModifier": 3
+        }
+    ],
+    "connections": [
+        {
+            "sourceNodeIndex": 9,
+            "destinationNodeIndex": 2
+        }
+    ],
+    "bookIdentifier": "BOOK_PVP_2",
+    "visible": false,
+    "isOverview": false,
+    "transitionNodes": [
+        {
+            "identifier": "TOWER_NODE",
+            "positionX": 649,
+            "positionY": 258,
+            "transitionBookHash": 0,
+            "transitionType": 1,
+            "width": 490,
+            "height": 490,
+            "parallaxIndex": 5,
+            "imagePath": "\/img\/theme\/destiny\/bgs\/bg_director_planet_tower.jpg",
+            "alphaImagePath": "\/img\/theme\/destiny\/bgs\/bg_director_planet_tower_alpha.jpg",
+            "destinationBackgroundImagePath": "",
+            "destinationDetailImagePath": "",
+            "destinationContextImagePath": "",
+            "label": "Tower",
+            "tileMap": {
+                "tileImages": [],
+                "numColumns": 6,
+                "numRows": 4,
+                "tileWidth": 320,
+                "tileHeight": 270
+            },
+            "mapImage": "images\/destiny_content\/Director\/Tower\/Director_Tower_f5ea90920f1d497d8b00cced4f5211ee.jpg"
+        }
+    ],
+    "notificationNodes": {
+        "TOWER_NODE": [
+            {
+                "identifier": "TOWER_GENERAL",
+                "transitionNodeIdentifier": "TOWER_NODE",
+                "positionX": 233,
+                "positionY": 140,
+                "width": 30,
+                "height": 30,
+                "backgroundImagePath": "",
+                "showCount": true,
+                "activityBundleHashes": [
+
+                ],
+                "vendorHashes": [
+                    4096191117, // see VendorDefinition
+                ]
+            }
+        ],
+        "BOOK_OVERVIEW_NODE_COSMODROME": [
+            {
+                "identifier": "COSMO_GENERAL",
+                "transitionNodeIdentifier": "BOOK_OVERVIEW_NODE_COSMODROME",
+                "positionX": 254,
+                "positionY": 43,
+                "width": 30,
+                "height": 30,
+                "backgroundImagePath": "",
+                "showCount": true,
+                "activityBundleHashes": [
+                    3645919501 // see ActivityBundleDefinition
+                ],
+                "vendorHashes": [
+                    4096191117 // see VendorDefinition 
+                ]
+            }
+        ],
+        "BOOK_OVERVIEW_NODE_MOON": [
+            {
+                "identifier": "MOON_GENERAL",
+                "transitionNodeIdentifier": "BOOK_OVERVIEW_NODE_MOON",
+                "positionX": 300,
+                "positionY": 110,
+                "width": 30,
+                "height": 30,
+                "backgroundImagePath": "",
+                "showCount": true,
+                "activityBundleHashes": [
+                    149381097 // see ActivityBundleDefinition
+                ],
+                "vendorHashes": [
+                    4096191117 // see VendorDefinition 
+                ]
+            }
+        ],
+        "BOOK_OVERVIEW_NODE_VENUS": [
+            {
+                "identifier": "VENUS_GENERAL",
+                "transitionNodeIdentifier": "BOOK_OVERVIEW_NODE_VENUS",
+                "positionX": 364,
+                "positionY": 360,
+                "width": 30,
+                "height": 30,
+                "backgroundImagePath": "",
+                "showCount": true,
+                "activityBundleHashes": [
+                    2474598319 // see ActivityBundleDefinition
+                ],
+                "vendorHashes": [
+                    4096191117 // see VendorDefinition 
+                ]
+            }
+        ],
+        "BOOK_OVERVIEW_NODE_MARS": [
+            {
+                "identifier": "MARS_GENERAL",
+                "transitionNodeIdentifier": "BOOK_OVERVIEW_NODE_MARS",
+                "positionX": 124,
+                "positionY": 390,
+                "width": 30,
+                "height": 30,
+                "backgroundImagePath": "",
+                "showCount": true,
+                "activityBundleHashes": [
+                    2474598319 // see ActivityBundleDefinition
+                ],
+                "vendorHashes": [
+                    4096191117 // see VendorDefinition 
+                ]
+            }
+        ],
+        "BOOK_OVERVIEW_NODE_REEF": [
+            {
+                "identifier": "REEF_GENERAL",
+                "transitionNodeIdentifier": "BOOK_OVERVIEW_NODE_REEF",
+                "positionX": 209,
+                "positionY": 267,
+                "width": 30,
+                "height": 30,
+                "backgroundImagePath": "",
+                "showCount": true,
+                "activityBundleHashes": [
+                    2474598319 // see ActivityBundleDefinition
+                ],
+                "vendorHashes": [
+                    4096191117 // see VendorDefinition 
+                ]
+            }
+        ]
+    },
+    "urlFriendlyName": "PVP2",
+    "imagePaths": [
+        ""
+    ],
+    "isDefaultExpression": {
+        "steps": []
+    },
+    "isVisibleExpression": {
+        "steps": [
+            {
+                "stepOperator": 1,
+                "flagHash": 106053676,
+                "valueHash": 0,
+                "value": 824
+            }
+        ]
+    },
+    "destinationHash": 0,
+    "tileMap": {
+        "tileImages": [
+            "images\/destiny_content\/Director\/Earth\/DirectorMap_Earth_00.jpg"
+        ],
+        "numColumns": 6,
+        "numRows": 4,
+        "tileWidth": 320,
+        "tileHeight": 270
+    },
+    "mapImage": "images\/destiny_content\/Director\/Earth\/Director_Earth_daa45cf5248a4446a8eb60463bc40cbe.jpg",
+    "bookName": "The Crucible",
+    "bookNumber": "Hone your skills and win glory in battle against other Guardians."
+}</code></pre>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+</body>
+</html>
