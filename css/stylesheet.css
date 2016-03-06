@@ -128,6 +128,9 @@ a:focus {
 #content .inner .table td {
   color: rgba(245, 245, 245, 0.65);
 }
+#content .inner hr {
+  border-top-color: rgba(245, 245, 245, 0.1);
+}
 #content .inner h2,
 #content .inner h3,
 #content .inner h4,

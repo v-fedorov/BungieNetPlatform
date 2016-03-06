@@ -8,6 +8,45 @@ $(document).ready(function() {
 	});
 
 	$('table').sortableTable();
+
+	var pushHeader = function(toc, header, depth) {
+		if (depth > 1 && toc.length > 0) {
+			pushHeader(toc[toc.length-1], header, depth-1);
+		} else {
+			toc.push({selector: $(header), children: []});
+		}
+	};
+	var appendHeader = function($parent, toc) {
+		var $toc = $('<ol class="toc"></ol>');
+		for (var i=0; i<toc.length; i++) {
+			var header = toc[i];
+			var $header = $('<li><a href="#' + header.selector.attr('id') + '">' + header.selector.text().trim() + '</a></li>');
+			if (header.children.length > 0) {
+				appendHeader($header, header.children);
+			}
+			$toc.append($header);
+		}
+		$parent.prepend($toc);
+	};
+
+	var tableOfContents = [];
+	$('#content .inner').first().find('h2, h3, h4, h5, h6').each(function() {
+		$(this).attr('id', $(this).text().trim().replace(/ /g, '-').replace(/[^a-z0-9\-]+/ig, ''));
+		switch($(this).prop('tagName').toLowerCase()) {
+			case 'h2': pushHeader(tableOfContents, this, 1); break;
+			case 'h3': pushHeader(tableOfContents, this, 2); break;
+			case 'h4': pushHeader(tableOfContents, this, 3); break;
+			case 'h5': pushHeader(tableOfContents, this, 4); break;
+			case 'h6': pushHeader(tableOfContents, this, 5); break;
+		}
+	});
+	console.log(tableOfContents);
+	if (tableOfContents.length > 1) {
+		var $inner = $('#content .inner');
+		$inner.prepend('<hr/>');
+		appendHeader($inner, tableOfContents);
+		$inner.prepend('<h2>Contents</h2>');
+	}
 });
 
 $.fn.sortableTable = function(options) {
