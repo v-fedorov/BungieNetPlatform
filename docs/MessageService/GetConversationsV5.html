@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Returns a paged list of conversations for the current user.</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Message/GetConversationsV5/{h}/">/Message/GetConversationsV5/{h}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Message/GetConversationsV5/{currentPage}/">/Message/GetConversationsV5/{currentPage}/</a></li>
 <li><strong>Method:</strong> GET</li>
 <li><strong>Accessibility:</strong> Private</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#MessageService">MessageService</a></li>
@@ -104,8 +104,8 @@
 </thead>
 <tbody>
 <tr>
-<td>h</td>
-<td>&nbsp;</td>
+<td>currentPage</td>
+<td>The current page to return. Starts at 1.</td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
-<p><a href="https://www.bungie.net/Platform/Message/GetConversationsV5/1/">https://www.bungie.net/Platform/Message/GetConversationsV5/1/</a></p>
+<p>GET <a href="https://www.bungie.net/Platform/Message/GetConversationsV5/1/">https://www.bungie.net/Platform/Message/GetConversationsV5/1/</a></p>
 <pre><code class="javascript">{
     "Response": {
         "users": {

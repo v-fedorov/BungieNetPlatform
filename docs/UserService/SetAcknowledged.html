@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Acknowledges that the user has viewed a given notification, (ie new Grimoire Card)</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/User/Acknowledged/{f}/">/User/Acknowledged/{f}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/User/Acknowledged/{ackId}/">/User/Acknowledged/{ackId}/</a></li>
 <li><strong>Method:</strong> POST</li>
 <li><strong>Accessibility:</strong> Private</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#UserService">UserService</a></li>
@@ -104,8 +104,8 @@
 </thead>
 <tbody>
 <tr>
-<td>f</td>
-<td>&nbsp;</td>
+<td>ackId</td>
+<td>The acknowledge id of a given item.</td>
 </tr>
 </tbody>
 </table>
@@ -114,8 +114,8 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
-<p>POST <a href="https://www.bungie.net/Platform/User/Acknowledged/1_68803000/">https://www.bungie.net/Platform/User/Acknowledged/1_68803000/</a>
-This will acknowledge that the &quot;Wanted: Skoriks, Archon-Slayer&quot; Grimoire Card has been viewed.</p>
+<p>POST <a href="https://www.bungie.net/Platform/User/Acknowledged/1_68803000/">https://www.bungie.net/Platform/User/Acknowledged/1_68803000/</a></p>
+<p>This will acknowledge that the &quot;Wanted: Skoriks, Archon-Slayer&quot; Grimoire Card has been viewed.</p>
 <pre><code class="javascript">{
     "Response": true,
     "ErrorCode": 1,

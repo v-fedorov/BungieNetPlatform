@@ -99,7 +99,52 @@
 <h3>Query String Parameters</h3>
 <p>None</p>
 <h3>JSON POST Parameters</h3>
-<p>None</p>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td>The body of the post.</td>
+</tr>
+<tr>
+<td><a href="../../docs/Enums#ForumPostCategory">category</a></td>
+<td>The forum post category.</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>A valid groupId.</td>
+</tr>
+<tr>
+<td>isGroupPrivate</td>
+<td>true or false</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>parentPostId</td>
+<td>A valid parentPostId.</td>
+</tr>
+<tr>
+<td>subTopicOverride</td>
+<td>true or false</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>The subject of the post.</td>
+</tr>
+<tr>
+<td>urlLinkOrImage</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <h2>Example</h2>
 <p>POST <a href="https://www.bungie.net/Platform/Forum/CreatePost/">https://www.bungie.net/Platform/Forum/CreatePost/</a></p>
 <pre><code class="javascript">{

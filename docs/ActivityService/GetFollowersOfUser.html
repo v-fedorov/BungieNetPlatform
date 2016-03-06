@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Returns a list of Bungie.net users following a given user.</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Activity/User/{i}/Followers/">/Activity/User/{i}/Followers/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Activity/User/{profileId}/Followers/">/Activity/User/{profileId}/Followers/</a></li>
 <li><strong>Method:</strong> GET</li>
 <li><strong>Accessibility:</strong> Public</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#ActivityService">ActivityService</a></li>
@@ -104,8 +104,8 @@
 </thead>
 <tbody>
 <tr>
-<td>i</td>
-<td>&nbsp;</td>
+<td>profileId</td>
+<td>A valid Bungie.net membership ID.</td>
 </tr>
 </tbody>
 </table>
@@ -124,14 +124,14 @@
 </tr>
 <tr>
 <td>currentpage</td>
-<td>The current page. Starts a 1.</td>
+<td>The current page to return. Starts at 1.</td>
 </tr>
 </tbody>
 </table>
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
-<p><a href="https://www.bungie.net/Platform/Activity/User/5197148/Followers/">https://www.bungie.net/Platform/Activity/User/5197148/Followers/</a></p>
+<p>GET <a href="https://www.bungie.net/Platform/Activity/User/5197148/Followers/">https://www.bungie.net/Platform/Activity/User/5197148/Followers/</a></p>
 <pre><code class="javascript">{
     "Response": {
         "results": [
