@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Returns the specific item from the current manifest a json object.</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Manifest/{manifestId}/{l}/">/Destiny/Manifest/{manifestId}/{l}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Manifest/{definitionType}/{definitionId}/">/Destiny/Manifest/{definitionType}/{definitionId}/</a></li>
 <li><strong>Method:</strong> GET</li>
 <li><strong>Accessibility:</strong> Public</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
@@ -104,12 +104,12 @@
 </thead>
 <tbody>
 <tr>
-<td>manifestId</td>
-<td>&nbsp;</td>
+<td><a href="../../docs/Enums#DestinyDefinitionType">definitionType</a></td>
+<td>The type of definition to return.</td>
 </tr>
 <tr>
-<td>l</td>
-<td>&nbsp;</td>
+<td>definitionId</td>
+<td>A valid definitionId.</td>
 </tr>
 </tbody>
 </table>
@@ -135,7 +135,7 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
-<p><a href="https://www.bungie.net/Platform/Destiny/Manifest/1/2167126461/">https://www.bungie.net/Platform/Destiny/Manifest/1/2167126461/</a></p>
+<p>GET <a href="https://www.bungie.net/Platform/Destiny/Manifest/1/2167126461/">https://www.bungie.net/Platform/Destiny/Manifest/1/2167126461/</a></p>
 <pre><code class="javascript">{
     "Response": {
         "data": {

@@ -108,7 +108,7 @@
 </tr>
 <tr>
 <td>characterId</td>
-<td>&nbsp;</td>
+<td>A valid characterId that is associated with the given account.</td>
 </tr>
 </tbody>
 </table>
@@ -130,6 +130,31 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
+<p>GET <a href="https://www.bungie.net/Platform/Destiny/2/MyAccount/Character/2305843009221011538/Vendors/Summaries/">https://www.bungie.net/Platform/Destiny/2/MyAccount/Character/2305843009221011538/Vendors/Summaries/</a></p>
+<pre><code class="javascript">{
+    "Response": {
+        "data": {
+            "vendors": [
+                {
+                    "vendorHash": 134701236,
+                    "ackState": {
+                        "needsAck": false,
+                        "ackId": ""
+                    },
+                    "nextRefreshDate": "2015-05-26T08:00:00Z",
+                    "enabled": true
+                }
+            ]
+        }
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {
+
+    }
+}</code></pre>
 <h2>References</h2>
 		</div>
 	</div>
