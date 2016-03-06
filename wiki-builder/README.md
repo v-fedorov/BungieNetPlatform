@@ -8,7 +8,7 @@ While an effort has been made to try and make sure these scripts won't bust anyt
 1. Setup a folder for keeping all of the BungieNetPlatform repos in one place.
 2. Pull https://github.com/DestinyDevs/BungieNetPlatform.wiki.git to `/wiki`.
 3. Pull https://github.com/DestinyDevs/BungieNetPlatform.git `master` branch to `/master`.
-4. Pull https://github.com/DestinyDevs/BungieNetPlatform.git `gh-pages` branch to `/gh-pages'.
+4. Pull https://github.com/DestinyDevs/BungieNetPlatform.git `gh-pages` branch to `/gh-pages`.
 5. Setup a localhost AMP server and point it to `/master/wiki-builder`.
 6. Setup another localhost and point it to `/gh-pages` so you can preview the static pages before they go online.
 7. Create a php file called `/master/wiki-builder/api-key.php` and enter `<?php define('API_KEY', '{your_api_key}');` so you can use the `GetDestinyManifest` endpoint.
