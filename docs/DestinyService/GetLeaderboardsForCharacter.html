@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Returns leaderboard stats for a given character compared against friends. Note you may need to re-authenticate with PSN/Xbox in order to see full rankings.</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Stats/Leaderboards/{membershipType}/{membershipId}/{characterId}/">/Destiny/Stats/Leaderboards/{membershipType}/{membershipId}/{characterId}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/">/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/</a></li>
 <li><strong>Method:</strong> GET</li>
 <li><strong>Accessibility:</strong> Private</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
@@ -105,11 +105,11 @@
 <tbody>
 <tr>
 <td><a href="../../docs/Enums#BungieMembershipType">membershipType</a></td>
-<td>A valid Bungie.net membership type.</td>
+<td>A valid Bungie.net membershipType.</td>
 </tr>
 <tr>
-<td>membershipId</td>
-<td>&nbsp;</td>
+<td>destinyMembershipId</td>
+<td>A valid destinyMembershipId.</td>
 </tr>
 <tr>
 <td>characterId</td>

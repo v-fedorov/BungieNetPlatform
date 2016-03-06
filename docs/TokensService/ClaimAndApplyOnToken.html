@@ -87,7 +87,7 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/ClaimAndApplyOnToken/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Tokens/ClaimAndApplyToken/{e}/">/Tokens/ClaimAndApplyToken/{e}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Tokens/ClaimAndApplyToken/{tokenType}/">/Tokens/ClaimAndApplyToken/{tokenType}/</a></li>
 <li><strong>Method:</strong> POST</li>
 <li><strong>Accessibility:</strong> </li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#TokensService">TokensService</a></li>
@@ -103,8 +103,8 @@
 </thead>
 <tbody>
 <tr>
-<td>e</td>
-<td>&nbsp;</td>
+<td>tokenType</td>
+<td>Default is 0.</td>
 </tr>
 </tbody>
 </table>
@@ -126,6 +126,25 @@
 </tbody>
 </table>
 <h2>Example</h2>
+<p>POST <a href="https://www.bungie.net/Platform/Tokens/ClaimAndApplyToken/0/">https://www.bungie.net/Platform/Tokens/ClaimAndApplyToken/0/</a></p>
+<p>Request Payload (as a string): X4C-FGX-MX3</p>
+<pre><code class="javascript">{
+    "Response": {
+        "OfferKey": "r1_collectors_edition.code2",
+        "OfferDisplayName": "Emblem: Note of Conquest",
+        "OfferDisplayDetail": "Pick up your emblem at the Special Orders Vendor in the Tower.",
+        "OfferImagePath": "/img/theme/destiny/icons/icon_glimmer.jpg",
+        "OfferPurchaseDate": "2015-06-25T23:59:51.16Z",
+        "OfferQuantity": 1,
+        "ConsumableQuantity": 0,
+        "RedeemType": 1
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {}
+}</code></pre>
 <h2>References</h2>
 		</div>
 	</div>

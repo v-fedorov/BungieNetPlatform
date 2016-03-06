@@ -1459,7 +1459,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/TokensService/ClaimAndApplyOnToken">ClaimAndApplyOnToken</a></td>
-<td>/Tokens/ClaimAndApplyToken/{e}/</td>
+<td>/Tokens/ClaimAndApplyToken/{tokenType}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1546,12 +1546,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetAccount">GetAccount</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetAccountSummary">GetAccountSummary</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Summary/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Summary/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1561,12 +1561,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetActivityHistory">GetActivityHistory</a></td>
-<td>/Destiny/Stats/ActivityHistory/{membershipType}/{membershipId}/{characterId}/</td>
+<td>/Destiny/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetAdvisorsForCharacter">GetAdvisorsForCharacter</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Advisors/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1576,7 +1576,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetAllItemsSummary">GetAllItemsSummary</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Items/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Items/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1591,37 +1591,37 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetCharacter">GetCharacter</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Complete/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Complete/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetCharacterActivities">GetCharacterActivities</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Activities/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Activities/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetCharacterInventory">GetCharacterInventory</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Inventory/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetCharacterInventorySummary">GetCharacterInventorySummary</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Inventory/Summary/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/Summary/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetCharacterProgression">GetCharacterProgression</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Progression/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Progression/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetCharacterSummary">GetCharacterSummary</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetDestinyAggregateActivityStats">GetDestinyAggregateActivityStats</a></td>
-<td>/Destiny/Stats/AggregateActivityStats/{membershipType}/{membershipId}/{characterId}/</td>
+<td>/Destiny/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1651,12 +1651,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetExcellenceBadges">GetExcellenceBadges</a></td>
-<td>/Destiny/Stats/GetExcellenceBadges/{membershipType}/{membershipId}/</td>
+<td>/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetGrimoireByMembership">GetGrimoireByMembership</a></td>
-<td>/Destiny/Vanguard/Grimoire/{membershipType}/{membershipId}/</td>
+<td>/Destiny/Vanguard/Grimoire/{membershipType}/{destinyMembershipId}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1666,7 +1666,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetHistoricalStats">GetHistoricalStats</a></td>
-<td>/Destiny/Stats/{membershipType}/{membershipId}/{characterId}/</td>
+<td>/Destiny/Stats/{membershipType}/{destinyMembershipId}/{characterId}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1676,22 +1676,22 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetHistoricalStatsForAccount">GetHistoricalStatsForAccount</a></td>
-<td>/Destiny/Stats/Account/{membershipType}/{membershipId}/</td>
+<td>/Destiny/Stats/Account/{membershipType}/{destinyMembershipId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetItemDetail">GetItemDetail</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Character/{characterId}/Inventory/{itemInstanceId}/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetLeaderboards">GetLeaderboards</a></td>
-<td>/Destiny/Stats/Leaderboards/{membershipType}/{membershipId}/</td>
+<td>/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetLeaderboardsForCharacter">GetLeaderboardsForCharacter</a></td>
-<td>/Destiny/Stats/Leaderboards/{membershipType}/{membershipId}/{characterId}/</td>
+<td>/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1741,12 +1741,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetTriumphs">GetTriumphs</a></td>
-<td>/Destiny/{membershipType}/Account/{membershipId}/Triumphs/</td>
+<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Triumphs/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetUniqueWeaponHistory">GetUniqueWeaponHistory</a></td>
-<td>/Destiny/Stats/UniqueWeapons/{membershipType}/{membershipId}/{characterId}/</td>
+<td>/Destiny/Stats/UniqueWeapons/{membershipType}/{destinyMembershipId}/{characterId}/</td>
 </tr>
 <tr>
 <td>GET</td>

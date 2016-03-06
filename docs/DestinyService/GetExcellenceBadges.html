@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Returns Destiny excellence badges for a given account. No longer in use.</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Stats/GetExcellenceBadges/{membershipType}/{membershipId}/">/Destiny/Stats/GetExcellenceBadges/{membershipType}/{membershipId}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/">/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/</a></li>
 <li><strong>Method:</strong> GET</li>
 <li><strong>Accessibility:</strong> Public</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
@@ -105,11 +105,11 @@
 <tbody>
 <tr>
 <td><a href="../../docs/Enums#BungieMembershipType">membershipType</a></td>
-<td>A valid Bungie.net membership type.</td>
+<td>A valid Bungie.net membershipType.</td>
 </tr>
 <tr>
-<td>membershipId</td>
-<td>&nbsp;</td>
+<td>destinyMembershipId</td>
+<td>A valid destinyMembershipId.</td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@
 <tbody>
 <tr>
 <td>definitions</td>
-<td>Include definitions in the response; true or false.</td>
+<td>Include definitions in the response. Use while testing.</td>
 </tr>
 </tbody>
 </table>
