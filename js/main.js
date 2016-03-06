@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 	var tableOfContents = [];
 	$('#content .inner').first().find('h2, h3, h4, h5, h6').each(function() {
-		$(this).attr('name', $(this).text().trim().replace(/ /g, '-').replace(/[^a-z0-9\-]+/ig, ''));
+		$(this).before('<a name="'+$(this).text().trim().replace(/ /g, '-').replace(/[^a-z0-9\-]+/ig, '')+'"></a>');
 		switch($(this).prop('tagName').toLowerCase()) {
 			case 'h2': pushHeader(tableOfContents, this, 1); break;
 			case 'h3': pushHeader(tableOfContents, this, 2); break;
