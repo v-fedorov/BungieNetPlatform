@@ -150,7 +150,7 @@ foreach($pages as $pageIndex => $page) {
 	$pagePath = str_replace('.md', '.html', $pagePath);
 	$pagePath = str_replace('Pages', '', $pagePath);
 
-	echo $pagePath.LN;
+	//echo $pagePath.LN;
 
 	if (strpos($page, 'Pages') === false) {
 		if (strpos($page, 'Home.md') === false && strpos($page, '_') === false) {
