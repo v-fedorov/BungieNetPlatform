@@ -1,0 +1,202 @@
+{
+    "asset": {
+        "type": "asset",
+        "definitions": [
+            {
+                "name": "DestinyGearAssetsDefinition",
+                "entries": 3305,
+                "classified": 0
+            }
+        ]
+    },
+    "gear": {
+        "type": "gear",
+        "definitions": [
+            {
+                "name": "DestinyGearAssetsDefinition",
+                "entries": 3305,
+                "classified": 0
+            }
+        ]
+    },
+    "world": {
+        "type": "world",
+        "definitions": [
+            {
+                "name": "DestinyActivityBundleDefinition",
+                "entries": 223,
+                "classified": 0
+            },
+            {
+                "name": "DestinyActivityDefinition",
+                "entries": 329,
+                "classified": 7
+            },
+            {
+                "name": "DestinyActivityTypeDefinition",
+                "entries": 56,
+                "classified": 0
+            },
+            {
+                "name": "DestinyBondDefinition",
+                "entries": 3,
+                "classified": 0
+            },
+            {
+                "name": "DestinyClassDefinition",
+                "entries": 3,
+                "classified": 0
+            },
+            {
+                "name": "DestinyDamageTypeDefinition",
+                "entries": 4,
+                "classified": 0
+            },
+            {
+                "name": "DestinyDestinationDefinition",
+                "entries": 22,
+                "classified": 0
+            },
+            {
+                "name": "DestinyDirectorBookDefinition",
+                "entries": 9,
+                "classified": 0
+            },
+            {
+                "name": "DestinyEnemyRaceDefinition",
+                "entries": 7,
+                "classified": 0
+            },
+            {
+                "name": "DestinyFactionDefinition",
+                "entries": 20,
+                "classified": 0
+            },
+            {
+                "name": "DestinyGenderDefinition",
+                "entries": 2,
+                "classified": 0
+            },
+            {
+                "name": "DestinyGrimoireCardDefinition",
+                "entries": 664,
+                "classified": 0
+            },
+            {
+                "name": "DestinyGrimoireDefinition",
+                "entries": 1,
+                "classified": 0
+            },
+            {
+                "name": "DestinyHistoricalStatsDefinition",
+                "entries": 1733,
+                "classified": 0
+            },
+            {
+                "name": "DestinyInventoryBucketDefinition",
+                "entries": 37,
+                "classified": 0
+            },
+            {
+                "name": "DestinyInventoryItemDefinition",
+                "entries": 6271,
+                "classified": 50
+            },
+            {
+                "name": "DestinyItemCategoryDefinition",
+                "entries": 55,
+                "classified": 0
+            },
+            {
+                "name": "DestinyLocationDefinition",
+                "entries": 130,
+                "classified": 0
+            },
+            {
+                "name": "DestinyObjectiveDefinition",
+                "entries": 933,
+                "classified": 0
+            },
+            {
+                "name": "DestinyPlaceDefinition",
+                "entries": 10,
+                "classified": 0
+            },
+            {
+                "name": "DestinyProgressionDefinition",
+                "entries": 243,
+                "classified": 0
+            },
+            {
+                "name": "DestinyRaceDefinition",
+                "entries": 3,
+                "classified": 0
+            },
+            {
+                "name": "DestinyRecordBookDefinition",
+                "entries": 1,
+                "classified": 0
+            },
+            {
+                "name": "DestinyRecordDefinition",
+                "entries": 16,
+                "classified": 0
+            },
+            {
+                "name": "DestinyRewardSourceDefinition",
+                "entries": 47,
+                "classified": 0
+            },
+            {
+                "name": "DestinySandboxPerkDefinition",
+                "entries": 959,
+                "classified": 0
+            },
+            {
+                "name": "DestinyScriptedSkullDefinition",
+                "entries": 15,
+                "classified": 0
+            },
+            {
+                "name": "DestinySpecialEventDefinition",
+                "entries": 6,
+                "classified": 0
+            },
+            {
+                "name": "DestinyStatDefinition",
+                "entries": 36,
+                "classified": 0
+            },
+            {
+                "name": "DestinyStatGroupDefinition",
+                "entries": 42,
+                "classified": 0
+            },
+            {
+                "name": "DestinyTalentGridDefinition",
+                "entries": 1083,
+                "classified": 0
+            },
+            {
+                "name": "DestinyTriumphSetDefinition",
+                "entries": 1,
+                "classified": 0
+            },
+            {
+                "name": "DestinyUnlockFlagDefinition",
+                "entries": 5717,
+                "classified": 0
+            },
+            {
+                "name": "DestinyVendorCategoryDefinition",
+                "entries": 12,
+                "classified": 0
+            },
+            {
+                "name": "DestinyVendorDefinition",
+                "entries": 33,
+                "classified": 0
+            }
+        ]
+    }
+}

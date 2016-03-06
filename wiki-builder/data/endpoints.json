@@ -1,0 +1,2797 @@
+{
+    "JSONPService": {
+        "name": "JSONPService",
+        "endpoints": {
+            "GetCurrentUser": {
+                "name": "GetCurrentUser",
+                "method": "GET",
+                "endpoint": "\/JSONP\/GetBungieNetUser\/",
+                "params": [
+                    "callback"
+                ],
+                "post": []
+            }
+        }
+    },
+    "UserService": {
+        "name": "UserService",
+        "endpoints": {
+            "CreateUser": {
+                "name": "CreateUser",
+                "method": "POST",
+                "endpoint": "\/User\/CreateUser\/",
+                "params": [],
+                "post": []
+            },
+            "UpdateUser": {
+                "name": "UpdateUser",
+                "method": "POST",
+                "endpoint": "\/User\/UpdateUser\/",
+                "params": [],
+                "post": [
+                    "about",
+                    "adultMode",
+                    "displayName",
+                    "emailAddress",
+                    "emailUsage",
+                    "locale",
+                    "localeInheritDefault",
+                    "profilePicture",
+                    "profileTheme",
+                    "showActivity",
+                    "showFacebookPublic",
+                    "showGamertagPublic",
+                    "showGroupMessaging",
+                    "showPsnPublic",
+                    "uniqueName"
+                ]
+            },
+            "UpdateUserAdmin": {
+                "name": "UpdateUserAdmin",
+                "method": "POST",
+                "endpoint": "\/User\/UpdateUserAdmin\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "UpdateNotificationSetting": {
+                "name": "UpdateNotificationSetting",
+                "method": "POST",
+                "endpoint": "\/User\/Notification\/Update\/",
+                "params": [],
+                "post": []
+            },
+            "EditSuccessMessageFlags": {
+                "name": "EditSuccessMessageFlags",
+                "method": "POST",
+                "endpoint": "\/User\/MessageFlags\/Success\/Update\/{g}\/",
+                "params": [],
+                "post": []
+            },
+            "GetCurrentUser": {
+                "name": "GetCurrentUser",
+                "method": "GET",
+                "endpoint": "\/User\/GetBungieNetUser\/",
+                "params": [],
+                "post": []
+            },
+            "GetCountsForCurrentUser": {
+                "name": "GetCountsForCurrentUser",
+                "method": "GET",
+                "endpoint": "\/User\/GetCounts\/",
+                "params": [],
+                "post": []
+            },
+            "GetBungieNetUserById": {
+                "name": "GetBungieNetUserById",
+                "method": "GET",
+                "endpoint": "\/User\/GetBungieNetUserById\/{membershipId}\/",
+                "params": [],
+                "post": []
+            },
+            "GetUserAliases": {
+                "name": "GetUserAliases",
+                "method": "GET",
+                "endpoint": "\/User\/GetUserAliases\/{membershipId}\/",
+                "params": [],
+                "post": []
+            },
+            "SearchUsers": {
+                "name": "SearchUsers",
+                "method": "GET",
+                "endpoint": "\/User\/SearchUsers\/",
+                "params": [
+                    "q"
+                ],
+                "post": []
+            },
+            "GetBungieAccount": {
+                "name": "GetBungieAccount",
+                "method": "GET",
+                "endpoint": "\/User\/GetBungieAccount\/{membershipId}\/{membershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "GetCurrentBungieAccount": {
+                "name": "GetCurrentBungieAccount",
+                "method": "GET",
+                "endpoint": "\/User\/GetCurrentBungieAccount\/",
+                "params": [],
+                "post": []
+            },
+            "SearchUsersPaged": {
+                "name": "SearchUsersPaged",
+                "method": "GET",
+                "endpoint": "\/User\/SearchUsersPaged\/{searchTerm}\/{page}\/",
+                "params": [],
+                "post": []
+            },
+            "SearchUsersPagedV2": {
+                "name": "SearchUsersPagedV2",
+                "method": "GET",
+                "endpoint": "\/User\/SearchUsersPaged\/{searchTerm}\/{page}\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetNotificationSettings": {
+                "name": "GetNotificationSettings",
+                "method": "GET",
+                "endpoint": "\/User\/GetNotificationSettings\/",
+                "params": [],
+                "post": []
+            },
+            "GetCredentialTypesForAccount": {
+                "name": "GetCredentialTypesForAccount",
+                "method": "GET",
+                "endpoint": "\/User\/GetCredentialTypesForAccount\/",
+                "params": [],
+                "post": []
+            },
+            "GetAvailableAvatars": {
+                "name": "GetAvailableAvatars",
+                "method": "GET",
+                "endpoint": "\/User\/GetAvailableAvatars\/",
+                "params": [],
+                "post": []
+            },
+            "GetAvailableAvatarsAdmin": {
+                "name": "GetAvailableAvatarsAdmin",
+                "method": "GET",
+                "endpoint": "\/User\/GetAvailableAvatarsAdmin\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAvailableThemes": {
+                "name": "GetAvailableThemes",
+                "method": "GET",
+                "endpoint": "\/User\/GetAvailableThemes\/",
+                "params": [],
+                "post": []
+            },
+            "RegisterMobileAppPair": {
+                "name": "RegisterMobileAppPair",
+                "method": "POST",
+                "endpoint": "\/User\/RegisterMobileAppPair\/",
+                "params": [],
+                "post": []
+            },
+            "UnregisterMobileAppPair": {
+                "name": "UnregisterMobileAppPair",
+                "method": "POST",
+                "endpoint": "\/User\/UnregisterMobileAppPair\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "UpdateStateInfoForMobileAppPair": {
+                "name": "UpdateStateInfoForMobileAppPair",
+                "method": "POST",
+                "endpoint": "\/User\/UpdateStateInfoForMobileAppPair\/",
+                "params": [],
+                "post": []
+            },
+            "GetMobileAppPairings": {
+                "name": "GetMobileAppPairings",
+                "method": "GET",
+                "endpoint": "\/User\/GetMobileAppPairings\/",
+                "params": [],
+                "post": []
+            },
+            "GetMobileAppPairingsUncached": {
+                "name": "GetMobileAppPairingsUncached",
+                "method": "GET",
+                "endpoint": "\/User\/GetMobileAppPairingsUncached\/",
+                "params": [],
+                "post": []
+            },
+            "GetSignOutUrl": {
+                "name": "GetSignOutUrl",
+                "method": "GET",
+                "endpoint": "\/User\/GetSignOutUrl\/",
+                "params": [],
+                "post": []
+            },
+            "LinkOverride": {
+                "name": "LinkOverride",
+                "method": "POST",
+                "endpoint": "\/User\/LinkOverride\/",
+                "params": [],
+                "post": []
+            },
+            "GetUserMembershipIds": {
+                "name": "GetUserMembershipIds",
+                "method": "GET",
+                "endpoint": "\/User\/GetMembershipIds\/",
+                "params": [
+                    "excludebungienet"
+                ],
+                "post": []
+            },
+            "SetAcknowledged": {
+                "name": "SetAcknowledged",
+                "method": "POST",
+                "endpoint": "\/User\/Acknowledged\/{ackId}\/",
+                "params": [],
+                "post": []
+            },
+            "GetPlatformApiKeysForUser": {
+                "name": "GetPlatformApiKeysForUser",
+                "method": "GET",
+                "endpoint": "\/User\/GetPlatformApiKeysForUser\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "MessageService": {
+        "name": "MessageService",
+        "endpoints": {
+            "GetConversationByIdV2": {
+                "name": "GetConversationByIdV2",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationByIdV2\/{e}\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetConversationWithMemberIdV2": {
+                "name": "GetConversationWithMemberIdV2",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationWithMemberV2\/{e}\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetConversationThreadV3": {
+                "name": "GetConversationThreadV3",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationThreadV3\/{e}\/{i}\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "SaveMessageV3": {
+                "name": "SaveMessageV3",
+                "method": "POST",
+                "endpoint": "\/Message\/SaveMessageV3\/",
+                "params": [],
+                "post": []
+            },
+            "SaveMessageV4": {
+                "name": "SaveMessageV4",
+                "method": "POST",
+                "endpoint": "\/Message\/SaveMessageV4\/",
+                "params": [],
+                "post": []
+            },
+            "UserIsTyping": {
+                "name": "UserIsTyping",
+                "method": "POST",
+                "endpoint": "\/Message\/UserIsTyping\/",
+                "params": [],
+                "post": []
+            },
+            "CreateConversation": {
+                "name": "CreateConversation",
+                "method": "POST",
+                "endpoint": "\/Message\/CreateConversation\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationsV5": {
+                "name": "GetConversationsV5",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationsV5\/{currentPage}\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetGroupConversations": {
+                "name": "GetGroupConversations",
+                "method": "GET",
+                "endpoint": "\/Message\/GetGroupConversations\/{h}\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetTotalConversationCount": {
+                "name": "GetTotalConversationCount",
+                "method": "GET",
+                "endpoint": "\/Message\/GetTotalConversationCount\/",
+                "params": [],
+                "post": []
+            },
+            "GetUnreadConversationCountV4": {
+                "name": "GetUnreadConversationCountV4",
+                "method": "GET",
+                "endpoint": "\/Message\/GetUnreadConversationCountV4\/",
+                "params": [],
+                "post": []
+            },
+            "GetUnreadGroupConversationCount": {
+                "name": "GetUnreadGroupConversationCount",
+                "method": "GET",
+                "endpoint": "\/Message\/GetUnreadGroupConversationCount\/",
+                "params": [],
+                "post": []
+            },
+            "LeaveConversation": {
+                "name": "LeaveConversation",
+                "method": "GET",
+                "endpoint": "\/Message\/LeaveConversation\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "ReviewInvitations": {
+                "name": "ReviewInvitations",
+                "method": "POST",
+                "endpoint": "\/Message\/Invitations\/ReviewListDirect\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "ReviewAllInvitations": {
+                "name": "ReviewAllInvitations",
+                "method": "POST",
+                "endpoint": "\/Message\/Invitations\/ReviewAllDirect\/{e}\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "ReviewInvitationDirect": {
+                "name": "ReviewInvitationDirect",
+                "method": "POST",
+                "endpoint": "\/Message\/Invitations\/ReviewDirect\/{invitationId}\/{invitationResponseState}\/",
+                "params": [],
+                "post": []
+            },
+            "ReviewInvitation": {
+                "name": "ReviewInvitation",
+                "method": "POST",
+                "endpoint": "\/Message\/Invitations\/{f}\/{g}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAllianceJoinInvitations": {
+                "name": "GetAllianceJoinInvitations",
+                "method": "GET",
+                "endpoint": "\/Message\/AllianceInvitations\/RequestsToJoinYourGroup\/{e}\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAllianceInvitedToJoinInvitations": {
+                "name": "GetAllianceInvitedToJoinInvitations",
+                "method": "GET",
+                "endpoint": "\/Message\/AllianceInvitations\/InvitationsToJoinAnotherGroup\/{e}\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetInvitationDetails": {
+                "name": "GetInvitationDetails",
+                "method": "GET",
+                "endpoint": "\/Message\/Invitations\/{e}\/Details\/",
+                "params": [],
+                "post": []
+            },
+            "UpdateConversationLastViewedTimestamp": {
+                "name": "UpdateConversationLastViewedTimestamp",
+                "method": "POST",
+                "endpoint": "\/Message\/Conversations\/UpdateLastViewedTimestamp\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationsV4": {
+                "name": "GetConversationsV4",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationsV4\/{h}\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetUnreadConversationCountV3": {
+                "name": "GetUnreadConversationCountV3",
+                "method": "GET",
+                "endpoint": "\/Message\/GetUnreadConversationCountV3\/",
+                "params": [],
+                "post": []
+            },
+            "GetUnreadConversationCountV2": {
+                "name": "GetUnreadConversationCountV2",
+                "method": "GET",
+                "endpoint": "\/Message\/GetUnreadPrivateConversationCount\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationById": {
+                "name": "GetConversationById",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationById\/{conversationId}\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationWithMemberId": {
+                "name": "GetConversationWithMemberId",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationWithMember\/{memberId}\/",
+                "params": [],
+                "post": []
+            },
+            "SaveMessageV2": {
+                "name": "SaveMessageV2",
+                "method": "POST",
+                "endpoint": "\/Message\/SaveMessageV2\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationsV2": {
+                "name": "GetConversationsV2",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationsV2\/{h}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationsV3": {
+                "name": "GetConversationsV3",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationsV3\/{h}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetConversationThreadV2": {
+                "name": "GetConversationThreadV2",
+                "method": "GET",
+                "endpoint": "\/Message\/GetConversationThreadV2\/{e}\/{i}\/{f}\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "NotificationService": {
+        "name": "NotificationService",
+        "endpoints": {
+            "GetRecentNotifications": {
+                "name": "GetRecentNotifications",
+                "method": "GET",
+                "endpoint": "\/Notification\/GetRecent\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetRecentNotificationCount": {
+                "name": "GetRecentNotificationCount",
+                "method": "GET",
+                "endpoint": "\/Notification\/GetCount\/",
+                "params": [],
+                "post": []
+            },
+            "ResetNotification": {
+                "name": "ResetNotification",
+                "method": "GET",
+                "endpoint": "\/Notification\/Reset\/",
+                "params": [],
+                "post": []
+            },
+            "GetRealTimeEvents": {
+                "name": "GetRealTimeEvents",
+                "method": "GET",
+                "endpoint": "\/Notification\/Events\/{h}\/{i}\/",
+                "params": [
+                    "timeout"
+                ],
+                "post": []
+            }
+        }
+    },
+    "ContentService": {
+        "name": "ContentService",
+        "endpoints": {
+            "GetContentType": {
+                "name": "GetContentType",
+                "method": "GET",
+                "endpoint": "\/Content\/GetContentType\/{i}\/",
+                "params": [],
+                "post": []
+            },
+            "GetContentById": {
+                "name": "GetContentById",
+                "method": "GET",
+                "endpoint": "\/Content\/GetContentById\/{k}\/{h}\/",
+                "params": [
+                    "head"
+                ],
+                "post": []
+            },
+            "GetContentByTagAndType": {
+                "name": "GetContentByTagAndType",
+                "method": "GET",
+                "endpoint": "\/Content\/GetContentByTagAndType\/{l}\/{k}\/{h}\/",
+                "params": [
+                    "head"
+                ],
+                "post": []
+            },
+            "SearchContentEx": {
+                "name": "SearchContentEx",
+                "method": "POST",
+                "endpoint": "\/Content\/SearchEx\/{f}\/",
+                "params": [
+                    "head"
+                ],
+                "post": []
+            },
+            "SearchContentWithText": {
+                "name": "SearchContentWithText",
+                "method": "GET",
+                "endpoint": "\/Content\/Search\/{j}\/",
+                "params": [
+                    "head",
+                    "ctype",
+                    "tag",
+                    "currentpage",
+                    "searchtext"
+                ],
+                "post": []
+            },
+            "SearchContentByTagAndType": {
+                "name": "SearchContentByTagAndType",
+                "method": "GET",
+                "endpoint": "\/Content\/SearchContentByTagAndType\/{n}\/{m}\/{j}\/",
+                "params": [
+                    "head",
+                    "currentpage",
+                    "itemsperpage"
+                ],
+                "post": []
+            },
+            "GetHomepageContent": {
+                "name": "GetHomepageContent",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Homepage\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetHomepageContentV2": {
+                "name": "GetHomepageContentV2",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Homepage\/V2\/",
+                "params": [],
+                "post": []
+            },
+            "GetJobs": {
+                "name": "GetJobs",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Jobs\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetPublications": {
+                "name": "GetPublications",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Publications\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetNews": {
+                "name": "GetNews",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/News\/{j}\/{k}\/",
+                "params": [
+                    "itemsperpage",
+                    "currentpage"
+                ],
+                "post": []
+            },
+            "GetDestinyContent": {
+                "name": "GetDestinyContent",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Destiny\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetDestinyContentV2": {
+                "name": "GetDestinyContentV2",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Destiny\/V2\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetPromoWidget": {
+                "name": "GetPromoWidget",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Destiny\/Promo\/",
+                "params": [],
+                "post": []
+            },
+            "GetFeaturedArticle": {
+                "name": "GetFeaturedArticle",
+                "method": "GET",
+                "endpoint": "\/Content\/Site\/Featured\/",
+                "params": [],
+                "post": []
+            },
+            "GetCareers": {
+                "name": "GetCareers",
+                "method": "GET",
+                "endpoint": "\/Content\/Careers\/",
+                "params": [],
+                "post": []
+            },
+            "GetCareer": {
+                "name": "GetCareer",
+                "method": "GET",
+                "endpoint": "\/Content\/Careers\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "SearchCareers": {
+                "name": "SearchCareers",
+                "method": "GET",
+                "endpoint": "\/Content\/Careers\/Search\/",
+                "params": [
+                    "searchtext"
+                ],
+                "post": []
+            }
+        }
+    },
+    "ExternalSocialService": {
+        "name": "ExternalSocialService",
+        "endpoints": {
+            "GetAggregatedSocialFeed": {
+                "name": "GetAggregatedSocialFeed",
+                "method": "GET",
+                "endpoint": "\/ExternalSocial\/GetAggregatedSocialFeed\/{j}\/",
+                "params": [
+                    "types"
+                ],
+                "post": []
+            }
+        }
+    },
+    "SurveyService": {
+        "name": "SurveyService",
+        "endpoints": {
+            "GetSurvey": {
+                "name": "GetSurvey",
+                "method": "GET",
+                "endpoint": "\/Survey\/GetSurvey\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "ForumService": {
+        "name": "ForumService",
+        "endpoints": {
+            "CreatePost": {
+                "name": "CreatePost",
+                "method": "POST",
+                "endpoint": "\/Forum\/CreatePost\/",
+                "params": [],
+                "post": [
+                    "body",
+                    "category",
+                    "groupId",
+                    "isGroupPrivate",
+                    "metadata",
+                    "parentPostId",
+                    "subTopicOverride",
+                    "subject",
+                    "urlLinkOrImage"
+                ]
+            },
+            "CreateContentComment": {
+                "name": "CreateContentComment",
+                "method": "POST",
+                "endpoint": "\/Forum\/CreateContentComment\/",
+                "params": [],
+                "post": []
+            },
+            "EditPost": {
+                "name": "EditPost",
+                "method": "POST",
+                "endpoint": "\/Forum\/EditPost\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "DeletePost": {
+                "name": "DeletePost",
+                "method": "POST",
+                "endpoint": "\/Forum\/DeletePost\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "RatePost": {
+                "name": "RatePost",
+                "method": "POST",
+                "endpoint": "\/Forum\/RatePost\/{f}\/{g}\/",
+                "params": [],
+                "post": []
+            },
+            "ModeratePost": {
+                "name": "ModeratePost",
+                "method": "POST",
+                "endpoint": "\/Forum\/Post\/{f}\/Moderate\/",
+                "params": [],
+                "post": []
+            },
+            "ModerateTag": {
+                "name": "ModerateTag",
+                "method": "POST",
+                "endpoint": "\/Forum\/Tags\/{f}\/Moderate\/",
+                "params": [],
+                "post": []
+            },
+            "ModerateGroupPost": {
+                "name": "ModerateGroupPost",
+                "method": "POST",
+                "endpoint": "\/Forum\/Post\/{f}\/GroupModerate\/",
+                "params": [],
+                "post": []
+            },
+            "GetTopicsPaged": {
+                "name": "GetTopicsPaged",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetTopicsPaged\/{page}\/{pageSize}\/{group}\/{sort}\/{quickDate}\/{categoryFilter}\/",
+                "params": [
+                    "tagstring"
+                ],
+                "post": []
+            },
+            "GetCoreTopicsPaged": {
+                "name": "GetCoreTopicsPaged",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetCoreTopicsPaged\/{i}\/{j}\/{f}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetPostsThreadedPaged": {
+                "name": "GetPostsThreadedPaged",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetPostsThreadedPaged\/{parentPostId}\/{page}\/{pageSize}\/{replySize}\/{getParentPost}\/{rootThreadMode}\/{sortMode}\/",
+                "params": [
+                    "showbanned"
+                ],
+                "post": []
+            },
+            "GetPostsThreadedPagedFromChild": {
+                "name": "GetPostsThreadedPagedFromChild",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetPostsThreadedPagedFromChild\/{childPostId}\/{page}\/{pageSize}\/{replySize}\/{rootThreadMode}\/{sortMode}\/",
+                "params": [
+                    "showbanned"
+                ],
+                "post": []
+            },
+            "GetPostAndParent": {
+                "name": "GetPostAndParent",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetPostAndParent\/{childPostId}\/",
+                "params": [
+                    "showbanned"
+                ],
+                "post": []
+            },
+            "GetPostAndParentAwaitingApproval": {
+                "name": "GetPostAndParentAwaitingApproval",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetPostAndParentAwaitingApproval\/{childPostId}\/",
+                "params": [
+                    "showbanned"
+                ],
+                "post": []
+            },
+            "GetPopularTags": {
+                "name": "GetPopularTags",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetPopularTags\/",
+                "params": [
+                    "quantity",
+                    "tagsSinceDate"
+                ],
+                "post": []
+            },
+            "GetForumTagCountEstimate": {
+                "name": "GetForumTagCountEstimate",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetForumTagCountEstimate\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetTopicForContent": {
+                "name": "GetTopicForContent",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetTopicForContent\/{contentId}\/",
+                "params": [],
+                "post": []
+            },
+            "GetForumTagSuggestions": {
+                "name": "GetForumTagSuggestions",
+                "method": "GET",
+                "endpoint": "\/Forum\/GetForumTagSuggestions\/",
+                "params": [
+                    "partialtag"
+                ],
+                "post": []
+            },
+            "MarkReplyAsAnswer": {
+                "name": "MarkReplyAsAnswer",
+                "method": "POST",
+                "endpoint": "\/Forum\/MarkReplyAsAnswer\/{e}\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "UnmarkReplyAsAnswer": {
+                "name": "UnmarkReplyAsAnswer",
+                "method": "POST",
+                "endpoint": "\/Forum\/UnmarkReplyAsAnswer\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "PollVote": {
+                "name": "PollVote",
+                "method": "POST",
+                "endpoint": "\/Forum\/Poll\/Vote\/{g}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetPoll": {
+                "name": "GetPoll",
+                "method": "GET",
+                "endpoint": "\/Forum\/Poll\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "ChangePinState": {
+                "name": "ChangePinState",
+                "method": "POST",
+                "endpoint": "\/Forum\/ChangePinState\/{g}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "ChangeLockState": {
+                "name": "ChangeLockState",
+                "method": "POST",
+                "endpoint": "\/Forum\/ChangeLockState\/{g}\/{e}\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "ActivityService": {
+        "name": "ActivityService",
+        "endpoints": {
+            "GetAggregatedActivitiesForCurrentUser": {
+                "name": "GetAggregatedActivitiesForCurrentUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/Aggregation\/",
+                "params": [
+                    "typefilter",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetEntitiesFollowedByCurrentUser": {
+                "name": "GetEntitiesFollowedByCurrentUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/Following\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroupsFollowedByCurrentUser": {
+                "name": "GetGroupsFollowedByCurrentUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/Following\/Groups\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroupsFollowedByUser": {
+                "name": "GetGroupsFollowedByUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{g}\/Following\/Groups\/",
+                "params": [],
+                "post": []
+            },
+            "GetEntitiesFollowedByUser": {
+                "name": "GetEntitiesFollowedByUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{g}\/Following\/",
+                "params": [],
+                "post": []
+            },
+            "GetEntitiesFollowedByCurrentUserV2": {
+                "name": "GetEntitiesFollowedByCurrentUserV2",
+                "method": "GET",
+                "endpoint": "\/Activity\/Following\/V2\/{f}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetEntitiesFollowedByUserV2": {
+                "name": "GetEntitiesFollowedByUserV2",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{e}\/Following\/V2\/{g}\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroupsFollowedPagedByCurrentUser": {
+                "name": "GetGroupsFollowedPagedByCurrentUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/Following\/Groups\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroupsFollowedPagedByUser": {
+                "name": "GetGroupsFollowedPagedByUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{e}\/Following\/Groups\/Paged\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "GetUsersFollowedByCurrentUser": {
+                "name": "GetUsersFollowedByCurrentUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/Following\/Users\/",
+                "params": [],
+                "post": []
+            },
+            "GetFollowersOfUser": {
+                "name": "GetFollowersOfUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{profileId}\/Followers\/",
+                "params": [
+                    "itemsperpage",
+                    "currentpage"
+                ],
+                "post": []
+            },
+            "FollowUser": {
+                "name": "FollowUser",
+                "method": "POST",
+                "endpoint": "\/Activity\/User\/{g}\/Follow\/",
+                "params": [],
+                "post": []
+            },
+            "UnfollowUser": {
+                "name": "UnfollowUser",
+                "method": "POST",
+                "endpoint": "\/Activity\/User\/{g}\/Unfollow\/",
+                "params": [],
+                "post": []
+            },
+            "GetLikeAndShareActivityForUser": {
+                "name": "GetLikeAndShareActivityForUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{j}\/Activities\/LikesAndShares\/",
+                "params": [
+                    "itemsperpage",
+                    "currentpage",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetLikeAndShareActivityForUserV2": {
+                "name": "GetLikeAndShareActivityForUserV2",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{i}\/Activities\/LikesAndSharesV2\/",
+                "params": [
+                    "currentpage",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetForumActivityForUser": {
+                "name": "GetForumActivityForUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{j}\/Activities\/Forums\/",
+                "params": [
+                    "itemsperpage",
+                    "currentpage",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetForumActivityForUserV2": {
+                "name": "GetForumActivityForUserV2",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{i}\/Activities\/ForumsV2\/",
+                "params": [
+                    "currentpage",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetLikeShareAndForumActivityForUser": {
+                "name": "GetLikeShareAndForumActivityForUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{i}\/Activities\/LikeShareAndForum\/",
+                "params": [
+                    "currentpage",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetFollowersOfGroup": {
+                "name": "GetFollowersOfGroup",
+                "method": "GET",
+                "endpoint": "\/Activity\/Group\/{i}\/Followers\/",
+                "params": [
+                    "itemsperpage",
+                    "currentpage"
+                ],
+                "post": []
+            },
+            "FollowGroup": {
+                "name": "FollowGroup",
+                "method": "POST",
+                "endpoint": "\/Activity\/Group\/{g}\/Follow\/",
+                "params": [],
+                "post": []
+            },
+            "UnfollowGroup": {
+                "name": "UnfollowGroup",
+                "method": "POST",
+                "endpoint": "\/Activity\/Group\/{g}\/Unfollow\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroupActivities": {
+                "name": "GetGroupActivities",
+                "method": "GET",
+                "endpoint": "\/Activity\/Group\/{h}\/Activities\/",
+                "params": [
+                    "format"
+                ],
+                "post": []
+            },
+            "GetFollowersOfTag": {
+                "name": "GetFollowersOfTag",
+                "method": "GET",
+                "endpoint": "\/Activity\/Tag\/Followers\/",
+                "params": [
+                    "tag",
+                    "itemsperpage",
+                    "currentpage"
+                ],
+                "post": []
+            },
+            "FollowTag": {
+                "name": "FollowTag",
+                "method": "POST",
+                "endpoint": "\/Activity\/Tag\/Follow\/",
+                "params": [
+                    "tag"
+                ],
+                "post": []
+            },
+            "UnfollowTag": {
+                "name": "UnfollowTag",
+                "method": "POST",
+                "endpoint": "\/Activity\/Tag\/Unfollow\/",
+                "params": [
+                    "tag"
+                ],
+                "post": []
+            },
+            "GetFriends": {
+                "name": "GetFriends",
+                "method": "GET",
+                "endpoint": "\/Activity\/Friends\/",
+                "params": [],
+                "post": []
+            },
+            "GetFriendsAllNoPresence": {
+                "name": "GetFriendsAllNoPresence",
+                "method": "GET",
+                "endpoint": "\/Activity\/Friends\/AllNoPresence\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetFriendsPaged": {
+                "name": "GetFriendsPaged",
+                "method": "GET",
+                "endpoint": "\/Activity\/Friends\/Paged\/{membershipType}\/{currentPage}\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "GroupService": {
+        "name": "GroupService",
+        "endpoints": {
+            "GetAvailableAvatars": {
+                "name": "GetAvailableAvatars",
+                "method": "GET",
+                "endpoint": "\/Group\/GetAvailableAvatars\/",
+                "params": [],
+                "post": []
+            },
+            "GetAvailableThemes": {
+                "name": "GetAvailableThemes",
+                "method": "GET",
+                "endpoint": "\/Group\/GetAvailableThemes\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroupsFollowingGroup": {
+                "name": "GetGroupsFollowingGroup",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/FollowedBy\/{currentPage}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetGroupsFollowedByGroup": {
+                "name": "GetGroupsFollowedByGroup",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Following\/{currentPage}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "FollowGroupWithGroup": {
+                "name": "FollowGroupWithGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Follow\/{followGroupId}\/",
+                "params": [],
+                "post": []
+            },
+            "UnfollowGroupWithGroup": {
+                "name": "UnfollowGroupWithGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Unfollow\/{followGroupId}\/",
+                "params": [],
+                "post": []
+            },
+            "FollowGroupsWithGroup": {
+                "name": "FollowGroupsWithGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/FollowList\/",
+                "params": [],
+                "post": []
+            },
+            "UnfollowGroupsWithGroup": {
+                "name": "UnfollowGroupsWithGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/UnfollowList\/",
+                "params": [],
+                "post": []
+            },
+            "UnfollowAllGroupsWithGroup": {
+                "name": "UnfollowAllGroupsWithGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/UnfollowAll\/",
+                "params": [],
+                "post": []
+            },
+            "InviteToJoinAlliance": {
+                "name": "InviteToJoinAlliance",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Allies\/Invite\/{allyGroupId}\/",
+                "params": [],
+                "post": []
+            },
+            "InviteManyToJoinAlliance": {
+                "name": "InviteManyToJoinAlliance",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Allies\/InviteMany\/",
+                "params": [],
+                "post": [
+                    "targetIds[]",
+                    "messageContent[message]"
+                ]
+            },
+            "RequestToJoinAlliance": {
+                "name": "RequestToJoinAlliance",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Allies\/RequestToJoin\/{allyGroupId}\/",
+                "params": [],
+                "post": []
+            },
+            "BreakAlliance": {
+                "name": "BreakAlliance",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Relationship\/{allyGroupId}\/BreakAlliance\/",
+                "params": [],
+                "post": []
+            },
+            "BreakAlliances": {
+                "name": "BreakAlliances",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/BreakAlliances\/",
+                "params": [],
+                "post": []
+            },
+            "DisbandAlliance": {
+                "name": "DisbandAlliance",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/BreakAllAlliances\/",
+                "params": [],
+                "post": []
+            },
+            "SetGroupAsAlliance": {
+                "name": "SetGroupAsAlliance",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/SetAsAlliance\/",
+                "params": [],
+                "post": []
+            },
+            "GetAlliedGroups": {
+                "name": "GetAlliedGroups",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Allies\/",
+                "params": [
+                    "currentpage",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetRecommendedGroups": {
+                "name": "GetRecommendedGroups",
+                "method": "POST",
+                "endpoint": "\/Group\/Recommended\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GroupSearch": {
+                "name": "GroupSearch",
+                "method": "POST",
+                "endpoint": "\/Group\/Search\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": [
+                    "contents[searchValue]",
+                    "contents[searchType]",
+                    "creationDate",
+                    "currentPage",
+                    "groupMemberCountFilter",
+                    "itemsPerPage",
+                    "localeFilter",
+                    "membershipType",
+                    "sortBy",
+                    "tagText"
+                ]
+            },
+            "GetDeletedGroupsForCurrentMember": {
+                "name": "GetDeletedGroupsForCurrentMember",
+                "method": "GET",
+                "endpoint": "\/Group\/MyGroups\/Deleted\/",
+                "params": [],
+                "post": []
+            },
+            "GetGroup": {
+                "name": "GetGroup",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetGroupByName": {
+                "name": "GetGroupByName",
+                "method": "GET",
+                "endpoint": "\/Group\/Name\/{groupName}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetGroupTagSuggestions": {
+                "name": "GetGroupTagSuggestions",
+                "method": "GET",
+                "endpoint": "\/Group\/GetGroupTagSuggestions\/",
+                "params": [
+                    "partialtag"
+                ],
+                "post": []
+            },
+            "CreateGroup": {
+                "name": "CreateGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/Create\/",
+                "params": [],
+                "post": []
+            },
+            "CreateGroupV2": {
+                "name": "CreateGroupV2",
+                "method": "POST",
+                "endpoint": "\/Group\/Create\/V2\/",
+                "params": [],
+                "post": [
+                    "name",
+                    "clanCallSign",
+                    "motto",
+                    "about",
+                    "theme",
+                    "tags",
+                    "avatarImageIndex",
+                    "isPublic",
+                    "membershipOption",
+                    "isPublicTopicAdminOnly",
+                    "isDefaultPostPublic",
+                    "clanMembershipTypes",
+                    "attributes",
+                    "allowChat",
+                    "locale",
+                    "clanReviewType",
+                    "clanName"
+                ]
+            },
+            "CreateMinimalGroup": {
+                "name": "CreateMinimalGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/Create\/Minimal\/",
+                "params": [],
+                "post": [
+                    "groupName",
+                    "groupAbout"
+                ]
+            },
+            "EditGroupV2": {
+                "name": "EditGroupV2",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/EditV2\/",
+                "params": [],
+                "post": [
+                    "name",
+                    "clanCallSign",
+                    "motto",
+                    "about",
+                    "theme",
+                    "tags",
+                    "avatarImageIndex",
+                    "chatSecurity",
+                    "allowChat",
+                    "membershipOptions",
+                    "homepage",
+                    "locale",
+                    "isPublic",
+                    "isPublicTopicAdminOnly",
+                    "defaultPublicity",
+                    "isDefaultPostPublic",
+                    "clanReviewType",
+                    "enableInvitationMessagingForAdmins",
+                    "clanName",
+                    "clanMembershipTypes"
+                ]
+            },
+            "SetPrivacy": {
+                "name": "SetPrivacy",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Privacy\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "UndeleteGroup": {
+                "name": "UndeleteGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Undelete\/",
+                "params": [],
+                "post": []
+            },
+            "InviteGroupMember": {
+                "name": "InviteGroupMember",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Invite\/{membershipId}\/",
+                "params": [],
+                "post": [
+                    "title",
+                    "message"
+                ]
+            },
+            "InviteClanMember": {
+                "name": "InviteClanMember",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/InviteToClan\/{membershipId}\/{clanMembershipType}\/",
+                "params": [],
+                "post": [
+                    "title",
+                    "message"
+                ]
+            },
+            "GetPendingMembershipsV2": {
+                "name": "GetPendingMembershipsV2",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Members\/PendingV2\/",
+                "params": [
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "GetPendingClanMemberships": {
+                "name": "GetPendingClanMemberships",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Clan\/{clanMembershipType}\/Pending\/{currentPage}\/",
+                "params": [],
+                "post": []
+            },
+            "RequestGroupMembershipV2": {
+                "name": "RequestGroupMembershipV2",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/ApplyV2\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "RescindGroupMembership": {
+                "name": "RescindGroupMembership",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/Rescind\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "ApproveGroupMembershipV2": {
+                "name": "ApproveGroupMembershipV2",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/ApproveV2\/",
+                "params": [],
+                "post": [
+                    "message"
+                ]
+            },
+            "DenyGroupMembershipV2": {
+                "name": "DenyGroupMembershipV2",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/DenyV2\/",
+                "params": [],
+                "post": [
+                    "message"
+                ]
+            },
+            "ApproveAllPending": {
+                "name": "ApproveAllPending",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/ApproveAll\/",
+                "params": [],
+                "post": [
+                    "message"
+                ]
+            },
+            "DenyAllPending": {
+                "name": "DenyAllPending",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/DenyAll\/",
+                "params": [],
+                "post": [
+                    "message"
+                ]
+            },
+            "ApprovePendingForList": {
+                "name": "ApprovePendingForList",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/ApproveList\/",
+                "params": [],
+                "post": [
+                    "message",
+                    "membershipIds[]"
+                ]
+            },
+            "DenyPendingForList": {
+                "name": "DenyPendingForList",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/DenyList\/",
+                "params": [],
+                "post": [
+                    "message",
+                    "membershipIds[]"
+                ]
+            },
+            "GetFoundedGroupsForMember": {
+                "name": "GetFoundedGroupsForMember",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/Founded\/{currentPage}\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetJoinedGroupsForMemberV3": {
+                "name": "GetJoinedGroupsForMemberV3",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/JoinedV3\/{currentPage}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetPendingGroupsForMemberV2": {
+                "name": "GetPendingGroupsForMemberV2",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/PendingV2\/{currentPage}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetClanAttributeDefinitions": {
+                "name": "GetClanAttributeDefinitions",
+                "method": "GET",
+                "endpoint": "\/Group\/GetClanAttributeDefinitions\/",
+                "params": [],
+                "post": []
+            },
+            "EnableClanForGroup": {
+                "name": "EnableClanForGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Clans\/Enable\/{clanMembershipType}\/",
+                "params": [
+                    "clanName"
+                ],
+                "post": []
+            },
+            "JoinClanForGroup": {
+                "name": "JoinClanForGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Clans\/Join\/{clanMembershipType}\/",
+                "params": [],
+                "post": [
+                    "message"
+                ]
+            },
+            "LeaveClanForGroup": {
+                "name": "LeaveClanForGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Clans\/Leave\/{clanMembershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "DisableClanForGroup": {
+                "name": "DisableClanForGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Clans\/Disable\/{clanMembershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "RefreshClanSettingsInDestiny": {
+                "name": "RefreshClanSettingsInDestiny",
+                "method": "POST",
+                "endpoint": "\/Group\/MyClans\/Refresh\/{clanMembershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "GetMembersOfClan": {
+                "name": "GetMembersOfClan",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/ClanMembers\/",
+                "params": [
+                    "currentPage",
+                    "memberType",
+                    "sort",
+                    "platformType"
+                ],
+                "post": []
+            },
+            "DesignateClanFounderForMigration": {
+                "name": "DesignateClanFounderForMigration",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/DesignateClanFounderForMigration\/{membershipId}\/{clanMembershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "GetMembersOfGroupV3": {
+                "name": "GetMembersOfGroupV3",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/MembersV3\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage",
+                    "memberType",
+                    "platformType",
+                    "sort",
+                    "nameSearch"
+                ],
+                "post": []
+            },
+            "GetAdminsOfGroupV2": {
+                "name": "GetAdminsOfGroupV2",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/AdminsV2\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "EditGroupMembership": {
+                "name": "EditGroupMembership",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/SetMembershipType\/{groupMembershipType}\/",
+                "params": [
+                    "clanPlatformType"
+                ],
+                "post": []
+            },
+            "KickMember": {
+                "name": "KickMember",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Kick\/",
+                "params": [
+                    "clanPlatformType"
+                ],
+                "post": []
+            },
+            "BanMember": {
+                "name": "BanMember",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Ban\/",
+                "params": [],
+                "post": [
+                    "comment",
+                    "length"
+                ]
+            },
+            "UnbanMember": {
+                "name": "UnbanMember",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Unban\/",
+                "params": [],
+                "post": []
+            },
+            "GetBannedMembersOfGroup": {
+                "name": "GetBannedMembersOfGroup",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Banned\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "GetBannedMembersOfGroupV2": {
+                "name": "GetBannedMembersOfGroupV2",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/BannedV2\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "OverrideFounderAdmin": {
+                "name": "OverrideFounderAdmin",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Admin\/FounderOverride\/{membershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAdminsOfGroup": {
+                "name": "GetAdminsOfGroup",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Admins\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "GetMembersOfGroup": {
+                "name": "GetMembersOfGroup",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Members\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage",
+                    "memberType",
+                    "platformType",
+                    "sort"
+                ],
+                "post": []
+            },
+            "GetMembersOfGroupV2": {
+                "name": "GetMembersOfGroupV2",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/MembersV2\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage",
+                    "memberType",
+                    "platformType",
+                    "sort"
+                ],
+                "post": []
+            },
+            "GetPendingGroupsForMember": {
+                "name": "GetPendingGroupsForMember",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/Pending\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "EditGroup": {
+                "name": "EditGroup",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Edit\/",
+                "params": [],
+                "post": []
+            },
+            "GetPendingMemberships": {
+                "name": "GetPendingMemberships",
+                "method": "GET",
+                "endpoint": "\/Group\/{groupId}\/Members\/Pending\/",
+                "params": [
+                    "itemsPerPage",
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "RequestGroupMembership": {
+                "name": "RequestGroupMembership",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/Apply\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "ApproveGroupMembership": {
+                "name": "ApproveGroupMembership",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Approve\/",
+                "params": [],
+                "post": []
+            },
+            "DenyGroupMembership": {
+                "name": "DenyGroupMembership",
+                "method": "POST",
+                "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Deny\/",
+                "params": [],
+                "post": []
+            },
+            "GetJoinedGroupsForCurrentMember": {
+                "name": "GetJoinedGroupsForCurrentMember",
+                "method": "GET",
+                "endpoint": "\/Group\/MyGroups\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetPendingGroupsForCurrentMember": {
+                "name": "GetPendingGroupsForCurrentMember",
+                "method": "GET",
+                "endpoint": "\/Group\/MyPendingGroups\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetJoinedGroupsForMember": {
+                "name": "GetJoinedGroupsForMember",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetJoinedGroupsForCurrentMemberV2": {
+                "name": "GetJoinedGroupsForCurrentMemberV2",
+                "method": "GET",
+                "endpoint": "\/Group\/MyGroups\/V2\/{currentPage}\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetPendingGroupsForCurrentMemberV2": {
+                "name": "GetPendingGroupsForCurrentMemberV2",
+                "method": "GET",
+                "endpoint": "\/Group\/MyPendingGroups\/V2\/{currentPage}\/",
+                "params": [
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetAllGroupsForCurrentMember": {
+                "name": "GetAllGroupsForCurrentMember",
+                "method": "GET",
+                "endpoint": "\/Group\/MyGroups\/All\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetJoinedGroupsForMemberV2": {
+                "name": "GetJoinedGroupsForMemberV2",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/Joined\/{currentPage}\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            },
+            "GetAllGroupsForMember": {
+                "name": "GetAllGroupsForMember",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{membershipId}\/All\/",
+                "params": [
+                    "clanonly",
+                    "populatefriends"
+                ],
+                "post": []
+            }
+        }
+    },
+    "IgnoreService": {
+        "name": "IgnoreService",
+        "endpoints": {
+            "GetIgnoreStatusForPost": {
+                "name": "GetIgnoreStatusForPost",
+                "method": "GET",
+                "endpoint": "\/Ignore\/MyIgnores\/Posts\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "GetIgnoreStatusForUser": {
+                "name": "GetIgnoreStatusForUser",
+                "method": "GET",
+                "endpoint": "\/Ignore\/MyIgnores\/Users\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetIgnoresForUser": {
+                "name": "GetIgnoresForUser",
+                "method": "POST",
+                "endpoint": "\/Ignore\/MyIgnores\/",
+                "params": [],
+                "post": []
+            },
+            "IgnoreItem": {
+                "name": "IgnoreItem",
+                "method": "POST",
+                "endpoint": "\/Ignore\/Ignore\/",
+                "params": [],
+                "post": [
+                    "ignoredItemId",
+                    "ignoredItemType",
+                    "comment",
+                    "reason",
+                    "itemContextId",
+                    "itemContextType",
+                    "ModeratorRequest"
+                ]
+            },
+            "UnignoreItem": {
+                "name": "UnignoreItem",
+                "method": "POST",
+                "endpoint": "\/Ignore\/Unignore\/",
+                "params": [],
+                "post": []
+            },
+            "MyLastReport": {
+                "name": "MyLastReport",
+                "method": "GET",
+                "endpoint": "\/Ignore\/MyLastReport\/",
+                "params": [],
+                "post": []
+            },
+            "FlagItem": {
+                "name": "FlagItem",
+                "method": "POST",
+                "endpoint": "\/Ignore\/Flag\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "GameService": {
+        "name": "GameService",
+        "endpoints": {
+            "GetPlayerGamesById": {
+                "name": "GetPlayerGamesById",
+                "method": "GET",
+                "endpoint": "\/Game\/GetPlayerGamesById\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "ReachModelSneakerNet": {
+                "name": "ReachModelSneakerNet",
+                "method": "POST",
+                "endpoint": "\/Game\/ReachModelSneakerNet\/{g}\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "AdminService": {
+        "name": "AdminService",
+        "endpoints": {
+            "GetAssignedReports": {
+                "name": "GetAssignedReports",
+                "method": "POST",
+                "endpoint": "\/Admin\/Assigned\/",
+                "params": [],
+                "post": []
+            },
+            "ResolveReport": {
+                "name": "ResolveReport",
+                "method": "POST",
+                "endpoint": "\/Admin\/Assigned\/Resolve\/",
+                "params": [],
+                "post": []
+            },
+            "OverturnReport": {
+                "name": "OverturnReport",
+                "method": "POST",
+                "endpoint": "\/Admin\/Reports\/Overturn\/",
+                "params": [],
+                "post": []
+            },
+            "GetDisciplinedReportsForMember": {
+                "name": "GetDisciplinedReportsForMember",
+                "method": "POST",
+                "endpoint": "\/Admin\/Member\/{e}\/Reports\/",
+                "params": [],
+                "post": []
+            },
+            "GetRecentDisciplineAndFlagHistoryForMember": {
+                "name": "GetRecentDisciplineAndFlagHistoryForMember",
+                "method": "GET",
+                "endpoint": "\/Admin\/Member\/{f}\/RecentIncludingFlags\/{e}",
+                "params": [],
+                "post": []
+            },
+            "GetResolvedReports": {
+                "name": "GetResolvedReports",
+                "method": "POST",
+                "endpoint": "\/Admin\/Reports\/",
+                "params": [],
+                "post": []
+            },
+            "GloballyIgnoreItem": {
+                "name": "GloballyIgnoreItem",
+                "method": "POST",
+                "endpoint": "\/Admin\/Ignores\/GloballyIgnore\/",
+                "params": [],
+                "post": []
+            },
+            "OverrideBanOnUser": {
+                "name": "OverrideBanOnUser",
+                "method": "POST",
+                "endpoint": "\/Admin\/Member\/{e}\/SetBan\/",
+                "params": [],
+                "post": []
+            },
+            "OverrideMsgBanOnUser": {
+                "name": "OverrideMsgBanOnUser",
+                "method": "POST",
+                "endpoint": "\/Admin\/Member\/{e}\/SetMsgBan\/",
+                "params": [],
+                "post": []
+            },
+            "OverrideGlobalIgnore": {
+                "name": "OverrideGlobalIgnore",
+                "method": "POST",
+                "endpoint": "\/Admin\/Ignores\/OverrideGlobalIgnore\/",
+                "params": [],
+                "post": []
+            },
+            "AdminUserSearch": {
+                "name": "AdminUserSearch",
+                "method": "GET",
+                "endpoint": "\/Admin\/Member\/Search\/",
+                "params": [
+                    "q"
+                ],
+                "post": []
+            },
+            "GetUserBanState": {
+                "name": "GetUserBanState",
+                "method": "GET",
+                "endpoint": "\/Admin\/Member\/{e}\/GetBanState\/",
+                "params": [],
+                "post": []
+            },
+            "GetUserWebClientIpHistory": {
+                "name": "GetUserWebClientIpHistory",
+                "method": "GET",
+                "endpoint": "\/Admin\/Member\/{e}\/GetWebClientIpHistory\/",
+                "params": [],
+                "post": []
+            },
+            "GetUserPostHistory": {
+                "name": "GetUserPostHistory",
+                "method": "GET",
+                "endpoint": "\/Admin\/Member\/{e}\/PostHistory\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAdminHistory": {
+                "name": "GetAdminHistory",
+                "method": "GET",
+                "endpoint": "\/Admin\/GlobalHistory\/{f}\/{k}\/",
+                "params": [
+                    "membershipFilter",
+                    "startdate",
+                    "enddate"
+                ],
+                "post": []
+            },
+            "BulkEditPost": {
+                "name": "BulkEditPost",
+                "method": "POST",
+                "endpoint": "\/Admin\/BulkEditPost\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "TokensService": {
+        "name": "TokensService",
+        "endpoints": {
+            "ClaimAndApplyOnToken": {
+                "name": "ClaimAndApplyOnToken",
+                "method": "POST",
+                "endpoint": "\/Tokens\/ClaimAndApplyToken\/{tokenType}\/",
+                "params": [],
+                "post": [
+                    "redeemCode"
+                ]
+            },
+            "GetCurrentUserOfferHistory": {
+                "name": "GetCurrentUserOfferHistory",
+                "method": "GET",
+                "endpoint": "\/Tokens\/OfferHistory\/",
+                "params": [],
+                "post": []
+            },
+            "GetCurrentUserThrottleState": {
+                "name": "GetCurrentUserThrottleState",
+                "method": "GET",
+                "endpoint": "\/Tokens\/ThrottleState\/",
+                "params": [],
+                "post": []
+            },
+            "ApplyOfferToCurrentDestinyMembership": {
+                "name": "ApplyOfferToCurrentDestinyMembership",
+                "method": "POST",
+                "endpoint": "\/Tokens\/ApplyOfferToCurrentDestinyMembership\/{e}\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "VerifyAge": {
+                "name": "VerifyAge",
+                "method": "POST",
+                "endpoint": "\/Tokens\/VerifyAge\/",
+                "params": [],
+                "post": []
+            },
+            "ClaimToken": {
+                "name": "ClaimToken",
+                "method": "POST",
+                "endpoint": "\/Tokens\/Claim\/",
+                "params": [],
+                "post": [
+                    "redeemCode"
+                ]
+            },
+            "ConsumeMarketplacePlatformCodeOffer": {
+                "name": "ConsumeMarketplacePlatformCodeOffer",
+                "method": "POST",
+                "endpoint": "\/Tokens\/ConsumeMarketplacePlatformCodeOffer\/{f}\/{e}\/{g}\/",
+                "params": [],
+                "post": []
+            },
+            "MarketplacePlatformCodeOfferHistory": {
+                "name": "MarketplacePlatformCodeOfferHistory",
+                "method": "GET",
+                "endpoint": "\/Tokens\/MarketplacePlatformCodeOfferHistory\/",
+                "params": [],
+                "post": []
+            },
+            "RAFGenerateReferralCode": {
+                "name": "RAFGenerateReferralCode",
+                "method": "POST",
+                "endpoint": "\/Tokens\/RAF\/GenerateReferralCode\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "RAFClaim": {
+                "name": "RAFClaim",
+                "method": "POST",
+                "endpoint": "\/Tokens\/RAF\/Claim\/",
+                "params": [],
+                "post": []
+            },
+            "RAFGetVeteranBondDetails": {
+                "name": "RAFGetVeteranBondDetails",
+                "method": "GET",
+                "endpoint": "\/Tokens\/RAF\/GetVeteranBondDetails\/",
+                "params": [],
+                "post": []
+            },
+            "RAFGetNewPlayerBondDetails": {
+                "name": "RAFGetNewPlayerBondDetails",
+                "method": "GET",
+                "endpoint": "\/Tokens\/RAF\/GetNewPlayerBondDetails\/",
+                "params": [],
+                "post": []
+            },
+            "BreakBond": {
+                "name": "BreakBond",
+                "method": "POST",
+                "endpoint": "\/Tokens\/RAF\/BreakBond\/",
+                "params": [],
+                "post": []
+            },
+            "GetRAFEligibility": {
+                "name": "GetRAFEligibility",
+                "method": "GET",
+                "endpoint": "\/Tokens\/RAF\/GetEligibility\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "DestinyService": {
+        "name": "DestinyService",
+        "endpoints": {
+            "GetDestinyManifest": {
+                "name": "GetDestinyManifest",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Manifest\/",
+                "params": [],
+                "post": []
+            },
+            "GetDestinySingleDefinition": {
+                "name": "GetDestinySingleDefinition",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Manifest\/{definitionType}\/{definitionId}\/",
+                "params": [
+                    "definitions",
+                    "version"
+                ],
+                "post": []
+            },
+            "SearchDestinyPlayer": {
+                "name": "SearchDestinyPlayer",
+                "method": "GET",
+                "endpoint": "\/Destiny\/SearchDestinyPlayer\/{membershipType}\/{displayName}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAllItemsSummary": {
+                "name": "GetAllItemsSummary",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Items\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAccount": {
+                "name": "GetAccount",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAccountSummary": {
+                "name": "GetAccountSummary",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Summary\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetVault": {
+                "name": "GetVault",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Vault\/",
+                "params": [
+                    "definitions",
+                    "accountId"
+                ],
+                "post": []
+            },
+            "GetVaultSummary": {
+                "name": "GetVaultSummary",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Vault\/Summary\/",
+                "params": [
+                    "definitions",
+                    "accountId"
+                ],
+                "post": []
+            },
+            "GetCharacterSummary": {
+                "name": "GetCharacterSummary",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetCharacter": {
+                "name": "GetCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Complete\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetCharacterInventory": {
+                "name": "GetCharacterInventory",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Inventory\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetCharacterInventorySummary": {
+                "name": "GetCharacterInventorySummary",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Inventory\/Summary\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetItemDetail": {
+                "name": "GetItemDetail",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Inventory\/{itemInstanceId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetCharacterActivities": {
+                "name": "GetCharacterActivities",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Activities\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetCharacterProgression": {
+                "name": "GetCharacterProgression",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Progression\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetTriumphs": {
+                "name": "GetTriumphs",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Triumphs\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAllVendorsForCurrentCharacter": {
+                "name": "GetAllVendorsForCurrentCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendors\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetVendorSummariesForCurrentCharacter": {
+                "name": "GetVendorSummariesForCurrentCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendors\/Summaries\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetVendorForCurrentCharacter": {
+                "name": "GetVendorForCurrentCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetVendorItemDetailForCurrentCharacter": {
+                "name": "GetVendorItemDetailForCurrentCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/Item\/{itemId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetPublicAdvisors": {
+                "name": "GetPublicAdvisors",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Advisors\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetPublicXurVendor": {
+                "name": "GetPublicXurVendor",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Advisors\/Xur\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetPublicVendor": {
+                "name": "GetPublicVendor",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Vendors\/{vendorId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAdvisorsForCurrentCharacter": {
+                "name": "GetAdvisorsForCurrentCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Advisors\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAdvisorsForCharacter": {
+                "name": "GetAdvisorsForCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetSpecialEventAdvisors": {
+                "name": "GetSpecialEventAdvisors",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Events\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetDestinyLiveTileContentItems": {
+                "name": "GetDestinyLiveTileContentItems",
+                "method": "GET",
+                "endpoint": "\/Destiny\/LiveTiles\/",
+                "params": [],
+                "post": []
+            },
+            "GetBondAdvisors": {
+                "name": "GetBondAdvisors",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Advisors\/Bonds\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetPublicVendorWithMetadata": {
+                "name": "GetPublicVendorWithMetadata",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Vendors\/{vendorId}\/Metadata\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetVendorForCurrentCharacterWithMetadata": {
+                "name": "GetVendorForCurrentCharacterWithMetadata",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/Metadata\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetVendorItemDetailForCurrentCharacterWithMetadata": {
+                "name": "GetVendorItemDetailForCurrentCharacterWithMetadata",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/Item\/{itemId}\/Metadata\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "TransferItem": {
+                "name": "TransferItem",
+                "method": "POST",
+                "endpoint": "\/Destiny\/TransferItem\/",
+                "params": [],
+                "post": [
+                    "membershipType",
+                    "itemReferenceHash",
+                    "itemId",
+                    "stackSize",
+                    "characterId",
+                    "transferToVault"
+                ]
+            },
+            "EquipItem": {
+                "name": "EquipItem",
+                "method": "POST",
+                "endpoint": "\/Destiny\/EquipItem\/",
+                "params": [],
+                "post": [
+                    "membershipType",
+                    "itemId",
+                    "characterId"
+                ]
+            },
+            "EquipItems": {
+                "name": "EquipItems",
+                "method": "POST",
+                "endpoint": "\/Destiny\/EquipItems\/",
+                "params": [],
+                "post": [
+                    "membershipType",
+                    "characterId",
+                    "itemIds]["
+                ]
+            },
+            "SetItemLockState": {
+                "name": "SetItemLockState",
+                "method": "POST",
+                "endpoint": "\/Destiny\/SetLockState\/",
+                "params": [],
+                "post": [
+                    "membershipType",
+                    "itemId",
+                    "characterId",
+                    "state"
+                ]
+            },
+            "BuyItem": {
+                "name": "BuyItem",
+                "method": "POST",
+                "endpoint": "\/Destiny\/BuyItem\/",
+                "params": [],
+                "post": []
+            },
+            "RefundItem": {
+                "name": "RefundItem",
+                "method": "POST",
+                "endpoint": "\/Destiny\/{e}\/RefundItem\/",
+                "params": [],
+                "post": []
+            },
+            "SetQuestTrackedState": {
+                "name": "SetQuestTrackedState",
+                "method": "POST",
+                "endpoint": "\/Destiny\/SetQuestTrackedState\/",
+                "params": [],
+                "post": [
+                    "membershipType",
+                    "membershipId",
+                    "characterId",
+                    "itemId",
+                    "state"
+                ]
+            },
+            "GetHistoricalStatsDefinition": {
+                "name": "GetHistoricalStatsDefinition",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/Definition\/",
+                "params": [],
+                "post": []
+            },
+            "GetHistoricalStats": {
+                "name": "GetHistoricalStats",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
+                "params": [
+                    "periodType",
+                    "modes",
+                    "groups",
+                    "monthstart",
+                    "monthend",
+                    "daystart",
+                    "dayend"
+                ],
+                "post": []
+            },
+            "GetHistoricalStatsForAccount": {
+                "name": "GetHistoricalStatsForAccount",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/Account\/{membershipType}\/{destinyMembershipId}\/",
+                "params": [
+                    "groups"
+                ],
+                "post": []
+            },
+            "GetActivityHistory": {
+                "name": "GetActivityHistory",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/ActivityHistory\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
+                "params": [
+                    "mode",
+                    "count",
+                    "page",
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetUniqueWeaponHistory": {
+                "name": "GetUniqueWeaponHistory",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/UniqueWeapons\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetLeaderboards": {
+                "name": "GetLeaderboards",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/",
+                "params": [
+                    "modes"
+                ],
+                "post": []
+            },
+            "GetLeaderboardsForPsn": {
+                "name": "GetLeaderboardsForPsn",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/LeaderboardsForPsn\/",
+                "params": [
+                    "modes",
+                    "code"
+                ],
+                "post": []
+            },
+            "GetLeaderboardsForCharacter": {
+                "name": "GetLeaderboardsForCharacter",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
+                "params": [
+                    "modes"
+                ],
+                "post": []
+            },
+            "GetPostGameCarnageReport": {
+                "name": "GetPostGameCarnageReport",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/PostGameCarnageReport\/{activityInstanceId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetActivityBlob": {
+                "name": "GetActivityBlob",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/ActivityBlob\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "GetDestinyAggregateActivityStats": {
+                "name": "GetDestinyAggregateActivityStats",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/AggregateActivityStats\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetMembershipIdByDisplayName": {
+                "name": "GetMembershipIdByDisplayName",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Stats\/GetMembershipIdByDisplayName\/{displayName}\/",
+                "params": [
+                    "ignorecase"
+                ],
+                "post": []
+            },
+            "GetExcellenceBadges": {
+                "name": "GetExcellenceBadges",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/GetExcellenceBadges\/{membershipType}\/{destinyMembershipId}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetMyGrimoire": {
+                "name": "GetMyGrimoire",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Vanguard\/Grimoire\/{membershipType}\/",
+                "params": [
+                    "definitions",
+                    "flavour",
+                    "single"
+                ],
+                "post": []
+            },
+            "GetGrimoireByMembership": {
+                "name": "GetGrimoireByMembership",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Vanguard\/Grimoire\/{membershipType}\/{destinyMembershipId}\/",
+                "params": [
+                    "definitions",
+                    "flavour",
+                    "single"
+                ],
+                "post": []
+            },
+            "GetGrimoireDefinition": {
+                "name": "GetGrimoireDefinition",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Vanguard\/Grimoire\/Definition\/",
+                "params": [],
+                "post": []
+            },
+            "GetDestinyExplorerItems": {
+                "name": "GetDestinyExplorerItems",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Explorer\/Items\/",
+                "params": [
+                    "page",
+                    "count",
+                    "name",
+                    "order",
+                    "orderstathash",
+                    "direction",
+                    "rarity",
+                    "step",
+                    "categories",
+                    "weaponPerformance",
+                    "impactEffects",
+                    "guardianAttributes",
+                    "lightAbilities",
+                    "damageTypes",
+                    "matchrandomsteps",
+                    "definitions",
+                    "sourcecat",
+                    "sourcehash"
+                ],
+                "post": []
+            },
+            "GetDestinyExplorerTalentNodeSteps": {
+                "name": "GetDestinyExplorerTalentNodeSteps",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Explorer\/TalentNodeSteps\/",
+                "params": [
+                    "page",
+                    "count",
+                    "name",
+                    "direction",
+                    "weaponPerformance",
+                    "impactEffects",
+                    "guardianAttributes",
+                    "lightAbilities",
+                    "damageTypes",
+                    "definitions"
+                ],
+                "post": []
+            }
+        }
+    },
+    "CommunitycontentService": {
+        "name": "CommunitycontentService",
+        "endpoints": {
+            "GetCommunityContent": {
+                "name": "GetCommunityContent",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Get\/{k}\/{h}\/{j}\/",
+                "params": [],
+                "post": []
+            },
+            "GetApprovalQueue": {
+                "name": "GetApprovalQueue",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Queue\/{i}\/{e}\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "SubmitContent": {
+                "name": "SubmitContent",
+                "method": "POST",
+                "endpoint": "\/CommunityContent\/Submit\/",
+                "params": [],
+                "post": []
+            },
+            "EditContent": {
+                "name": "EditContent",
+                "method": "POST",
+                "endpoint": "\/CommunityContent\/Edit\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "AlterApprovalState": {
+                "name": "AlterApprovalState",
+                "method": "POST",
+                "endpoint": "\/CommunityContent\/AlterApprovalState\/{e}\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "CoreService": {
+        "name": "CoreService",
+        "endpoints": {
+            "HelloWorld": {
+                "name": "HelloWorld",
+                "method": "GET",
+                "endpoint": "\/\/HelloWorld\/",
+                "params": [],
+                "post": []
+            },
+            "GetAvailableLocales": {
+                "name": "GetAvailableLocales",
+                "method": "GET",
+                "endpoint": "\/\/GetAvailableLocales\/",
+                "params": [],
+                "post": []
+            },
+            "GetCommonSettings": {
+                "name": "GetCommonSettings",
+                "method": "GET",
+                "endpoint": "\/\/Settings\/",
+                "params": [],
+                "post": []
+            },
+            "GetSystemStatus": {
+                "name": "GetSystemStatus",
+                "method": "GET",
+                "endpoint": "\/\/Status\/{h}\/",
+                "params": [],
+                "post": []
+            },
+            "GetGlobalAlerts": {
+                "name": "GetGlobalAlerts",
+                "method": "GET",
+                "endpoint": "\/\/GlobalAlerts\/",
+                "params": [],
+                "post": []
+            }
+        }
+    }
+}
