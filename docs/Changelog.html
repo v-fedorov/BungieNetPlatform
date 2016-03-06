@@ -19,19 +19,19 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 
-	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css">
-	<script src="../../js/main.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+	<script src="../js/main.js"></script>
 
-	<title>ApplyOfferToCurrentDestinyMembership | TokensService | TokensService / ApplyOfferToCurrentDestinyMembership</title>
+	<title>Changelog | Changelog</title>
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../../docs/TokensService/ApplyOfferToCurrentDestinyMembership.html | TokensService / ApplyOfferToCurrentDestinyMembership -->
+<!-- ../docs/Changelog.html | Changelog -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -41,25 +41,25 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+			<a href="../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-<li><li><a href="../../">Home</a></li>
-<li><a href="../../docs/Changelog">Changelog</a></li>
+<li><li><a href="../">Home</a></li>
+<li><a href="../docs/Changelog">Changelog</a></li>
 <li><a href="#Guides">Guides</a>
 <ul>
-<li><a href="../../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../../docs/API-Details">API Details</a></li>
-<li><a href="../../docs/Manifest">Manifest</a></li>
-<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../docs/API-Details">API Details</a></li>
+<li><a href="../docs/Manifest">Manifest</a></li>
+<li><a href="../docs/Authentication">Authentication</a></li>
 </ul></li>
 <li><a href="#References">References</a>
 <ul>
-<li><a href="../../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../../docs/Enums">Enums</a></li>
-<li><a href="../../docs/Endpoints">Endpoints</a></li>
-<li><a href="../../docs/Definitions">Definitions</a></li>
+<li><a href="../docs/Error-Codes">Error Codes</a></li>
+<li><a href="../docs/Enums">Enums</a></li>
+<li><a href="../docs/Endpoints">Endpoints</a></li>
+<li><a href="../docs/Definitions">Definitions</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -71,7 +71,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>TokensService / ApplyOfferToCurrentDestinyMembership</h1>
+		<h1>Changelog</h1>
 		<h2></h2>
 
 		<!--<section id="downloads">
@@ -84,39 +84,26 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/ApplyOfferToCurrentDestinyMembership" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>Info</h2>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
+<p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
+<hr />
+<h2>March 6, 2016</h2>
+<p>Initial GitHub Wiki was setup and existing pages were pulled from the old <a href="http://bungienetplatform.wikia.com/wiki/Bungienetplatform_Wikia">BungieNetPlatform Wikia</a>.</p>
+<p>Backend (Wiki):</p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Tokens/ApplyOfferToCurrentDestinyMembership/{e}/{h}/">/Tokens/ApplyOfferToCurrentDestinyMembership/{e}/{h}/</a></li>
-<li><strong>Method:</strong> POST</li>
-<li><strong>Accessibility:</strong> </li>
-<li><strong>Service:</strong> <a href="../../docs/Endpoints#TokensService">TokensService</a></li>
+<li>Endpoints, Enums and most listing pages are generated via a PHP script locally and are then pushed up into the repo. Try not to mess with these too much so automatic updates can be done quickly and easily.</li>
+<li>There will be page errors/missing information for some Endpoints as content was scraped programmatically from the old Wikia.</li>
 </ul>
-<h2>Parameters</h2>
-<h3>Path Parameters</h3>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>e</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>h</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<h3>Query String Parameters</h3>
-<p>None</p>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<h2>References</h2>
+<p>Frontend (Pages):</p>
+<ul>
+<li>Pages are generated from Wiki Markdown files using <a href="http://parsedown.org/">Parsedown</a> and some custom regular expressions to keep things tidy.</li>
+<li>Added dark theme using colours sourced from current <a href="https://www.bungie.net">Bungie.net</a> website.</li>
+<li>Code syntax highlighting supported with <a href="https://highlightjs.org/">highlight.js</a> library.</li>
+<li>Code examples are collapsed by default to make it easier to skim through a page.</li>
+<li>Added search functionality for looking up pages by name. Runs entirely in JavaScript using a lookup table.</li>
+<li>Added an &quot;Edit Wiki&quot; link at the top of every page to quickly go in and make changes. Note this won't update the frontend until all the static pages have been recompiled and pushed back into the repo.</li>
+<li>Made tables sortable.</li>
+</ul>
 		</div>
 	</div>
 </div>
