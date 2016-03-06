@@ -88,7 +88,7 @@
 <h2>Info</h2>
 <p>Changes the group membership type for a user. </p>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/{groupId}/Members/{membershipId}/SetMembershipType/{membershipType}/">/Group/{groupId}/Members/{membershipId}/SetMembershipType/{membershipType}/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/{groupId}/Members/{membershipId}/SetMembershipType/{groupMembershipType}/">/Group/{groupId}/Members/{membershipId}/SetMembershipType/{groupMembershipType}/</a></li>
 <li><strong>Method:</strong> POST</li>
 <li><strong>Accessibility:</strong> Private</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#GroupService">GroupService</a></li>
@@ -112,8 +112,8 @@
 <td>A valid Bungie.net membershipId that is in the group.</td>
 </tr>
 <tr>
-<td><a href="../../docs/Enums#BungieMembershipType">membershipType</a></td>
-<td>A valid Bungie.net membership type.</td>
+<td>groupMembershipType</td>
+<td>A valid group membershipType. 0=Member, 1=Admin, 2=Founder (probably will throw an error)</td>
 </tr>
 </tbody>
 </table>

@@ -89,7 +89,7 @@
 <ul>
 <li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/{groupId}/BreakAllAlliances/">/Group/{groupId}/BreakAllAlliances/</a></li>
 <li><strong>Method:</strong> POST</li>
-<li><strong>Accessibility:</strong> </li>
+<li><strong>Accessibility:</strong> Private</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#GroupService">GroupService</a></li>
 </ul>
 <h2>Parameters</h2>
@@ -104,7 +104,7 @@
 <tbody>
 <tr>
 <td>groupId</td>
-<td>&nbsp;</td>
+<td>A valid groupId.</td>
 </tr>
 </tbody>
 </table>
@@ -113,6 +113,15 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
+<p>POST <a href="https://www.bungie.net/Platform/Group/177526/BreakAllAlliances/">https://www.bungie.net/Platform/Group/177526/BreakAllAlliances/</a></p>
+<pre><code class="javascript">{
+    "Response": 0,
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {}
+}</code></pre>
 <h2>References</h2>
 		</div>
 	</div>
