@@ -190,7 +190,8 @@ a:focus {
   border: none;
   border-radius: 0;
   background: rgba(245, 245, 245, 0.05);
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #content .inner pre code {
   background: none;
@@ -211,6 +212,32 @@ a:focus {
 }
 #content .inner pre code .hljs-built_in {
   color: #b184c5;
+}
+#content .inner pre.collapse {
+  position: relative;
+  display: block;
+  overflow: visible;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+#content .inner pre.collapse.collapsed code {
+  max-height: 100px;
+  overflow: hidden;
+}
+#content .inner pre.collapse .expand-code {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transform: translateX(-50%) translateY(50%);
+  -moz-transform: translateX(-50%) translateY(50%);
+  -o-transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(50%);
 }
 #content .inner .edit-link {
   float: right;

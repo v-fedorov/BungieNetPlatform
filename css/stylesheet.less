@@ -200,7 +200,8 @@ a {
 			border: none;
 			border-radius: 0;
 			background: fade(rgb(245,245,245), 5%);
-			margin-top: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 			code {
 				background: none;
 				color: #fff;
@@ -218,6 +219,29 @@ a {
 				}
 				.hljs-built_in {
 					color: #b184c5;
+				}
+			}
+			&.collapse {
+				position: relative;
+				display: block;
+				overflow: visible;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+				&.collapsed code {
+					max-height: 100px;
+					overflow: hidden;
+				}
+				.expand-code {
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin: auto;
+					background: fade(#000, 20%);
+					border-radius: 8px;
+					padding: 6px 10px;
+					text-decoration: none;
+					text-align: center;
+					.vendor(transform, translateX(-50%) translateY(50%));
 				}
 			}
 		}

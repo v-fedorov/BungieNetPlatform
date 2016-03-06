@@ -7,6 +7,18 @@ $(document).ready(function() {
 		}
 	});
 
+	$('pre code').each(function() {
+		var $code = $(this).parent();
+		if ($code.height() < 100) return;
+		$code.addClass('collapse').addClass('collapsed');
+		$code.append('<a href="#" class="expand-code">Expand <i class="fa fa-caret-down"></i></a>');
+		$code.find('.expand-code').on('click', function(e) {
+			e.preventDefault();
+			$code.toggleClass('collapsed');
+			$(this).html($code.is('.collapsed') ? 'Expand <i class="fa fa-caret-down"></i>' : 'Collapse <i class="fa fa-caret-up"></i>');
+		});
+	});
+
 	$('table').sortableTable();
 
 	var pushHeader = function(toc, header, depth) {
@@ -41,7 +53,7 @@ $(document).ready(function() {
 			case 'h6': pushHeader(tableOfContents, this, 5); break;
 		}
 	});
-	console.log(tableOfContents);
+	//console.log(tableOfContents);
 	if (tableOfContents.length > 1) {
 		var $toc = $('<div id="table-of-contents" class="collapse toc"></div>');
 		appendHeader($toc, tableOfContents);
