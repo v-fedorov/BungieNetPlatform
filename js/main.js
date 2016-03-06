@@ -39,7 +39,7 @@ $(document).ready(function() {
 			if (header.children.length > 0) {
 				appendHeader($header, header.children);
 			}
-			$header.prepend('<a href="#' + header.selector.attr('name') + '">' + header.selector.text().trim() + '</a>');
+			$header.prepend('<a href="#' + header.selector.prev().attr('name') + '">' + header.selector.text().trim() + '</a>');
 			$toc.append($header);
 		}
 		$parent.prepend($toc);
