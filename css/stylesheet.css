@@ -150,6 +150,7 @@ a[name] {
 }
 #content .inner .table {
   word-break: break-word;
+  margin-top: 20px;
 }
 #content .inner .table .active {
   background: none;
@@ -251,6 +252,10 @@ a[name] {
 }
 #content .inner .edit-link {
   float: right;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
 }
 #content .inner .wiki-builder {
   display: none;
