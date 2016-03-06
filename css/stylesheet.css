@@ -191,7 +191,7 @@ a:focus {
   border-radius: 0;
   background: rgba(245, 245, 245, 0.05);
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #content .inner pre code {
   background: none;
@@ -218,7 +218,6 @@ a:focus {
   display: block;
   overflow: visible;
   padding-bottom: 20px;
-  margin-bottom: 20px;
 }
 #content .inner pre.collapse.collapsed code {
   max-height: 100px;
