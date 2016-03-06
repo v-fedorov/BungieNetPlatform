@@ -42,10 +42,13 @@ $(document).ready(function() {
 	});
 	console.log(tableOfContents);
 	if (tableOfContents.length > 1) {
+		var $toc = $('<div id="table-of-contents" class="collapse"></div>');
+		appendHeader($toc, tableOfContents);
+		$toc.append('<hr/>');
+
 		var $inner = $('#content .inner');
-		$inner.prepend('<hr/>');
-		appendHeader($inner, tableOfContents);
-		$inner.prepend('<h2>Contents</h2>');
+		$inner.prepend($toc);
+		$inner.prepend('<h2>Contents <a href="#table-of-contents" data-toggle="collapse" title="Show / Hide" class="toggle-collpase collapsed"><span class="hide">Toggle</span></h2>');
 	}
 });
 

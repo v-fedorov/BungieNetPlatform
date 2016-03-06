@@ -33,6 +33,19 @@ a {
 	word-break: break-word;
 }
 
+.toggle-collpase {
+	font-size: 0.65em;
+	text-transform: none;
+	text-decoration: none !important;
+
+	&:before {
+		content: '[ hide ]';
+	}
+	&.collapsed:before {
+		content: '[ show ]';
+	}
+}
+
 #top {
 	background: #2a333e;
 	border: none;

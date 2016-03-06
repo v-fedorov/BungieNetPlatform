@@ -32,6 +32,17 @@ a:hover,
 a:focus {
   color: #fff;
 }
+.toggle-collpase {
+  font-size: 0.65em;
+  text-transform: none;
+  text-decoration: none !important;
+}
+.toggle-collpase:before {
+  content: '[ hide ]';
+}
+.toggle-collpase.collapsed:before {
+  content: '[ show ]';
+}
 #top {
   background: #2a333e;
   border: none;
