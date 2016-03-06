@@ -5,6 +5,9 @@ $(document).ready(function() {
 		if (link && (link.indexOf('//') == 0 || link.indexOf('http') == 0)) {
 			$(this).attr('target', '_blank');
 		}
+		if (link.indexOf('#') == 0 && $(this).parents('#content')) {
+			$(this).addClass('no-page');
+		}
 	});
 
 	$('pre code').each(function() {

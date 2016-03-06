@@ -32,6 +32,10 @@ a:hover,
 a:focus {
   color: #fff;
 }
+a.no-page {
+  color: #a43a39;
+  font-style: italic;
+}
 .toggle-collpase {
   font-size: 0.65em;
   text-transform: none;
