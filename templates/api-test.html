@@ -1,0 +1,91 @@
+<form name="apiForm" class="form-horizontal">
+	<div class="form-group">
+		<div class="col-sm-10 col-sm-offset-2">
+			<div class="alert alert-success" ng-show="reauthValid[proxy.id]">Bungie.net cookies should still be valid.</div>
+			<div class="alert alert-danger" ng-show="!reauthValid[proxy.id]">Re-authentication with Bungie.net is required to use Private endpoints.</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Proxy</label>
+		<div class="col-sm-10">
+			<select ng-model="proxy" class="form-control" ng-options="proxy.name for proxy in proxies"></select>
+		</div>
+	</div>
+
+	<div class="form-group form-group-auth">
+		<label class="col-sm-2 control-label">bungleatk</label>
+		<div class="col-sm-7">
+			<textarea class="form-control" ng-model="bungleatk" ng-required="!reauthValid[proxy.id]" placeholder="Paste a valid bungleatk cookie here."></textarea>
+		</div>
+		<div class="col-sm-3">
+			<select class="form-control" ng-model="reauthPlatform">
+				<option value="Psnid">Playstation</option>
+				<option value="Xuid">Xbox</option>
+			</select>
+			<button type="button" class="btn btn-danger" ng-click="reauth()">Reauthenticate <i ng-show="isReauth" class="fa fa-refresh fa-spin"></i></button>
+		</div>
+	</div>
+
+	<hr/>
+
+	<div class="form-group" ng-show="proxy.apiKeyRequired">
+		<label class="col-sm-2 control-label">API Key</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="apiKey" placeholder="Enter Your API Key" ng-required="proxy.apiKeyRequired">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Endpoint</label>
+		<div class="col-sm-10">
+			<select class="form-control" ng-model="endpoint" ng-options="endpoint.name group by endpoint.service for endpoint in endpoints"></select>
+			<code>{{endpoint.method}} {{endpoint.endpoint}}</code>
+		</div>
+	</div>
+
+	<fieldset ng-show="hasParams(endpoint.path)">
+		<legend>URL Parameters</legend>
+		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.path">
+			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
+			<div class="col-sm-9">
+				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="pathData[paramFieldName]" ng-required="true" placeholder="{{paramField.desc}}">
+				<select ng-if="paramField.link" class="form-control" ng-model="pathData[paramFieldName]" ng-required="true" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset ng-show="hasParams(endpoint.params)">
+		<legend>Query Parameters</legend>
+		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.params">
+			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
+			<div class="col-sm-9">
+				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="pathData[paramFieldName]" placeholder="{{paramField.desc}}">
+				<select ng-if="paramField.link" class="form-control" ng-model="queryData[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset ng-show="hasParams(endpoint.post)">
+		<legend>JSON POST Parameters</legend>
+		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.post">
+			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
+			<div class="col-sm-9">
+				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="postData[paramFieldName]" placeholder="{{paramField.desc}}">
+				<select ng-if="paramField.link" class="form-control" ng-model="postData[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+			</div>
+		</div>
+	</fieldset>
+
+	<button type="button" class="btn btn-primary pull-right" ng-click="request()" ng-disabled="apiForm.$invalid">Test <i ng-show="isRequesting" class="fa fa-spin fa-refresh"></i></button>
+
+	<hr/>
+
+	<div ng-show="test">
+		<h2>Request</h2>
+		<code>{{test.request.method}} {{test.request.url}}</code>
+		<pre ng-show="test.request.data" syntax-highlight="test.request.data" language="javascript"></pre>
+
+		<h2>Response</h2>
+		<pre ng-show="test.response" syntax-highlight="test.response" language="javascript"></pre>
+	</div>
+</form>

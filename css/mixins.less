@@ -82,3 +82,11 @@
 .media-portrait-phone(@rules) {
 	@media (max-width: (@screen-xs-min - 1)) { @rules(); }
 }
+
+.clear {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

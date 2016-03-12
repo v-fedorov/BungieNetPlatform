@@ -4,6 +4,11 @@
 /* 	-------------------------------------------------
  	Media Wraps
 	------------------------------------------------- */
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 body {
   background: #12161b;
   font-family: 'Roboto', sans-serif;
@@ -148,6 +153,9 @@ a[name] {
 #content .inner p {
   margin: 0;
 }
+#content .inner p + p {
+  margin-top: 10px;
+}
 #content .inner .table {
   word-break: break-word;
   margin-top: 20px;
@@ -259,6 +267,55 @@ a[name] {
 }
 #content .inner .wiki-builder {
   display: none;
+}
+#api-test form:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#api-test legend {
+  color: #f2c161;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+  padding-bottom: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+}
+#api-test input.ng-invalid,
+#api-test select.ng-invalid,
+#api-test textarea.ng-invalid {
+  box-shadow: 0 0 0px 3px rgba(255, 0, 0, 0.8);
+}
+#api-test code {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  word-break: break-all;
+}
+#api-test hr {
+  clear: both;
+}
+#api-test .btn.pull-right {
+  margin-bottom: 20px;
+}
+#api-test .form-group-auth textarea {
+  height: 78px;
+  resize: none;
+}
+#api-test .form-group-auth .btn {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #api-test .form-group * + * + * {
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  #api-test .form-group * + * + * {
+    margin-top: 10px;
+  }
 }
 #footer {
   padding-top: 50px;

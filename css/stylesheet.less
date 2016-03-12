@@ -161,6 +161,9 @@ a {
 		padding: 20px;
 		p {
 			margin: 0;
+			+ p {
+				margin-top: 10px;
+			}
 		}
 		.table {
 			word-break: break-word;
@@ -266,6 +269,66 @@ a {
 		}
 	}
 }
+#api-test {
+	form {
+		.clear();
+	}
+	legend {
+		color: rgb(242, 193, 97);
+		border-bottom: 1px solid fade(rgb(245, 245, 245), 10%);
+		padding-bottom: 8px;
+		font-size: 1.1em;
+		font-weight: bold;
+		text-align: center;
+	}
+	input, select, textarea {
+		&.ng-invalid {
+			box-shadow: 0 0 0px 3px fade(#ff0000, 80%);
+		}
+	}
+	code {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		display: block;
+		word-break: break-all;
+	}
+	hr {
+		clear: both;
+	}
+	.btn.pull-right {
+		margin-bottom: 20px;
+	}
+
+	.form-group-auth {
+		textarea {
+			height: 78px;
+			resize: none;
+		}
+		.btn {
+			display: block;
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
+}
+.media-tablet-and-up({
+	#api-test {
+		.form-group {
+			* + * + * {
+				padding-left: 0;
+			}
+		}
+	}
+});
+.media-landscape-phone({
+	#api-test {
+		.form-group {
+			* + * + * {
+				margin-top: 10px;
+			}
+		}
+	}
+});
 #footer {
 	padding-top: 50px;
 	padding-bottom: 50px;

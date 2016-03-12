@@ -10,17 +10,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('pre code').each(function() {
-		var $code = $(this).parent();
-		if ($code.height() < 100) return;
-		$code.addClass('collapse').addClass('collapsed');
-		$code.append('<a href="#" class="expand-code">Expand <i class="fa fa-caret-down"></i></a>');
-		$code.find('.expand-code').on('click', function(e) {
-			e.preventDefault();
-			$code.toggleClass('collapsed');
-			$(this).html($code.is('.collapsed') ? 'Expand <i class="fa fa-caret-down"></i>' : 'Collapse <i class="fa fa-caret-up"></i>');
-		});
-	});
+	$('pre code').codeFolding();
 
 	$('table').sortableTable();
 
@@ -67,6 +57,21 @@ $(document).ready(function() {
 		$inner.prepend('<h2>Contents <a href="#table-of-contents" data-toggle="collapse" title="Show / Hide" class="toggle-collpase collapsed"><span class="hide">Toggle</span></h2>');
 	}
 });
+
+$.fn.codeFolding = function() {
+	return this.each(function() {
+		var target = this;
+		var $code = $(this).parent();
+		if ($code.height() < 100) return;
+		$code.addClass('collapse').addClass('collapsed');
+		$code.append('<a href="#" class="expand-code">Expand <i class="fa fa-caret-down"></i></a>');
+		$code.find('.expand-code').on('click', function(e) {
+			e.preventDefault();
+			$code.toggleClass('collapsed');
+			$(this).html($code.is('.collapsed') ? 'Expand <i class="fa fa-caret-down"></i>' : 'Collapse <i class="fa fa-caret-up"></i>');
+		});
+	});
+};
 
 $.fn.sortableTable = function(options) {
 	if (options == undefined) options = {};
