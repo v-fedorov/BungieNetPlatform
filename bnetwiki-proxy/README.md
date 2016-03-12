@@ -8,6 +8,9 @@ $.get({
 	url: "/Platform/Destiny/Manifest/",
 	headers: {
 		"x-api-key": "{your-api-key}"
+	},
+	xhrFields: {
+		withCredentials: true
 	}
 }, function(result) {
 	console.log('GetManifest', result);
@@ -23,6 +26,9 @@ $.get({
 	url: "/Reauth/Psnid/",
 	headers: {
 		"x-bungleatk": "{a-valid-bungleatk-cookie}"
+	},
+	xhrFields: {
+		withCredentials: true
 	}
 }, function(result) {
 	// You can now make authenticated requests.
