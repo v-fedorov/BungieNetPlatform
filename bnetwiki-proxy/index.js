@@ -2,6 +2,8 @@ var origins = [
 	'http://destinydevs.github.io',
 	'http://bnet.io'
 ];
+
+var apiKey = '10E792629C2A47E19356B8A79EEFA640';
 var port = process.env.PORT || 5000;
 
 var http = require('http');
@@ -34,16 +36,10 @@ http.createServer(function (req, res) {
 	}
 
 	else if (target) {
-		if (target == '/Platform' && !req.headers['x-api-key']) {
-			res.writeHead(403, {});
-			res.write('API Key required.');
-			res.end();
-			return;
-		}
 		var headers = {
 			'Content-Length': req.headers['content-length'] ? req.headers['content-length'] : 0
 		};
-		if (req.headers['x-api-key']) headers['x-api-key'] = req.headers['x-api-key'];
+		headers['x-api-key'] = apiKey;
 		
 		var cookies = [];
 		if (req.headers['cookie']) cookies = req.headers['cookie'].split('; ');
