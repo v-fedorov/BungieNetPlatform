@@ -135,6 +135,7 @@ $endpointsMarkdown = '';
 $endpointsMarkdown = 'This listing is based on [platform.lib.js](https://www.bungie.net/Scripts/platform.lib.min.js) file used by [Bungie.net](https://www.bungie.net).'.LN.LN;
 
 $namespaces = array();
+$apis = array();
 
 foreach($endpoints as $service) {
 	$serviceEndpoints = get_object_vars($service->endpoints);
@@ -149,6 +150,8 @@ foreach($endpoints as $service) {
 
 	$servicePath = BASEPATH.'/wiki/'.$service->name.'.md';
 	$serviceMarkdown = '';
+
+	$apis[$service->name] = array();
 
 	foreach($serviceEndpoints as $endpoint) {
 		if (in_array($endpoint->name, $namespaces)) {
@@ -168,9 +171,9 @@ foreach($endpoints as $service) {
 		$endpointMarkdown = preg_replace('/(\* \*\*Service:\*\*).*/m', '$1 [['.$service->name.'|Endpoints#'.$service->name.']]', $endpointMarkdown);
 
 		// Manual Content
-		$infoDesc = '';
-		$infoAccess = '';
-		if (strlen($infoDesc) > 0) $endpointMarkdown = preg_replace('/(## Info\n).*\n/m', '$1'.$infoDesc.LN, $endpointMarkdown);
+		//$infoDesc = '';
+		$infoAccess = $endpoint->method == 'POST' ? 'Private' : '';
+		//if (strlen($infoDesc) > 0) $endpointMarkdown = preg_replace('/(## Info\n).*\n/m', '$1'.$infoDesc.LN, $endpointMarkdown);
 		if (strlen($infoAccess) > 0) $endpointMarkdown = preg_replace('/(\* \*\*Accessibility:\*\*).*/m', '$1 '.ucfirst($infoAccess), $endpointMarkdown);
 
 		// References
@@ -233,12 +236,28 @@ foreach($endpoints as $service) {
 		}
 
 		update($endpointPath, $endpointMarkdown);
+
+		// Build API Data
+		$params = array(
+			'path' => getParams('### Path Parameters', $endpointMarkdown),
+			'query' => getParams('### Query String Parameters', $endpointMarkdown),
+			'json' => getParams('### JSON POST Parameters', $endpointMarkdown)
+		);
+		//echo '<pre>'.var_export($params, true).'</pre>';
+		$endpoint->path = $params['path'];
+		$endpoint->access = $infoAccess;
+		//$endpoint->desc = preg_replace('/.*## Info\n(.*)\n\*.*/m', '$1', $endpointMarkdown);
+		$endpoint->params = $params['query'];
+		$endpoint->post = $params['json'];
+		$apis[$service->name][] = $endpoint;
 	}
 
 	$endpointsMarkdown .= LN;
 }
 
 update($endpointsPath, $endpointsMarkdown);
+
+file_put_contents(BUILDERPATH.'/data/api-data.json', json_encode($apis, JSON_PRETTY_PRINT));
 
 // Build Definitions
 $defsPath = BUILDERPATH.'/data/manifest.json';

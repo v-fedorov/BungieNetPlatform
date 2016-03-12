@@ -86,6 +86,7 @@ function buildPage($markdownPath, $outputPath) {
 		$page_title = $site_title;
 		$page_desc = $site_desc;
 	}
+	$page_name = pathinfo($markdownPath, PATHINFO_FILENAME);
 	$page_url = $root.trim(str_replace('index.html', '', $outputUri), '/');
 
 	$title = $page_title;

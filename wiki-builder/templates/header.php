@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<title><?= $title ?></title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -23,8 +24,15 @@
 
 	<link rel="stylesheet" type="text/css" media="screen" href="<?= $root ?>css/stylesheet.css?<?= filemtime(BASEPATH.'/gh-pages/css/stylesheet.css') ?>">
 	<script src="<?= $root ?>js/main.js?<?= filemtime(BASEPATH.'/gh-pages/js/main.js') ?>"></script>
+	<?php if ($page_name == 'API-Test') {?>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script type="text/javascript">
+			var apiEnums = JSON.parse('<?= file_exists('data/enums.json') ? addslashes(json_encode(json_decode(file_get_contents('data/enums.json')))) : '{}' ?>');
+			var apiData = JSON.parse('<?= file_exists('data/api-data.json') ? addslashes(json_encode(json_decode(file_get_contents('data/api-data.json')))) : '{}' ?>');
+		</script>
+		<script type="text/javascript" src="<?= $root ?>js/api-test.js"></script>
+	<?php } ?>
 
-	<title><?= $title ?></title>
 </head>
 
 <body>
