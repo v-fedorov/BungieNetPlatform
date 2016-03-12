@@ -57,7 +57,7 @@ http.createServer(function (req, res) {
 			//console.log('bungled', bungled);
 		}
 
-		console.log('Request Headers', headers);
+		//console.log('Request Headers', headers);
 
 		var reqEx = https.request({
 			hostname: 'www.bungie.net',
@@ -66,8 +66,8 @@ http.createServer(function (req, res) {
 			path: target+req.url,
 			headers: headers
 		}, function(resEx) {
-			console.log(resEx.statusCode);
-			console.log('Response Headers', resEx.headers);
+			//console.log(resEx.statusCode);
+			//console.log('Response Headers', resEx.headers);
 			resEx.headers['access-control-allow-origin'] = origin;
 			resEx.headers["Access-Control-Allow-Credentials"] = true;
 			resEx.headers["Access-Control-Expose-Headers"] = 'x-status, location, Content-Type';
