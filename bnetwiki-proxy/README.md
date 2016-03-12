@@ -27,6 +27,7 @@ $.get({
 }, function(result) {
 	// You can now make authenticated requests.
 });
+```
 
 ## Response Codes
 Because CORS restricts how JavaScript can make cross-origin requests, all responses will return HTTP 200 and their actual response codes will get output to the "x-status" header.
