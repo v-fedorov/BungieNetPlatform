@@ -14,7 +14,7 @@ angular.module('api-test', [])
 				scope.$watch('syntaxHighlight', function() {
 					elem.empty();
 
-					console.log(scope.syntaxHighlight);
+					//console.log(scope.syntaxHighlight);
 
 					if (scope.syntaxHighlight) {
 						var code = JSON.stringify(scope.syntaxHighlight, null, 4);
@@ -71,6 +71,13 @@ angular.module('api-test', [])
 		$scope.pathData = {};
 		$scope.queryData = {};
 		$scope.postData = {};
+		$scope.$watch('endpoint', function(endpoint) {
+			console.log('Changed Endpoint', endpoint);
+
+			$scope.pathData = {};
+			$scope.queryData = {};
+			$scope.postData = {};
+		});
 
 		$scope.isReauth = false;
 		$scope.isRequesting = false;
@@ -88,7 +95,7 @@ angular.module('api-test', [])
 					'x-bungleatk': $scope.bungleatk
 				}
 			}).then(function(response) {
-				console.log(response, response.headers());
+				//console.log(response, response.headers());
 				$scope.isReauth = false;
 				if (response.headers('x-status') == '200') {
 					localStorage.setItem($scope.proxy.id, new Date().getTime()+(14*24*60*60*1000));
@@ -108,7 +115,7 @@ angular.module('api-test', [])
 				post: $scope.postData
 			};
 
-			console.log(params);
+			//console.log(params);
 
 			var url = proxyUrl+'/Platform'+$scope.endpoint.endpoint;
 			for (var key in params.path) {
@@ -126,7 +133,7 @@ angular.module('api-test', [])
 
 			if (Object.keys($scope.postData).length > 0) options.data = $scope.postData;
 
-			console.log(options);
+			console.log('Request', options);
 
 			$scope.test = {
 				request: options,
@@ -135,7 +142,7 @@ angular.module('api-test', [])
 
 			$scope.isRequesting = true;
 			$http(options).then(function(response) {
-				console.log(response, response.headers());
+				//console.log(response, response.headers());
 				$scope.isRequesting = false;
 				$scope.test.response = response.data;
 			});
