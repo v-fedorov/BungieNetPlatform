@@ -31,7 +31,13 @@ angular.module('api-test', [])
 		};
 	})
 	.controller('ApiCtrl', function($scope, $http, $httpParamSerializer) {
-		console.log('loaded');
+		$scope.apiKey = '';
+		$scope.pathData = {};
+		$scope.queryData = {};
+		$scope.postData = {};
+
+		$scope.isReauth = false;
+		$scope.isRequesting = false;
 
 		$scope.proxies = [
 			{id: "bnetwikiProxy", name: "bnetwiki-proxy.herokuapp.com (Requires API Key)", url: "https://bnetwiki-proxy.herokuapp.com", apiKeyRequired: true},
@@ -40,21 +46,51 @@ angular.module('api-test', [])
 		$scope.proxy = $scope.proxies[0];
 
 		$scope.endpoints = [];
+		$scope.services = [];
 		for (var serviceName in apiData) {
-			for (var i=0; i<apiData[serviceName].length; i++) {
-				var endpoint = apiData[serviceName][i];
-				endpoint.service = serviceName;
-				$scope.endpoints.push(endpoint);
+			$scope.services.push(serviceName);
+		}
+		$scope.services.sort();
+
+		for (var serviceName in apiData) {
+			var service = apiData[serviceName];
+			for (var i=0; i<service.length; i++) {
+				var endpoint = service[i];
+				if (endpoint.name == 'GetDestinyManifest' && serviceName == 'DestinyService') {
+					$scope.service = serviceName;
+					$scope.endpoint = endpoint;
+					break;
+				}
 			}
 		}
-		//$scope.endpoint = $scope.endpoints[0];
-		for (var i=0; i<$scope.endpoints.length; i++) {
-			var endpoint = $scope.endpoints[i];
-			if (endpoint.name == 'GetBungieAccount' && endpoint.service == 'UserService') {
-				$scope.endpoint = endpoint;
-				break;
+
+		$scope.$watch('service', function(service) {
+			//console.log('Changed Service', service);
+			if (service == undefined) return;
+
+			$scope.endpoints = [];
+			for (var i=0; i<apiData[service].length; i++) {
+				apiData[service][i].service = service;
+				$scope.endpoints.push(apiData[service][i]);
 			}
-		}
+			if ($scope.endpoints.indexOf($scope.endpoint) == -1) {
+				$scope.endpoint = $scope.endpoints[0];
+			}
+		});
+
+		$scope.$watch('endpoint', function(endpoint) {
+			//console.log('Changed Endpoint', endpoint);
+			if (endpoint == undefined) return;
+
+			$scope.pathData = {};
+			$scope.queryData = {};
+			$scope.postData = {};
+
+			/*if ($scope.service != endpoint.service) {
+				defaultEndpoint = endpoint;
+				$scope.service = endpoint.service;
+			}*/
+		});
 
 		$scope.reauthPlatform = 'Psnid';
 
@@ -65,22 +101,6 @@ angular.module('api-test', [])
 			apiAuth = apiAuth ? parseInt(apiAuth) : 0;
 			$scope.reauthValid[proxy.id] = new Date().getTime() < apiAuth;
 		}
-
-
-		$scope.apiKey = '';
-		$scope.pathData = {};
-		$scope.queryData = {};
-		$scope.postData = {};
-		$scope.$watch('endpoint', function(endpoint) {
-			console.log('Changed Endpoint', endpoint);
-
-			$scope.pathData = {};
-			$scope.queryData = {};
-			$scope.postData = {};
-		});
-
-		$scope.isReauth = false;
-		$scope.isRequesting = false;
 
 		$scope.reauth = function() {
 			console.log('Reauth', $scope.proxy);

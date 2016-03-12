@@ -36,6 +36,13 @@
 	</div>
 
 	<div class="form-group">
+		<label class="col-sm-2 control-label">Service</label>
+		<div class="col-sm-10">
+			<select class="form-control" ng-model="service" ng-options="service for service in services"></select>
+		</div>
+	</div>
+
+	<div class="form-group">
 		<label class="col-sm-2 control-label">Endpoint</label>
 		<div class="col-sm-10">
 			<select class="form-control" ng-model="endpoint" ng-options="endpoint.name group by endpoint.service for endpoint in endpoints"></select>
