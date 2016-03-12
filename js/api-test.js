@@ -35,7 +35,7 @@ angular.module('api-test', [])
 
 		$scope.proxies = [
 			{id: "bnetwikiProxy", name: "bnetwiki-proxy.herokuapp.com (Requires API Key)", url: "https://bnetwiki-proxy.herokuapp.com", apiKeyRequired: true},
-			{id: "bungieProxy", name: "bungie-proxy.herokuapp.com", url: "https://bungie-proxy.herokuapp.com", apiKeyRequired: false}
+			//{id: "bungieProxy", name: "bungie-proxy.herokuapp.com", url: "https://bungie-proxy.herokuapp.com", apiKeyRequired: false}
 		];
 		$scope.proxy = $scope.proxies[0];
 
