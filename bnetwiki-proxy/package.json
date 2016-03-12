@@ -1,0 +1,19 @@
+{
+  "name": "bnetwiki-proxy",
+  "version": "0.0.01",
+  "description": "A simple proxy for performing CORS requests to the Bungie.net Platform.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3",
+    "express": "4.13.3",
+    "http-proxy": "^1.13.2",
+    "http-proxy-rules": "^1.0.1"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "license": "MIT"
+}

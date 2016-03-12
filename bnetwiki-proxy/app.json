@@ -1,0 +1,4 @@
+{
+  "name": "Bungie.net Wiki Proxy",
+  "description": "A simple proxy for performing CORS requests to the Bungie.net Platform."
+}
